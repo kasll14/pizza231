@@ -5,6 +5,7 @@
 запустите Git Bash
 перейдите в каталог c:/xampp/htdocs
 > cd c:/xampp/htdocs
+Удалите все файлы и папки в htdocs
 
 Fork репозитория Coopteh/pizza231
 - Войдите в свой аккаунт на github.com и сделайте fork
