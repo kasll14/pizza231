@@ -26,7 +26,7 @@ switch ($resource) {
         $controller = new HomeController();
         echo $controller->get();
         break;
-    case 'courses':
+    case 'course':
         $controller = new CoursesController();
         echo $controller->get();
         break;
