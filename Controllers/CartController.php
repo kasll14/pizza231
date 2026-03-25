@@ -25,9 +25,8 @@ $_SESSION['cart'] = [];
 }
 $courseId = isset($_POST['courseId']) ? (int)$_POST['courseId'] : 0;
 if ($courseId < 1 || $courseId > 6) {
-// Для AJAX запросов
 if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && 
-    strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
 http_response_code(400);
 echo json_encode(['success' => false, 'error' => 'invalid_course']);
 exit;
@@ -38,7 +37,7 @@ exit;
 $courses = \Views\CourseTemplate::$courses;
 if (!isset($courses[$courseId])) {
 if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && 
-    strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
 http_response_code(404);
 echo json_encode(['success' => false, 'error' => 'course_not_found']);
 exit;
@@ -64,9 +63,8 @@ $_SESSION['cart'][] = [
 'added_at' => time()
 ];
 }
-// Для AJAX запросов
 if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && 
-    strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
 http_response_code(200);
 echo json_encode([
 'success' => true,
@@ -76,22 +74,6 @@ exit;
 }
 header('Location: /cart?success=added');
 exit;
-}
-public function getCount(): int
-{
-if (session_status() === PHP_SESSION_NONE) {
-session_start();
-}
-return count($_SESSION['cart'] ?? []);
-}
-// Новый метод для AJAX получения количества
-public function getCountJson(): void
-{
-if (session_status() === PHP_SESSION_NONE) {
-session_start();
-}
-header('Content-Type: application/json');
-echo json_encode(['count' => count($_SESSION['cart'] ?? [])]);
 }
 public function remove(): void
 {
@@ -103,9 +85,8 @@ foreach ($_SESSION['cart'] as $key => $item) {
 if ($item['id'] === $courseId) {
 unset($_SESSION['cart'][$key]);
 $_SESSION['cart'] = array_values($_SESSION['cart']);
-// Для AJAX
 if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && 
-    strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
 http_response_code(200);
 echo json_encode(['success' => true, 'count' => count($_SESSION['cart'])]);
 exit;
@@ -114,9 +95,8 @@ header('Location: /cart?success=removed');
 exit;
 }
 }
-// Для AJAX
 if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && 
-    strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
 http_response_code(404);
 echo json_encode(['success' => false, 'error' => 'not_found']);
 exit;
@@ -130,14 +110,51 @@ if (session_status() === PHP_SESSION_NONE) {
 session_start();
 }
 $_SESSION['cart'] = [];
-// Для AJAX
 if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && 
-    strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
 http_response_code(200);
 echo json_encode(['success' => true, 'count' => 0]);
 exit;
 }
 header('Location: /cart?success=cleared');
+exit;
+}
+public function getCount(): int
+{
+if (session_status() === PHP_SESSION_NONE) {
+session_start();
+}
+return count($_SESSION['cart'] ?? []);
+}
+public function getCountJson(): void
+{
+if (session_status() === PHP_SESSION_NONE) {
+session_start();
+}
+header('Content-Type: application/json');
+echo json_encode(['count' => count($_SESSION['cart'] ?? [])]);
+}
+// Новые методы для системы заказов
+public function checkout(): void
+{
+$controller = new \Controllers\OrderController();
+echo $controller->checkout();
+exit;
+}
+public function order(): void
+{
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+header('Location: /cart');
+exit;
+}
+$controller = new \Controllers\OrderController();
+$controller->process();
+exit;
+}
+public function success(): void
+{
+$controller = new \Controllers\OrderController();
+echo $controller->success();
 exit;
 }
 }

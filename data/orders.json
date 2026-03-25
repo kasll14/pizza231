@@ -1,0 +1,64 @@
+[
+    {
+        "id": "ORD-20260325-890DD1",
+        "name": "maslee",
+        "email": "garcihanovislam@gmail.com",
+        "phone": "+7 (923) 487-96-35",
+        "payment_method": "sbp",
+        "comment": "",
+        "items": [
+            {
+                "id": 2,
+                "title": "Frontend: React",
+                "price": "от 50 000 ₽",
+                "icon": "⚛️",
+                "duration": "10 недель • 4-6 часов в неделю",
+                "added_at": 1774425006
+            },
+            {
+                "id": 1,
+                "title": "Python-разработчик",
+                "price": "от 54 000 ₽",
+                "icon": "🐍",
+                "duration": "12 недель • 3-5 часов в неделю",
+                "added_at": 1774425006
+            },
+            {
+                "id": 3,
+                "title": "SQL и базы данных",
+                "price": "от 32 000 ₽",
+                "icon": "🗄️",
+                "duration": "8 недель • 3-4 часа в неделю",
+                "added_at": 1774425007
+            },
+            {
+                "id": 4,
+                "title": "Machine Learning",
+                "price": "от 112 000 ₽",
+                "icon": "🤖",
+                "duration": "16 недель • 5-7 часов в неделю",
+                "added_at": 1774425008
+            },
+            {
+                "id": 5,
+                "title": "Web3 & Blockchain",
+                "price": "от 91 000 ₽",
+                "icon": "🌐",
+                "duration": "14 недель • 4-6 часов в неделю",
+                "added_at": 1774425009
+            },
+            {
+                "id": 6,
+                "title": "Mobile Dev (Flutter)",
+                "price": "от 66 000 ₽",
+                "icon": "📱",
+                "duration": "12 недель • 4-5 часов в неделю",
+                "added_at": 1774425009
+            }
+        ],
+        "total": 405000,
+        "status": "pending",
+        "created_at": "2026-03-25 08:56:40",
+        "ip": "::1"
+    }
+]
