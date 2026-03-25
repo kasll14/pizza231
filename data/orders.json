@@ -1,64 +1,24 @@
 [
     {
-        "id": "ORD-20260325-890DD1",
-        "name": "maslee",
-        "email": "garcihanovislam@gmail.com",
-        "phone": "+7 (923) 487-96-35",
+        "id": "ORD-20260325-75D70A",
+        "name": "йейуе",
+        "email": "garcihanovislam@gmail.xn--com-tddt4d",
+        "phone": "+7 (235) 156",
         "payment_method": "sbp",
-        "comment": "",
+        "comment": "qrwqtyyy",
         "items": [
-            {
-                "id": 2,
-                "title": "Frontend: React",
-                "price": "от 50 000 ₽",
-                "icon": "⚛️",
-                "duration": "10 недель • 4-6 часов в неделю",
-                "added_at": 1774425006
-            },
             {
                 "id": 1,
                 "title": "Python-разработчик",
-                "price": "от 54 000 ₽",
-                "icon": "🐍",
+                "price": "54 000 ₽",
+                "icon": "PY",
                 "duration": "12 недель • 3-5 часов в неделю",
-                "added_at": 1774425006
-            },
-            {
-                "id": 3,
-                "title": "SQL и базы данных",
-                "price": "от 32 000 ₽",
-                "icon": "🗄️",
-                "duration": "8 недель • 3-4 часа в неделю",
-                "added_at": 1774425007
-            },
-            {
-                "id": 4,
-                "title": "Machine Learning",
-                "price": "от 112 000 ₽",
-                "icon": "🤖",
-                "duration": "16 недель • 5-7 часов в неделю",
-                "added_at": 1774425008
-            },
-            {
-                "id": 5,
-                "title": "Web3 & Blockchain",
-                "price": "от 91 000 ₽",
-                "icon": "🌐",
-                "duration": "14 недель • 4-6 часов в неделю",
-                "added_at": 1774425009
-            },
-            {
-                "id": 6,
-                "title": "Mobile Dev (Flutter)",
-                "price": "от 66 000 ₽",
-                "icon": "📱",
-                "duration": "12 недель • 4-5 часов в неделю",
-                "added_at": 1774425009
+                "added_at": 1774432057
             }
         ],
-        "total": 405000,
+        "total": 54000,
         "status": "pending",
-        "created_at": "2026-03-25 08:56:40",
+        "created_at": "2026-03-25 10:47:51",
         "ip": "::1"
     }
 ]
