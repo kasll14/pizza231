@@ -8,6 +8,11 @@ $resource = trim($path, '/');
 $resource = preg_replace('/[^a-zA-Z0-9\-_\/]/', '', $resource);
 
 // Маршруты корзины
+if ($resource === 'cart/count' && $_SERVER['REQUEST_METHOD'] === 'GET') {
+$controller = new CartController();
+$controller->getCountJson();
+exit;
+}
 if ($resource === 'cart/add' && $_SERVER['REQUEST_METHOD'] === 'POST') {
     $controller = new CartController();
     $controller->add();
