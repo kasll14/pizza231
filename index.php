@@ -1,51 +1,26 @@
 <?php
-// 🌐 LANG: Добавлена поддержка сессии для языка
 session_start();
 
-// 🌐 LANG: 1. СНАЧАЛА регистрируем автозагрузчик
+use Lib\Language;
+
 spl_autoload_register(function ($class) {
-    // Преобразуем пространство имен в путь к файлу
     $class = ltrim($class, '\\');
-    
-    // 🌐 LANG: Проверка для Lib namespace
     if (strpos($class, 'Lib\\') === 0) {
         $fileName = __DIR__ . '/Lib/' . substr($class, 4) . '.php';
-        if (file_exists($fileName)) {
-            require $fileName;
-            return;
-        }
+        if (file_exists($fileName)) { require $fileName; return; }
     }
-    
-    // Проверка для Controllers namespace
     if (strpos($class, 'Controllers\\') === 0) {
         $fileName = __DIR__ . '/Controllers/' . substr($class, 12) . '.php';
-        if (file_exists($fileName)) {
-            require $fileName;
-            return;
-        }
+        if (file_exists($fileName)) { require $fileName; return; }
     }
-    
-    // Проверка для Views namespace
     if (strpos($class, 'Views\\') === 0) {
         $fileName = __DIR__ . '/Views/' . substr($class, 6) . '.php';
-        if (file_exists($fileName)) {
-            require $fileName;
-            return;
-        }
-    }
-    
-    // Общий путь
-    $fileName = __DIR__ . '/' . str_replace('\\', '/', $class) . '.php';
-    if (file_exists($fileName)) {
-        require $fileName;
+        if (file_exists($fileName)) { require $fileName; return; }
     }
 });
 
-// 🌐 LANG: 2. ТЕПЕРЬ инициализируем язык (после автозагрузчика!)
-use Lib\Language;
 Language::init();
 
-// 🌐 LANG: 3. Обработка переключения языка
 if (isset($_GET['lang']) && in_array($_GET['lang'], ['ru', 'en'])) {
     $_SESSION['lang'] = $_GET['lang'];
     $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
@@ -53,10 +28,76 @@ if (isset($_GET['lang']) && in_array($_GET['lang'], ['ru', 'en'])) {
     exit;
 }
 
-// Простая маршрутизация
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 switch ($uri) {
+    // 🔐 ДОБАВЛЕНО: Маршруты для подтверждения кодом
+    case '/auth/verify-code':
+        $controller = new Controllers\AuthController();
+        echo $controller->verifyCode();
+        break;
+    case '/auth/resend-code':
+        $controller = new Controllers\AuthController();
+        $controller->resendCode();
+        break;
+    
+    // === СУЩЕСТВУЮЩИЕ МАРШРУТЫ ===
+    case '/auth/register':
+        $controller = new Controllers\AuthController();
+        echo $controller->register();
+        break;
+    case '/auth/login':
+        $controller = new Controllers\AuthController();
+        echo $controller->login();
+        break;
+    case '/auth/logout':
+        $controller = new Controllers\AuthController();
+        $controller->logout();
+        break;
+    case '/auth/forgot-password':
+        $controller = new Controllers\AuthController();
+        echo $controller->forgotPassword();
+        break;
+    case '/auth/reset-password':
+        $controller = new Controllers\AuthController();
+        echo $controller->resetPassword();
+        break;
+    case '/profile':
+        $controller = new Controllers\ProfileController();
+        echo $controller->index();
+        break;
+    case '/profile/edit':
+        $controller = new Controllers\ProfileController();
+        echo $controller->edit();
+        break;
+    case '/profile/orders':
+        $controller = new Controllers\ProfileController();
+        echo $controller->orders();
+        break;
+    case '/admin':
+        $controller = new Controllers\AdminController();
+        echo $controller->index();
+        break;
+    case '/admin/orders':
+        $controller = new Controllers\AdminController();
+        echo $controller->orders();
+        break;
+    case '/admin/order':
+        $controller = new Controllers\AdminController();
+        echo $controller->orderDetail();
+        break;
+    case '/admin/order/update':
+        $controller = new Controllers\AdminController();
+        $controller->updateOrderStatus();
+        break;
+    case '/admin/users':
+        $controller = new Controllers\AdminController();
+        echo $controller->users();
+        break;
+    case '/admin/user/delete':
+        $controller = new Controllers\AdminController();
+        $controller->deleteUser();
+        break;
     case '/':
     case '/home':
         $controller = new Controllers\HomeController();

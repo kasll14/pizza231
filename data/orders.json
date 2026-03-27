@@ -42,5 +42,122 @@
         "status": "pending",
         "created_at": "2026-03-27 08:58:00",
         "ip": "::1"
+    },
+    {
+        "id": "ORD-20260327-8A76B4",
+        "name": "Гарчиханов Ислам Магомедсалиевич Милевский Владислав Анатольевич",
+        "email": "toni.maslennikov.08@inbox.ru",
+        "phone": "+7 (251) 256-46-42",
+        "payment_method": "card",
+        "comment": "",
+        "items": [
+            {
+                "id": 2,
+                "title": "Frontend: React",
+                "price": "50 000 ₽",
+                "icon": "RX",
+                "duration": "10 недель • 4-6 часов в неделю",
+                "added_at": 1774599914
+            }
+        ],
+        "total": 50000,
+        "status": "pending",
+        "created_at": "2026-03-27 09:25:28",
+        "ip": "::1"
+    },
+    {
+        "id": "ORD-20260327-78E4AF",
+        "name": "Гарчиханов Ислам Магомедсалиевич Милевский Владислав Анатольевич",
+        "email": "toni.maslennikov.08@inbox.ru",
+        "phone": "+7 (251) 256-46-42",
+        "payment_method": "card",
+        "comment": "",
+        "items": [
+            {
+                "id": 2,
+                "title": "Frontend: React",
+                "price": "50 000 ₽",
+                "icon": "RX",
+                "duration": "10 недель • 4-6 часов в неделю",
+                "added_at": 1774600124
+            }
+        ],
+        "total": 50000,
+        "status": "pending",
+        "created_at": "2026-03-27 09:28:55",
+        "ip": "::1"
+    },
+    {
+        "id": "ORD-20260327-FBA22F",
+        "name": "Гарчиханов Ислам Магомедсалиевич Милевский Владислав Анатольевич",
+        "email": "toni.maslennikov.08@inbox.ru",
+        "phone": "+7 (251) 256-46-42",
+        "payment_method": "card",
+        "comment": "",
+        "items": [
+            {
+                "id": 2,
+                "title": "Frontend: React",
+                "price": "50 000 ₽",
+                "icon": "RX",
+                "duration": "10 недель • 4-6 часов в неделю",
+                "added_at": 1774601654
+            }
+        ],
+        "total": 50000,
+        "status": "pending",
+        "created_at": "2026-03-27 09:54:23",
+        "ip": "::1",
+        "user_id": null,
+        "user_email": null
+    },
+    {
+        "id": "ORD-20260327-D7663B",
+        "name": "Гарчиханов Ислам Магомедсалиевич Милевский Владислав Анатольевич",
+        "email": "toni.maslennikov.08@inbox.ru",
+        "phone": "+7 (251) 256-46-42",
+        "payment_method": "card",
+        "comment": "",
+        "items": [
+            {
+                "id": 3,
+                "title": "SQL и базы данных",
+                "price": "32 000 ₽",
+                "icon": "DB",
+                "duration": "8 недель • 3-4 часа в неделю",
+                "added_at": 1774603539
+            },
+            {
+                "id": 4,
+                "title": "Machine Learning",
+                "price": "112 000 ₽",
+                "icon": "ML",
+                "duration": "16 недель • 5-7 часов в неделю",
+                "added_at": 1774603540
+            },
+            {
+                "id": 1,
+                "title": "Python-разработчик",
+                "price": "54 000 ₽",
+                "icon": "PY",
+                "duration": "12 недель • 3-5 часов в неделю",
+                "added_at": 1774603541
+            },
+            {
+                "id": 2,
+                "title": "Frontend: React",
+                "price": "50 000 ₽",
+                "icon": "RX",
+                "duration": "10 недель • 4-6 часов в неделю",
+                "added_at": 1774603542
+            }
+        ],
+        "total": 248000,
+        "status": "cancelled",
+        "created_at": "2026-03-27 10:25:49",
+        "ip": "::1",
+        "user_id": 2,
+        "user_email": "toni.maslennikov.08@inbox.ru",
+        "updated_at": "2026-03-27 10:27:09"
     }
 ]
