@@ -60,6 +60,9 @@ class BaseTemplate
         $authProfile = Language::get('auth_profile');
         $authLogout = Language::get('auth_logout');
         $authAdmin = Language::get('auth_admin_panel');
+        $themeToggle = Language::get('theme_toggle');
+        $themeLight = Language::get('theme_light');
+        $themeDark = Language::get('theme_dark');
 
         return '<!DOCTYPE html>
 <html lang="' . $currentLang . '" data-theme="' . $defaultTheme . '">
@@ -70,6 +73,24 @@ class BaseTemplate
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* 🌙 ТЁМНАЯ ТЕМА: Отключение переходов при загрузке */
+        :root, body, .navbar, .card, .alert-success, .alert-error,
+        .cart-container, .cart-item, .cart-summary, .auth-container,
+        .profile-container, .admin-container, .checkout-container,
+        .success-container, .feature-box, .course-card, .cta-section,
+        .order-detail, .users-table, .orders-table, .logs-container,
+        .form-control, .form-select, .btn, footer {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+        }
+        .no-transitions, .no-transitions *, .no-transitions *:before, .no-transitions *:after {
+            transition: none !important;
+            animation: none !important;
+        }
+        body.loaded .no-transitions, body.loaded .no-transitions *,
+        body.loaded .no-transitions *:before, body.loaded .no-transitions *:after {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+            animation: initial !important;
+        }
         /* 🌙 ТЁМНАЯ ТЕМА: CSS переменные для светлой и тёмной темы */
         :root {
             --primary: #2c5282;
@@ -92,8 +113,6 @@ class BaseTemplate
             --badge-bg: #ebf4ff;
             --badge-text: #2c5282;
         }
-
-        /* 🌙 ТЁМНАЯ ТЕМА: Переменные для тёмной темы */
         [data-theme="dark"] {
             --primary: #4299e1;
             --primary-dark: #2c5282;
@@ -115,29 +134,23 @@ class BaseTemplate
             --badge-bg: #2c5282;
             --badge-text: #90cdf4;
         }
-
         body {
             font-family: "Inter", system-ui, -apple-system, sans-serif;
             color: var(--text);
             background: var(--background);
             line-height: 1.6;
-            transition: background-color 0.3s ease, color 0.3s ease;
         }
-
         .navbar {
             background: var(--surface) !important;
             border-bottom: 1px solid var(--border);
             padding: 0.75rem 0;
             box-shadow: var(--shadow);
-            transition: background-color 0.3s ease, border-color 0.3s ease;
         }
-
         .navbar-brand {
             font-weight: 700;
             color: var(--text) !important;
             font-size: 1.25rem;
         }
-
         .nav-link {
             color: var(--text) !important;
             font-weight: 500;
@@ -146,18 +159,15 @@ class BaseTemplate
             transition: color 0.2s, background-color 0.2s;
             border-radius: 6px;
         }
-
         .nav-link:hover, .nav-link.active {
             color: var(--primary) !important;
             background: var(--surface-hover);
         }
-
         .cart-link {
             position: relative;
             display: inline-flex;
             align-items: center;
         }
-
         .cart-count {
             background: var(--danger);
             color: white;
@@ -172,7 +182,6 @@ class BaseTemplate
             text-align: center;
             line-height: 1.4;
         }
-
         .navbar-collapse {
             margin-top: 1rem;
             padding: 1rem;
@@ -180,16 +189,11 @@ class BaseTemplate
             border-radius: 12px;
             box-shadow: var(--shadow-lg);
         }
-
         .navbar-nav {
             flex-direction: column;
             gap: 0.5rem;
         }
-
-        .nav-item {
-            width: 100%;
-        }
-
+        .nav-item { width: 100%; }
         .lang-switcher-mobile {
             display: flex;
             align-items: center;
@@ -199,7 +203,6 @@ class BaseTemplate
             border-radius: 8px;
             margin: 1rem 0;
         }
-
         .lang-switcher-mobile a {
             padding: 0.5rem 0.75rem;
             border-radius: 6px;
@@ -209,23 +212,17 @@ class BaseTemplate
             color: var(--text-muted);
             transition: all 0.2s;
         }
-
         .lang-switcher-mobile a:hover {
             color: var(--primary);
             background: var(--surface);
         }
-
         .lang-switcher-mobile a.active {
             color: var(--primary);
             background: var(--surface);
             font-weight: 600;
             box-shadow: var(--shadow);
         }
-
-        .lang-divider {
-            color: var(--border);
-        }
-
+        .lang-divider { color: var(--border); }
         /* 🌙 ТЁМНАЯ ТЕМА: Переключатель темы */
         .theme-switcher {
             display: flex;
@@ -235,7 +232,6 @@ class BaseTemplate
             padding-left: 1rem;
             border-left: 1px solid var(--border);
         }
-
         .theme-toggle-btn {
             background: var(--surface-hover);
             border: 1px solid var(--border);
@@ -248,19 +244,16 @@ class BaseTemplate
             justify-content: center;
             color: var(--text);
         }
-
         .theme-toggle-btn:hover {
             background: var(--primary);
             color: white;
             border-color: var(--primary);
         }
-
         .theme-toggle-btn svg {
             width: 20px;
             height: 20px;
             fill: currentColor;
         }
-
         .theme-toggle-mobile {
             display: flex;
             align-items: center;
@@ -275,18 +268,15 @@ class BaseTemplate
             cursor: pointer;
             border: 1px solid var(--border);
         }
-
         .theme-toggle-mobile:hover {
             background: var(--primary);
             color: white;
         }
-
         .user-mobile-section {
             border-top: 1px solid var(--border);
             padding-top: 1rem;
             margin-top: 1rem;
         }
-
         .user-mobile-info {
             display: flex;
             align-items: center;
@@ -296,7 +286,6 @@ class BaseTemplate
             border-radius: 8px;
             margin-bottom: 1rem;
         }
-
         .user-mobile-avatar {
             width: 40px;
             height: 40px;
@@ -310,20 +299,17 @@ class BaseTemplate
             font-size: 1rem;
             flex-shrink: 0;
         }
-
         .user-mobile-name {
             flex: 1;
             font-weight: 500;
             color: var(--text);
             font-size: 0.95rem;
         }
-
         .user-mobile-buttons {
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
         }
-
         .user-mobile-buttons a {
             padding: 0.75rem 1rem;
             border-radius: 8px;
@@ -336,60 +322,49 @@ class BaseTemplate
             justify-content: center;
             gap: 0.5rem;
         }
-
         .btn-mobile-profile {
             background: var(--surface-hover);
             color: var(--text);
             border: 1px solid var(--border);
         }
-
         .btn-mobile-profile:hover {
             background: var(--border);
             color: var(--text);
         }
-
         .btn-mobile-admin {
             background: var(--danger);
             color: white;
         }
-
         .btn-mobile-admin:hover {
             background: #c53030;
             color: white;
         }
-
         .btn-mobile-logout {
             background: transparent;
             color: var(--danger);
             border: 1px solid var(--danger);
         }
-
         .btn-mobile-logout:hover {
             background: var(--danger);
             color: white;
         }
-
         .btn-mobile-login {
             background: var(--primary);
             color: white;
         }
-
         .btn-mobile-login:hover {
             background: var(--primary-dark);
             color: white;
         }
-
         .btn-mobile-register {
             background: transparent;
             color: var(--primary);
             border: 1px solid var(--primary);
         }
-
         .btn-mobile-register:hover {
             background: var(--primary);
             color: white;
         }
-
         .lang-switcher-desktop {
             display: flex;
             align-items: center;
@@ -398,7 +373,6 @@ class BaseTemplate
             padding-left: 1.5rem;
             border-left: 1px solid var(--border);
         }
-
         .lang-switcher-desktop a {
             padding: 0.4rem 0.75rem;
             border-radius: 6px;
@@ -408,18 +382,15 @@ class BaseTemplate
             color: var(--text-muted);
             transition: all 0.2s;
         }
-
         .lang-switcher-desktop a:hover {
             color: var(--primary);
             background: var(--surface-hover);
         }
-
         .lang-switcher-desktop a.active {
             color: var(--primary);
             background: var(--badge-bg);
             font-weight: 600;
         }
-
         .user-menu-desktop {
             display: flex;
             align-items: center;
@@ -428,7 +399,6 @@ class BaseTemplate
             padding-left: 1.5rem;
             border-left: 1px solid var(--border);
         }
-
         .user-avatar-desktop {
             width: 36px;
             height: 36px;
@@ -441,7 +411,6 @@ class BaseTemplate
             font-weight: 600;
             font-size: 0.9rem;
         }
-
         .user-menu-desktop a {
             padding: 0.5rem 1rem;
             border-radius: 6px;
@@ -451,14 +420,12 @@ class BaseTemplate
             transition: all 0.2s;
             white-space: nowrap;
         }
-
         .toast-container {
             position: fixed;
             top: 20px;
             right: 20px;
             z-index: 9999;
         }
-
         .toast-notification {
             background: var(--success);
             color: white;
@@ -469,13 +436,11 @@ class BaseTemplate
             animation: slideIn 0.3s ease;
             font-weight: 500;
         }
-
         .toast-notification.show {
             display: flex;
             align-items: center;
             gap: 0.75rem;
         }
-
         .toast-close {
             background: none;
             border: none;
@@ -485,33 +450,19 @@ class BaseTemplate
             opacity: 0.9;
             margin-left: 0.5rem;
         }
-
-        .toast-close:hover {
-            opacity: 1;
-        }
-
+        .toast-close:hover { opacity: 1; }
         @keyframes slideIn {
             from { transform: translateX(100%); opacity: 0; }
             to { transform: translateX(0); opacity: 1; }
         }
-
         footer {
             background: var(--primary-dark);
             color: rgba(255,255,255,0.85);
             padding: 2.5rem 0 1.5rem;
             margin-top: 4rem;
-            transition: background-color 0.3s ease;
         }
-
-        footer a {
-            color: rgba(255,255,255,0.9);
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: white;
-        }
-
+        footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+        footer a:hover { color: white; }
         .btn-primary {
             background: var(--primary);
             border-color: var(--primary);
@@ -520,39 +471,30 @@ class BaseTemplate
             border-radius: 6px;
             color: white;
         }
-
         .btn-primary:hover {
             background: var(--primary-dark);
             border-color: var(--primary-dark);
             color: white;
         }
-
         .btn-outline-primary {
             background: transparent;
             border-color: var(--primary);
             color: var(--primary);
         }
-
         .btn-outline-primary:hover {
             background: var(--primary);
             color: white;
         }
-
         .btn-outline-danger {
             background: transparent;
             border-color: var(--danger);
             color: var(--danger);
         }
-
         .btn-outline-danger:hover {
             background: var(--danger);
             color: white;
         }
-
-        .container {
-            max-width: 1200px;
-        }
-
+        .container { max-width: 1200px; }
         @media (max-width: 991px) {
             .navbar-toggler {
                 border: 1px solid var(--border);
@@ -564,7 +506,6 @@ class BaseTemplate
                 display: none !important;
             }
         }
-
         @media (min-width: 992px) {
             .lang-switcher-mobile,
             .user-mobile-section,
@@ -572,37 +513,42 @@ class BaseTemplate
                 display: none !important;
             }
         }
-
         .form-control, .form-select {
             background: var(--surface);
             border-color: var(--border);
             color: var(--text);
         }
-
         .form-control:focus, .form-select:focus {
             background: var(--surface);
             border-color: var(--primary);
             color: var(--text);
             box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
         }
-
         .card {
             background: var(--surface);
             border-color: var(--border);
         }
-
         .alert-success {
             background: rgba(56, 161, 105, 0.15);
             color: var(--success);
             border: 1px solid var(--success);
         }
-
         .alert-error {
             background: rgba(229, 62, 62, 0.15);
             color: var(--danger);
             border: 1px solid var(--danger);
         }
     </style>
+    <!-- 🌙 ТЁМНАЯ ТЕМА: Мгновенное применение темы до рендеринга -->
+    <script>
+    (function() {
+        var savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+            document.documentElement.setAttribute("data-theme", savedTheme);
+            document.documentElement.classList.add("no-transitions");
+        }
+    })();
+    </script>
 </head>
 <body>
     <div class="toast-container">
@@ -633,7 +579,7 @@ class BaseTemplate
                     ' . $langSwitcher . '
                 </div>
                 <div class="theme-switcher">
-                    <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Переключить тему">
+                    <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="' . $themeToggle . '">
                         <svg class="sun-icon" viewBox="0 0 24 24" style="display: ' . ($defaultTheme === 'light' ? 'block' : 'none') . ';">
                             <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
                         </svg>
@@ -658,12 +604,12 @@ class BaseTemplate
                 </div>
                 <div class="theme-toggle-mobile" onclick="toggleTheme()">
                     <svg class="sun-icon" viewBox="0 0 24 24" style="width:20px;height:20px;display: ' . ($defaultTheme === 'light' ? 'block' : 'none') . ';">
-                        <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
+                        <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
                     </svg>
                     <svg class="moon-icon" viewBox="0 0 24 24" style="width:20px;height:20px;display: ' . ($defaultTheme === 'dark' ? 'block' : 'none') . ';">
                         <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/>
                     </svg>
-                    <span style="margin-left:0.5rem">' . ($defaultTheme === 'light' ? 'Тёмная тема' : 'Светлая тема') . '</span>
+                    <span style="margin-left:0.5rem">' . ($defaultTheme === 'light' ? $themeDark : $themeLight) . '</span>
                 </div>
                 ' . ($isLoggedIn ? '
                     <div class="user-mobile-section">
@@ -726,22 +672,17 @@ class BaseTemplate
             var newTheme = currentTheme === "dark" ? "light" : "dark";
             html.setAttribute("data-theme", newTheme);
             localStorage.setItem("theme", newTheme);
-
-            // Обновляем иконки
             document.querySelectorAll(".sun-icon").forEach(function(icon) {
                 icon.style.display = newTheme === "light" ? "block" : "none";
             });
             document.querySelectorAll(".moon-icon").forEach(function(icon) {
                 icon.style.display = newTheme === "dark" ? "block" : "none";
             });
-
-            // Обновляем текст в мобильной кнопке
             var mobileText = document.querySelector(".theme-toggle-mobile span");
             if (mobileText) {
-                mobileText.textContent = newTheme === "light" ? "Тёмная тема" : "Светлая тема";
+                mobileText.textContent = newTheme === "light" ? "' . $themeDark . '" : "' . $themeLight . '";
             }
         }
-
         // 🌙 ТЁМНАЯ ТЕМА: Применение сохранённой темы при загрузке
         document.addEventListener("DOMContentLoaded", function() {
             var savedTheme = localStorage.getItem("theme");
@@ -755,11 +696,15 @@ class BaseTemplate
                 });
                 var mobileText = document.querySelector(".theme-toggle-mobile span");
                 if (mobileText) {
-                    mobileText.textContent = savedTheme === "light" ? "Тёмная тема" : "Светлая тема";
+                    mobileText.textContent = savedTheme === "light" ? "' . $themeDark . '" : "' . $themeLight . '";
                 }
             }
+            // ✅ Включаем переходы после загрузки страницы
+            setTimeout(function() {
+                document.documentElement.classList.remove("no-transitions");
+                document.body.classList.add("loaded");
+            }, 100);
         });
-
         function showToast(message, duration) {
             duration = duration || 3000;
             var toast = document.getElementById("cartToast");

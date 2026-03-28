@@ -37,6 +37,14 @@ class OrderTemplate extends BaseTemplate
                 margin-bottom: 2rem;
             }
             
+            .checkout-header h2 {
+                color: var(--text) !important;
+            }
+            
+            .checkout-header p {
+                color: var(--text-muted) !important;
+            }
+            
             .order-summary {
                 background: var(--surface-hover);
                 border-radius: 8px;
@@ -52,6 +60,7 @@ class OrderTemplate extends BaseTemplate
                 padding: 0.75rem 0;
                 border-bottom: 1px solid var(--border);
                 transition: border-color 0.3s ease;
+                color: var(--text) !important;
             }
             
             .order-item:last-child {
@@ -70,9 +79,15 @@ class OrderTemplate extends BaseTemplate
             .form-section-title {
                 font-size: 1.1rem;
                 font-weight: 600;
-                color: var(--text);
+                color: var(--text) !important;
                 margin-bottom: 1rem;
-                transition: color 0.3s ease;
+            }
+            
+            .form-label {
+                color: var(--text) !important;
+                font-weight: 500;
+                margin-bottom: 0.5rem;
+                display: block;
             }
             
             .form-control-lg {
@@ -80,15 +95,40 @@ class OrderTemplate extends BaseTemplate
                 border: 1px solid var(--border);
                 padding: 0.75rem 1rem;
                 background: var(--surface);
-                color: var(--text);
+                color: var(--text) !important;
                 transition: all 0.3s ease;
+                width: 100%;
             }
             
             .form-control-lg:focus {
                 border-color: var(--primary);
                 box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
                 background: var(--surface);
-                color: var(--text);
+                color: var(--text) !important;
+                outline: none;
+            }
+            
+            /* 🌙 ТЁМНАЯ ТЕМА: Светлые placeholder\'ы */
+            .form-control-lg::placeholder {
+                color: #a0aec0;
+                opacity: 0.9;
+            }
+            
+            [data-theme="dark"] .form-control-lg {
+                background: #2d3748;
+                border-color: #4a5568;
+                color: #e2e8f0 !important;
+            }
+            
+            [data-theme="dark"] .form-control-lg:focus {
+                background: #2d3748;
+                border-color: #4299e1;
+                color: #e2e8f0 !important;
+            }
+            
+            [data-theme="dark"] .form-control-lg::placeholder {
+                color: #a0aec0;
+                opacity: 0.9;
             }
             
             .payment-option {
@@ -111,6 +151,30 @@ class OrderTemplate extends BaseTemplate
                 background: var(--badge-bg);
             }
             
+            .payment-option label {
+                color: var(--text) !important;
+                font-weight: 500;
+                margin: 0;
+                cursor: pointer;
+                display: block;
+            }
+            
+            .payment-option small {
+                color: #a0aec0 !important;
+                opacity: 0.9;
+            }
+            
+            [data-theme="dark"] .payment-option {
+                background: #2d3748;
+                border-color: #4a5568;
+            }
+            
+            [data-theme="dark"] .payment-option:hover,
+            [data-theme="dark"] .payment-option.selected {
+                background: #2c5282;
+                border-color: #4299e1;
+            }
+            
             .btn-checkout-submit {
                 background: var(--primary);
                 border: none;
@@ -118,15 +182,16 @@ class OrderTemplate extends BaseTemplate
                 font-size: 1.1rem;
                 font-weight: 600;
                 border-radius: 6px;
-                color: white;
+                color: white !important;
                 width: 100%;
                 transition: background 0.3s ease;
                 min-height: 48px;
+                cursor: pointer;
             }
             
             .btn-checkout-submit:hover {
                 background: var(--primary-dark);
-                color: white;
+                color: white !important;
             }
             
             .error-message {
@@ -148,6 +213,27 @@ class OrderTemplate extends BaseTemplate
                 transition: all 0.3s ease;
             }
             
+            /* 🌙 ТЁМНАЯ ТЕМА: Специальные стили для тёмной темы */
+            [data-theme="dark"] .checkout-container {
+                background: #2d3748;
+                border-color: #4a5568;
+            }
+            
+            [data-theme="dark"] .order-summary {
+                background: #4a5568;
+                border-color: #4a5568;
+            }
+            
+            [data-theme="dark"] .form-section {
+                background: #4a5568;
+                border-color: #4a5568;
+            }
+            
+            [data-theme="dark"] .security-badge {
+                color: #a0aec0;
+                border-color: #4a5568;
+            }
+            
             @media (max-width: 768px) {
                 .checkout-container {
                     padding: 1.5rem;
@@ -163,10 +249,14 @@ class OrderTemplate extends BaseTemplate
         
         $orderItemsHtml = '';
         foreach ($cartItems as $item) {
+            // 🔧 ИСПРАВЛЕНИЕ: Проверка типа данных перед htmlspecialchars
+            $title = is_array($item['title']) ? '' : (string)$item['title'];
+            $price = is_array($item['price']) ? '' : (string)$item['price'];
+            
             $orderItemsHtml .= '
             <div class="order-item">
-                <span>' . htmlspecialchars($item['title']) . '</span>
-                <span class="fw-bold">' . htmlspecialchars($item['price']) . '</span>
+                <span>' . htmlspecialchars($title) . '</span>
+                <span class="fw-bold">' . htmlspecialchars($price) . '</span>
             </div>';
         }
         
@@ -179,18 +269,24 @@ class OrderTemplate extends BaseTemplate
             $errorHtml = '<div class="error-message">' . implode(', ', $errorMessages) . '</div>';
         }
         
+        // 🔧 ИСПРАВЛЕНИЕ: Проверка типа данных для полей формы
+        $nameValue = isset($data['name']) && !is_array($data['name']) ? htmlspecialchars((string)$data['name']) : '';
+        $emailValue = isset($data['email']) && !is_array($data['email']) ? htmlspecialchars((string)$data['email']) : '';
+        $phoneValue = isset($data['phone']) && !is_array($data['phone']) ? htmlspecialchars((string)$data['phone']) : '';
+        $commentValue = isset($data['comment']) && !is_array($data['comment']) ? htmlspecialchars((string)$data['comment']) : '';
+        
         $content = $customStyles . '
         <section class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="checkout-container">
                         <div class="checkout-header">
-                            <h2 class="display-6 fw-bold mb-2" style="color: var(--text);">' . Language::get('checkout_title') . '</h2>
-                            <p class="text-muted">' . Language::get('checkout_subtitle') . '</p>
+                            <h2 class="display-6 fw-bold mb-2">' . Language::get('checkout_title') . '</h2>
+                            <p class="mb-0">' . Language::get('checkout_subtitle') . '</p>
                         </div>
                         ' . $errorHtml . '
                         <div class="order-summary">
-                            <h4 class="fw-bold mb-3" style="color: var(--text);">' . Language::get('checkout_your_order') . '</h4>
+                            <h4 class="fw-bold mb-3">' . Language::get('checkout_your_order') . '</h4>
                             ' . $orderItemsHtml . '
                             <div class="order-item" style="border-top: 2px solid var(--primary); padding-top: 1rem; margin-top: 0.5rem;">
                                 <span class="fw-bold">' . Language::get('cart_total') . ':</span>
@@ -202,15 +298,15 @@ class OrderTemplate extends BaseTemplate
                                 <div class="form-section-title">' . Language::get('checkout_contact_info') . '</div>
                                 <div class="mb-3">
                                     <label class="form-label">' . Language::get('checkout_name') . ' *</label>
-                                    <input type="text" name="name" class="form-control form-control-lg" value="' . htmlspecialchars($data['name'] ?? '') . '" required placeholder="Иванов Иван Иванович">
+                                    <input type="text" name="name" class="form-control form-control-lg" value="' . $nameValue . '" required placeholder="Иванов Иван Иванович">
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">' . Language::get('checkout_email') . ' *</label>
-                                    <input type="email" name="email" class="form-control form-control-lg" value="' . htmlspecialchars($data['email'] ?? '') . '" required placeholder="example@mail.ru">
+                                    <input type="email" name="email" class="form-control form-control-lg" value="' . $emailValue . '" required placeholder="example@mail.ru">
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">' . Language::get('checkout_phone') . ' *</label>
-                                    <input type="tel" name="phone" class="form-control form-control-lg" value="' . htmlspecialchars($data['phone'] ?? '') . '" required placeholder="+7 (999) 000-00-00">
+                                    <input type="tel" name="phone" class="form-control form-control-lg" value="' . $phoneValue . '" required placeholder="+7 (999) 000-00-00">
                                 </div>
                             </div>
                             <div class="form-section">
@@ -219,27 +315,27 @@ class OrderTemplate extends BaseTemplate
                                     <label>
                                         <input type="radio" name="payment_method" value="card" checked>
                                         <strong>' . Language::get('checkout_payment_card') . '</strong>
-                                        <p class="text-muted small mb-0">Visa, MasterCard, МИР</p>
+                                        <p class="small mb-0" style="color: #a0aec0; opacity: 0.9;">Visa, MasterCard, МИР</p>
                                     </label>
                                 </div>
                                 <div class="payment-option" onclick="selectPayment(this)">
                                     <label>
                                         <input type="radio" name="payment_method" value="sbp">
                                         <strong>' . Language::get('checkout_payment_sbp') . '</strong>
-                                        <p class="text-muted small mb-0">' . Language::get('checkout_payment_sbp') . '</p>
+                                        <p class="small mb-0" style="color: #a0aec0; opacity: 0.9;">' . Language::get('checkout_payment_sbp') . '</p>
                                     </label>
                                 </div>
                                 <div class="payment-option" onclick="selectPayment(this)">
                                     <label>
                                         <input type="radio" name="payment_method" value="invoice">
                                         <strong>' . Language::get('checkout_payment_invoice') . '</strong>
-                                        <p class="text-muted small mb-0">' . Language::get('checkout_payment_invoice') . '</p>
+                                        <p class="small mb-0" style="color: #a0aec0; opacity: 0.9;">' . Language::get('checkout_payment_invoice') . '</p>
                                     </label>
                                 </div>
                             </div>
                             <div class="form-section">
                                 <div class="form-section-title">' . Language::get('checkout_comment') . '</div>
-                                <textarea name="comment" class="form-control form-control-lg" rows="3" placeholder="' . Language::get('checkout_comment_placeholder') . '">' . htmlspecialchars($data['comment'] ?? '') . '</textarea>
+                                <textarea name="comment" class="form-control form-control-lg" rows="3" placeholder="' . Language::get('checkout_comment_placeholder') . '">' . $commentValue . '</textarea>
                             </div>
                             <button type="submit" class="btn-checkout-submit">' . Language::get('checkout_submit') . '</button>
                             <div class="security-badge">' . Language::get('checkout_security') . '</div>
@@ -331,6 +427,39 @@ class OrderTemplate extends BaseTemplate
                 flex-shrink: 0;
             }
             
+            /* 🌙 ТЁМНАЯ ТЕМА: Улучшенная читаемость текста */
+            .step strong {
+                color: var(--text) !important;
+                display: block;
+                margin-bottom: 0.25rem;
+            }
+            
+            .step p {
+                color: var(--text-muted) !important;
+                opacity: 0.95 !important;
+                margin: 0;
+            }
+            
+            /* 🌙 ТЁМНАЯ ТЕМА: Специальные стили для тёмной темы */
+            [data-theme="dark"] .success-container {
+                background: #2d3748;
+                border-color: #4a5568;
+            }
+            
+            [data-theme="dark"] .success-steps {
+                background: #4a5568;
+                border-color: #4a5568;
+            }
+            
+            [data-theme="dark"] .step p {
+                color: #cbd5e0 !important;
+                opacity: 1 !important;
+            }
+            
+            [data-theme="dark"] .step strong {
+                color: #e2e8f0 !important;
+            }
+            
             @media (max-width: 576px) {
                 .success-container {
                     padding: 2rem 1rem;
@@ -345,29 +474,29 @@ class OrderTemplate extends BaseTemplate
                     <div class="success-container">
                         <div class="success-icon">✓</div>
                         <h2 class="display-5 fw-bold mb-3" style="color: var(--text);">' . Language::get('order_success_title') . '</h2>
-                        <p class="lead text-muted">' . Language::get('order_success_message') . '</p>
+                        <p class="lead" style="color: var(--text-muted); opacity: 0.95;">' . Language::get('order_success_message') . '</p>
                         <div class="order-number">' . Language::get('order_number') . ' ' . htmlspecialchars($orderId) . '</div>
                         <div class="success-steps">
                             <h4 class="fw-bold mb-3" style="color: var(--text);">' . Language::get('order_next_steps') . '</h4>
                             <div class="step">
                                 <div class="step-number">1</div>
                                 <div>
-                                    <strong style="color: var(--text);">' . Language::get('order_step1_title') . '</strong>
-                                    <p class="text-muted small mb-0">' . Language::get('order_step1_desc') . '</p>
+                                    <strong>' . Language::get('order_step1_title') . '</strong>
+                                    <p>' . Language::get('order_step1_desc') . '</p>
                                 </div>
                             </div>
                             <div class="step">
                                 <div class="step-number">2</div>
                                 <div>
-                                    <strong style="color: var(--text);">' . Language::get('order_step2_title') . '</strong>
-                                    <p class="text-muted small mb-0">' . Language::get('order_step2_desc') . '</p>
+                                    <strong>' . Language::get('order_step2_title') . '</strong>
+                                    <p>' . Language::get('order_step2_desc') . '</p>
                                 </div>
                             </div>
                             <div class="step">
                                 <div class="step-number">3</div>
                                 <div>
-                                    <strong style="color: var(--text);">' . Language::get('order_step3_title') . '</strong>
-                                    <p class="text-muted small mb-0">' . Language::get('order_step3_desc') . '</p>
+                                    <strong>' . Language::get('order_step3_title') . '</strong>
+                                    <p>' . Language::get('order_step3_desc') . '</p>
                                 </div>
                             </div>
                         </div>

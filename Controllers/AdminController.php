@@ -2,9 +2,9 @@
 // 🔐 НОВЫЙ ФАЙЛ: Controllers/AdminController.php
 // Контроллер админ-панели
 namespace Controllers;
-
 use Lib\User;
 use Lib\Language;
+use Lib\Logger; // 📝 LOGGER: Добавлен импорт
 use Views\AdminTemplate;
 
 class AdminController
@@ -29,6 +29,11 @@ class AdminController
             'recentOrders' => array_slice(array_values(array_reverse($orders)), 0, 10)
         ];
         
+        // 📝 LOGGER: Логирование доступа к админ-панели
+        Logger::info("Доступ к админ-панели", [
+            'user_id' => $_SESSION['user_id'] ?? 'unknown'
+        ]);
+        
         return AdminTemplate::getDashboardTemplate($stats);
     }
     
@@ -50,7 +55,7 @@ class AdminController
         
         $search = $_GET['search'] ?? '';
         if (!empty($search)) {
-            $orders = array_filter($orders, fn($o) => 
+            $orders = array_filter($orders, fn($o) =>
                 stripos($o['id'], $search) !== false ||
                 stripos($o['name'], $search) !== false ||
                 stripos($o['email'], $search) !== false
@@ -110,8 +115,10 @@ class AdminController
         $ordersFile = __DIR__ . '/../data/orders.json';
         $orders = file_exists($ordersFile) ? json_decode(file_get_contents($ordersFile), true) ?? [] : [];
         
+        $oldStatus = null;
         foreach ($orders as $key => $order) {
             if ($order['id'] === $orderId) {
+                $oldStatus = $orders[$key]['status'];
                 $orders[$key]['status'] = $status;
                 $orders[$key]['updated_at'] = date('Y-m-d H:i:s');
                 break;
@@ -120,7 +127,15 @@ class AdminController
         
         file_put_contents($ordersFile, json_encode($orders, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
         
-        if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && 
+        // 📝 LOGGER: Логирование обновления статуса заказа
+        Logger::info("Статус заказа обновлён", [
+            'order_id' => $orderId,
+            'old_status' => $oldStatus,
+            'new_status' => $status,
+            'admin_id' => $_SESSION['user_id'] ?? 'unknown'
+        ]);
+        
+        if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) &&
             strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest') {
             header('Content-Type: application/json');
             echo json_encode(['success' => true]);
@@ -138,6 +153,7 @@ class AdminController
             header('Location: /');
             exit;
         }
+        
         return AdminTemplate::getUsersTemplate(User::getAllUsers());
     }
     
@@ -150,19 +166,58 @@ class AdminController
         }
         
         $userId = $_POST['user_id'] ?? 0;
+        
         if ($userId == 1) {
             header('Location: /admin/users?error=cannot_delete_admin');
             exit;
         }
         
         $users = User::getAllUsers();
+        
         if (isset($users[$userId])) {
+            $deletedUser = $users[$userId];
             unset($users[$userId]);
-            $content = "<?php\n// data/users.php\nreturn " . var_export($users, true) . ";\n";
+            
+            $content = "<?php\n// data/users.php\nreturn " . var_export($users, true) . ";";
             file_put_contents(__DIR__ . '/../data/users.php', $content);
+            
+            // 📝 LOGGER: Логирование удаления пользователя
+            Logger::warning("Пользователь удалён", [
+                'deleted_user_id' => $userId,
+                'deleted_user_email' => $deletedUser['email'] ?? 'unknown',
+                'admin_id' => $_SESSION['user_id'] ?? 'unknown'
+            ]);
         }
         
         header('Location: /admin/users?success=deleted');
         exit;
+    }
+    
+    public function logs(): string
+    {
+        if (!User::isAdmin()) {
+            header('Location: /');
+            exit;
+        }
+        
+        $action = $_GET['action'] ?? 'view';
+        $limit = (int)($_GET['limit'] ?? 100);
+        
+        if ($action === 'clear' && $_SERVER['REQUEST_METHOD'] === 'POST') {
+            Logger::clearLogs();
+            
+            // 📝 LOGGER: Логирование очистки логов
+            Logger::info("Логи очищены администратором", [
+                'admin_id' => $_SESSION['user_id'] ?? 'unknown'
+            ]);
+            
+            header('Location: /admin/logs?success=cleared');
+            exit;
+        }
+        
+        $logs = Logger::getLogs($limit);
+        $stats = Logger::getStats();
+        
+        return AdminTemplate::getLogsTemplate($logs, $stats, $limit);
     }
 }

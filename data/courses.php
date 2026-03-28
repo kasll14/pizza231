@@ -1,127 +1,125 @@
 <?php
 // data/courses.php
-// Централизованное хранилище данных о курсах
-
+// Централизованное хранилище данных о курсах (многоязычное)
 return [
     1 => [
         'id' => 1,
-        'title' => 'Python-разработчик',
+        'title' => ['ru' => 'Python-разработчик', 'en' => 'Python Developer'],
         'icon' => 'PY',
-        'description' => 'От основ программирования до создания полноценных веб-приложений.',
+        'description' => ['ru' => 'От основ программирования до создания полноценных веб-приложений.', 'en' => 'From programming basics to creating full-fledged web applications.'],
         'features' => [
-            'Синтаксис Python с нуля',
-            'Работа с базами данных',
-            'Создание REST API',
-            'Дипломный проект в портфолио'
+            ['ru' => 'Синтаксис Python с нуля', 'en' => 'Python syntax from scratch'],
+            ['ru' => 'Работа с базами данных', 'en' => 'Working with databases'],
+            ['ru' => 'Создание REST API', 'en' => 'Creating REST API'],
+            ['ru' => 'Дипломный проект в портфолио', 'en' => 'Diploma project in portfolio']
         ],
         'price_from' => '54 000 ₽',
         'price_numeric' => 54000,
-        'duration' => '12 недель • 3-5 часов в неделю',
+        'duration' => ['ru' => '12 недель • 3-5 часов в неделю', 'en' => '12 weeks • 3-5 hours per week'],
         'duration_weeks' => 12,
-        'level' => 'Начальный уровень',
-        'format' => ['Онлайн', 'Офис'],
+        'level' => ['ru' => 'Начальный уровень', 'en' => 'Beginner Level'],
+        'format' => [['ru' => 'Онлайн', 'en' => 'Online'], ['ru' => 'Офис', 'en' => 'Office']],
         'certificate' => true,
         'job_assistance' => true
     ],
     2 => [
         'id' => 2,
-        'title' => 'Frontend: React',
+        'title' => ['ru' => 'Frontend: React', 'en' => 'Frontend: React'],
         'icon' => 'RX',
-        'description' => 'Создавай современные интерактивные интерфейсы для веб-приложений.',
+        'description' => ['ru' => 'Создавай современные интерактивные интерфейсы для веб-приложений.', 'en' => 'Create modern interactive interfaces for web applications.'],
         'features' => [
-            'HTML5, CSS3, JavaScript ES6+',
-            'React + Redux',
-            'Работа с API',
-            '3 проекта в портфолио'
+            ['ru' => 'HTML5, CSS3, JavaScript ES6+', 'en' => 'HTML5, CSS3, JavaScript ES6+'],
+            ['ru' => 'React + Redux', 'en' => 'React + Redux'],
+            ['ru' => 'Работа с API', 'en' => 'Working with API'],
+            ['ru' => '3 проекта в портфолио', 'en' => '3 projects in portfolio']
         ],
         'price_from' => '50 000 ₽',
         'price_numeric' => 50000,
-        'duration' => '10 недель • 4-6 часов в неделю',
+        'duration' => ['ru' => '10 недель • 4-6 часов в неделю', 'en' => '10 weeks • 4-6 hours per week'],
         'duration_weeks' => 10,
-        'level' => 'Средний уровень',
-        'format' => ['Онлайн', 'Офис'],
+        'level' => ['ru' => 'Средний уровень', 'en' => 'Intermediate Level'],
+        'format' => [['ru' => 'Онлайн', 'en' => 'Online'], ['ru' => 'Офис', 'en' => 'Office']],
         'certificate' => true,
         'job_assistance' => true
     ],
     3 => [
         'id' => 3,
-        'title' => 'SQL и базы данных',
+        'title' => ['ru' => 'SQL и базы данных', 'en' => 'SQL and Databases'],
         'icon' => 'DB',
-        'description' => 'Проектирование, оптимизация и работа с большими данными.',
+        'description' => ['ru' => 'Проектирование, оптимизация и работа с большими данными.', 'en' => 'Design, optimization and working with big data.'],
         'features' => [
-            'PostgreSQL, MySQL',
-            'Сложные запросы',
-            'Оптимизация производительности',
-            'Работа с Big Data'
+            ['ru' => 'PostgreSQL, MySQL', 'en' => 'PostgreSQL, MySQL'],
+            ['ru' => 'Сложные запросы', 'en' => 'Complex queries'],
+            ['ru' => 'Оптимизация производительности', 'en' => 'Performance optimization'],
+            ['ru' => 'Работа с Big Data', 'en' => 'Working with Big Data']
         ],
         'price_from' => '32 000 ₽',
         'price_numeric' => 32000,
-        'duration' => '8 недель • 3-4 часа в неделю',
+        'duration' => ['ru' => '8 недель • 3-4 часа в неделю', 'en' => '8 weeks • 3-4 hours per week'],
         'duration_weeks' => 8,
-        'level' => 'Начальный уровень',
-        'format' => ['Онлайн', 'Офис'],
+        'level' => ['ru' => 'Начальный уровень', 'en' => 'Beginner Level'],
+        'format' => [['ru' => 'Онлайн', 'en' => 'Online'], ['ru' => 'Офис', 'en' => 'Office']],
         'certificate' => true,
         'job_assistance' => false
     ],
     4 => [
         'id' => 4,
-        'title' => 'Machine Learning',
+        'title' => ['ru' => 'Machine Learning', 'en' => 'Machine Learning'],
         'icon' => 'ML',
-        'description' => 'Нейросети, компьютерное зрение, обработка естественного языка.',
+        'description' => ['ru' => 'Нейросети, компьютерное зрение, обработка естественного языка.', 'en' => 'Neural networks, computer vision, natural language processing.'],
         'features' => [
-            'Python для ML',
-            'TensorFlow, PyTorch',
-            'Computer Vision, NLP',
-            'Деплой моделей'
+            ['ru' => 'Python для ML', 'en' => 'Python for ML'],
+            ['ru' => 'TensorFlow, PyTorch', 'en' => 'TensorFlow, PyTorch'],
+            ['ru' => 'Computer Vision, NLP', 'en' => 'Computer Vision, NLP'],
+            ['ru' => 'Деплой моделей', 'en' => 'Model deployment']
         ],
         'price_from' => '112 000 ₽',
         'price_numeric' => 112000,
-        'duration' => '16 недель • 5-7 часов в неделю',
+        'duration' => ['ru' => '16 недель • 5-7 часов в неделю', 'en' => '16 weeks • 5-7 hours per week'],
         'duration_weeks' => 16,
-        'level' => 'Продвинутый уровень',
-        'format' => ['Онлайн'],
+        'level' => ['ru' => 'Продвинутый уровень', 'en' => 'Advanced Level'],
+        'format' => [['ru' => 'Онлайн', 'en' => 'Online']],
         'certificate' => true,
         'job_assistance' => true
     ],
     5 => [
         'id' => 5,
-        'title' => 'Web3 & Blockchain',
+        'title' => ['ru' => 'Web3 & Blockchain', 'en' => 'Web3 & Blockchain'],
         'icon' => 'W3',
-        'description' => 'Смарт-контракты, dApps, разработка на Solidity.',
+        'description' => ['ru' => 'Смарт-контракты, dApps, разработка на Solidity.', 'en' => 'Smart contracts, dApps, Solidity development.'],
         'features' => [
-            'Основы блокчейна',
-            'Solidity программирование',
-            'Создание dApps',
-            'Аудит смарт-контрактов'
+            ['ru' => 'Основы блокчейна', 'en' => 'Blockchain basics'],
+            ['ru' => 'Solidity программирование', 'en' => 'Solidity programming'],
+            ['ru' => 'Создание dApps', 'en' => 'Creating dApps'],
+            ['ru' => 'Аудит смарт-контрактов', 'en' => 'Smart contract audit']
         ],
         'price_from' => '91 000 ₽',
         'price_numeric' => 91000,
-        'duration' => '14 недель • 4-6 часов в неделю',
+        'duration' => ['ru' => '14 недель • 4-6 часов в неделю', 'en' => '14 weeks • 4-6 hours per week'],
         'duration_weeks' => 14,
-        'level' => 'Средний уровень',
-        'format' => ['Онлайн'],
+        'level' => ['ru' => 'Средний уровень', 'en' => 'Intermediate Level'],
+        'format' => [['ru' => 'Онлайн', 'en' => 'Online']],
         'certificate' => true,
         'job_assistance' => true
     ],
     6 => [
         'id' => 6,
-        'title' => 'Mobile Dev (Flutter)',
+        'title' => ['ru' => 'Mobile Dev (Flutter)', 'en' => 'Mobile Dev (Flutter)'],
         'icon' => 'MB',
-        'description' => 'Кроссплатформенные приложения для iOS и Android.',
+        'description' => ['ru' => 'Кроссплатформенные приложения для iOS и Android.', 'en' => 'Cross-platform applications for iOS and Android.'],
         'features' => [
-            'Dart с нуля',
-            'Flutter фреймворк',
-            'Публикация в Store',
-            '2 приложения в портфолио'
+            ['ru' => 'Dart с нуля', 'en' => 'Dart from scratch'],
+            ['ru' => 'Flutter фреймворк', 'en' => 'Flutter framework'],
+            ['ru' => 'Публикация в Store', 'en' => 'Publishing to Store'],
+            ['ru' => '2 приложения в портфолио', 'en' => '2 applications in portfolio']
         ],
         'price_from' => '66 000 ₽',
         'price_numeric' => 66000,
-        'duration' => '12 недель • 4-5 часов в неделю',
+        'duration' => ['ru' => '12 недель • 4-5 часов в неделю', 'en' => '12 weeks • 4-5 hours per week'],
         'duration_weeks' => 12,
-        'level' => 'Начальный уровень',
-        'format' => ['Онлайн', 'Офис'],
+        'level' => ['ru' => 'Начальный уровень', 'en' => 'Beginner Level'],
+        'format' => [['ru' => 'Онлайн', 'en' => 'Online'], ['ru' => 'Офис', 'en' => 'Office']],
         'certificate' => true,
         'job_assistance' => true
     ]
-    // Чтобы добавить новый курс, просто скопируйте структуру выше и измените данные
 ];
