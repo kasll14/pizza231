@@ -1,0 +1,56 @@
+<?php
+// data/users.php
+return array (
+  1 => 
+  array (
+    'id' => 1,
+    'email' => 'admin@kemt.local',
+    'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+    'name' => 'Администратор',
+    'phone' => '+7 (3842) 39-60-00',
+    'role' => 'admin',
+    'verified' => true,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
+    'created_at' => '2024-01-01 00:00:00',
+    'last_login' => NULL,
+  ),
+  3 => 
+  array (
+    'id' => 3,
+    'email' => 'kerji4100@gmail.com',
+    'password' => '$2y$10$JKXPIylu5RnEzLKSzfZZ1uFf/7MkZ/tJzjoeWZSdlg5d2C1u.xDy6',
+    'name' => 'Хозяйкин Андрей Дмитриевич',
+    'phone' => '79234879635',
+    'role' => 'admin',
+    'verified' => true,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
+    'created_at' => '2026-03-28 18:37:40',
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
+  ),
+  4 => 
+  array (
+    'id' => 4,
+    'email' => 'toni.maslennikov.08@inbox.ru',
+    'password' => '$2y$10$AN5GMaxO6Rz/i1VjFt8C6.s5RZh4koYtPvXNL6W2QlbreR1On4KVu',
+    'name' => 'maslennikov anton dm',
+    'phone' => '79234879635',
+    'role' => 'admin',
+    'verified' => true,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => 'e4b77ff203363416a06b3178660d683e2fa7fadbd4b5a199cf005872875865e2',
+    'created_at' => '2026-03-28 20:04:39',
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
+    'token_expires' => '2026-03-28 21:21:47',
+  ),
+);

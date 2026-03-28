@@ -1,0 +1,23 @@
+{
+    "name": "coopteh/insurance221",
+    "description": "Сайт страховой компании - курсовая работа",
+    "type": "project",
+    "require": {
+        "php": ">=7.4"
+
+        
+    },
+    "autoload": {
+        "psr-4": {
+            "Controllers\\": "Controllers/",
+            "Views\\": "Views/",
+            "Models\\": "Models/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Student",
+            "email": "student@kuzbasskt.ru"
+        }
+    ]
+}

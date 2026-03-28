@@ -1,0 +1,123 @@
+[
+    {
+        "id": "ORD-20260328-74A39A",
+        "name": "maslennikov anton dm",
+        "email": "toni.maslennikov.08@inbox.ru",
+        "phone": "+7 (923) 487-96-35",
+        "payment_method": "sbp",
+        "comment": "123",
+        "items": [
+            {
+                "id": 2,
+                "title": "Frontend: React",
+                "price": "50 000 ₽",
+                "icon": "RX",
+                "duration": "10 недель • 4-6 часов в неделю",
+                "added_at": 1774725048
+            },
+            {
+                "id": 1,
+                "title": "Python-разработчик",
+                "price": "54 000 ₽",
+                "icon": "PY",
+                "duration": "12 недель • 3-5 часов в неделю",
+                "added_at": 1774725050
+            }
+        ],
+        "total": 104000,
+        "status": "pending",
+        "created_at": "2026-03-28 20:12:39",
+        "ip": "::1",
+        "user_id": 4,
+        "user_email": "toni.maslennikov.08@inbox.ru"
+    },
+    {
+        "id": "ORD-20260328-C5EDBB",
+        "name": "maslennikov anton dm",
+        "email": "toni.maslennikov.08@inbox.ru",
+        "phone": "+7 (923) 487-96-35",
+        "payment_method": "card",
+        "comment": "123",
+        "items": [
+            {
+                "id": 1,
+                "title": "Python-разработчик",
+                "price": "54 000 ₽",
+                "icon": "PY",
+                "duration": "12 недель • 3-5 часов в неделю",
+                "added_at": 1774725173
+            }
+        ],
+        "total": 54000,
+        "status": "pending",
+        "created_at": "2026-03-28 20:14:36",
+        "ip": "::1",
+        "user_id": 4,
+        "user_email": "toni.maslennikov.08@inbox.ru"
+    },
+    {
+        "id": "ORD-20260328-1733EC",
+        "name": "maslennikov anton dm",
+        "email": "toni.maslennikov.08@inbox.ru",
+        "phone": "+7 (923) 487-96-35",
+        "payment_method": "card",
+        "comment": "123123",
+        "items": [
+            {
+                "id": 2,
+                "title": "Frontend: React",
+                "price": "50 000 ₽",
+                "icon": "RX",
+                "duration": "10 недель • 4-6 часов в неделю",
+                "added_at": 1774725435
+            },
+            {
+                "id": 1,
+                "title": "Python-разработчик",
+                "price": "54 000 ₽",
+                "icon": "PY",
+                "duration": "12 недель • 3-5 часов в неделю",
+                "added_at": 1774725435
+            },
+            {
+                "id": 3,
+                "title": "SQL и базы данных",
+                "price": "32 000 ₽",
+                "icon": "DB",
+                "duration": "8 недель • 3-4 часа в неделю",
+                "added_at": 1774725436
+            },
+            {
+                "id": 6,
+                "title": "Mobile Dev (Flutter)",
+                "price": "66 000 ₽",
+                "icon": "MB",
+                "duration": "12 недель • 4-5 часов в неделю",
+                "added_at": 1774725437
+            },
+            {
+                "id": 5,
+                "title": "Web3 & Blockchain",
+                "price": "91 000 ₽",
+                "icon": "W3",
+                "duration": "14 недель • 4-6 часов в неделю",
+                "added_at": 1774725437
+            },
+            {
+                "id": 4,
+                "title": "Machine Learning",
+                "price": "112 000 ₽",
+                "icon": "ML",
+                "duration": "16 недель • 5-7 часов в неделю",
+                "added_at": 1774725437
+            }
+        ],
+        "total": 405000,
+        "status": "completed",
+        "created_at": "2026-03-28 20:17:37",
+        "ip": "::1",
+        "user_id": 4,
+        "user_email": "toni.maslennikov.08@inbox.ru",
+        "updated_at": "2026-03-28 20:19:38"
+    }
+]
