@@ -1,6 +1,7 @@
 <?php
 // 🔐 ОБНОВЛЕНО: Добавлена поддержка кода для смены пароля
 namespace Lib;
+use Lib\Logger; // 📝 LOGGER: Добавлен импорт
 
 class User
 {
@@ -62,12 +63,13 @@ class User
             'verification_token' => null,
             'created_at' => date('Y-m-d H:i:s'),
             'last_login' => null,
-            'password_change_code' => null,        // 🔐 ДОБАВЛЕНО
-            'password_change_code_expires' => null // 🔐 ДОБАВЛЕНО
+            'password_change_code' => null,
+            'password_change_code_expires' => null
         ];
         
         self::$users[$newId] = $user;
         self::saveUsers();
+        
         return $newId;
     }
     
@@ -76,7 +78,7 @@ class User
         if (empty(self::$users)) self::init();
         
         foreach (self::$users as $id => $user) {
-            if (strtolower($user['email']) === strtolower($email) && 
+            if (strtolower($user['email']) === strtolower($email) &&
                 $user['verification_code'] === $code &&
                 isset($user['code_expires']) &&
                 strtotime($user['code_expires']) > time()) {
@@ -85,9 +87,11 @@ class User
                 self::$users[$id]['verification_code'] = null;
                 self::$users[$id]['code_expires'] = null;
                 self::saveUsers();
+                
                 return true;
             }
         }
+        
         return false;
     }
     
@@ -123,7 +127,7 @@ class User
         
         $code = self::generateVerificationCode();
         self::$users[$userId]['password_change_code'] = $code;
-        self::$users[$userId]['password_change_code_expires'] = 
+        self::$users[$userId]['password_change_code_expires'] =
             date('Y-m-d H:i:s', strtotime('+10 minutes'));
         self::saveUsers();
         
@@ -138,12 +142,11 @@ class User
         
         $user = self::$users[$userId];
         
-        if (isset($user['password_change_code']) && 
+        if (isset($user['password_change_code']) &&
             $user['password_change_code'] === $code &&
             isset($user['password_change_code_expires']) &&
             strtotime($user['password_change_code_expires']) > time()) {
             
-            // Очищаем код после успешной проверки
             self::$users[$userId]['password_change_code'] = null;
             self::$users[$userId]['password_change_code_expires'] = null;
             self::saveUsers();
@@ -175,6 +178,7 @@ class User
                 self::$users[$id][$key] = $value;
             }
         }
+        
         self::saveUsers();
         return true;
     }
@@ -186,6 +190,7 @@ class User
         
         self::$users[$id]['password'] = password_hash($newPassword, PASSWORD_DEFAULT);
         self::saveUsers();
+        
         return true;
     }
     
@@ -199,6 +204,7 @@ class User
             }
             return $user;
         }
+        
         return null;
     }
     
@@ -224,6 +230,7 @@ class User
     public static function login(int $userId): void
     {
         if (session_status() === PHP_SESSION_NONE) session_start();
+        
         $user = self::getUserById($userId);
         if ($user) {
             $_SESSION['user_id'] = $user['id'];
@@ -247,11 +254,12 @@ class User
         if (!file_exists($ordersFile)) return [];
         
         $orders = json_decode(file_get_contents($ordersFile), true) ?? [];
-        $userOrders = array_filter($orders, fn($o) => 
+        
+        $userOrders = array_filter($orders, fn($o) =>
             isset($o['user_id']) && $o['user_id'] === $userId
         );
         
-        usort($userOrders, fn($a, $b) => 
+        usort($userOrders, fn($a, $b) =>
             strtotime($b['created_at']) - strtotime($a['created_at'])
         );
         
@@ -270,11 +278,12 @@ class User
             if ($order['id'] === $orderId) {
                 $orders[$key]['user_id'] = $userId;
                 $orders[$key]['user_email'] = $user['email'];
-                file_put_contents($ordersFile, 
+                file_put_contents($ordersFile,
                     json_encode($orders, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
                 return true;
             }
         }
+        
         return false;
     }
     
@@ -287,6 +296,7 @@ class User
         self::$users[$userId]['verification_token'] = $token;
         self::$users[$userId]['token_expires'] = date('Y-m-d H:i:s', strtotime('+1 hour'));
         self::saveUsers();
+        
         return $token;
     }
     
@@ -295,18 +305,31 @@ class User
         if (empty(self::$users)) self::init();
         
         foreach (self::$users as $id => $user) {
-            if ($user['verification_token'] === $token && 
-                isset($user['token_expires']) && 
+            if ($user['verification_token'] === $token &&
+                isset($user['token_expires']) &&
                 strtotime($user['token_expires']) > time()) {
                 return $id;
             }
         }
+        
         return null;
     }
     
     private static function saveUsers(): void
     {
-        $content = "<?php\n// data/users.php\nreturn " . var_export(self::$users, true) . ";\n";
-        file_put_contents(self::$usersFile, $content);
+        try {
+            $content = "<?php\n// data/users.php\nreturn " . var_export(self::$users, true) . ";";
+            file_put_contents(self::$usersFile, $content);
+            
+            // 📝 LOGGER: Логирование сохранения пользователей (debug)
+            Logger::debug("Файл пользователей сохранён", ['file' => self::$usersFile]);
+        } catch (\Exception $e) {
+            // 📝 LOGGER: Логирование ошибки сохранения
+            Logger::error("Ошибка сохранения пользователей", [
+                'file' => self::$usersFile,
+                'exception' => $e->getMessage()
+            ]);
+            throw $e;
+        }
     }
 }

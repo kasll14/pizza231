@@ -1,10 +1,10 @@
 <?php
 // 🔐 ОБНОВЛЕНО: Контроллер теперь работает с кодами
 namespace Controllers;
-
 use Lib\User;
 use Lib\Auth;
 use Lib\Language;
+use Lib\Logger; // 📝 LOGGER: Добавлен импорт
 use Views\AuthTemplate;
 
 class AuthController
@@ -46,8 +46,20 @@ class AuthController
                 $_SESSION['verify_email'] = $user['email'];
                 $_SESSION['verify_name'] = $user['name'];
                 
+                // 📝 LOGGER: Логирование регистрации
+                Logger::info("Новая регистрация пользователя", [
+                    'user_id' => $userId,
+                    'email' => $data['email']
+                ]);
+                
                 header('Location: /auth/verify-code');
                 exit;
+            } else {
+                // 📝 LOGGER: Логирование ошибок регистрации
+                Logger::warning("Ошибка регистрации", [
+                    'email' => $data['email'] ?? 'unknown',
+                    'errors' => $errors
+                ]);
             }
         }
         
@@ -77,6 +89,13 @@ class AuthController
                 
                 if ($result && !isset($result['error'])) {
                     User::login($result['id']);
+                    
+                    // 📝 LOGGER: Логирование успешного входа
+                    Logger::info("Успешный вход пользователя", [
+                        'user_id' => $result['id'],
+                        'email' => $email
+                    ]);
+                    
                     if ($result['role'] === 'admin') {
                         header('Location: /admin');
                         exit;
@@ -92,6 +111,12 @@ class AuthController
                     exit;
                 } else {
                     $errors[] = 'invalid_credentials';
+                    
+                    // 📝 LOGGER: Логирование неудачной попытки входа
+                    Logger::warning("Неудачная попытка входа", [
+                        'email' => $email,
+                        'ip' => $_SERVER['REMOTE_ADDR'] ?? 'unknown'
+                    ]);
                 }
             }
         }
@@ -101,7 +126,14 @@ class AuthController
     
     public function logout(): void
     {
+        $userId = $_SESSION['user_id'] ?? null;
         User::logout();
+        
+        // 📝 LOGGER: Логирование выхода
+        if ($userId) {
+            Logger::info("Выход пользователя", ['user_id' => $userId]);
+        }
+        
         header('Location: /');
         exit;
     }
@@ -129,10 +161,17 @@ class AuthController
                 // 🔐 Успешное подтверждение
                 unset($_SESSION['verify_email']);
                 unset($_SESSION['verify_name']);
+                
+                // 📝 LOGGER: Логирование подтверждения email
+                Logger::info("Email подтверждён", ['email' => $email]);
+                
                 header('Location: /auth/login?verified=1');
                 exit;
             } else {
                 $errors[] = 'code_wrong';
+                
+                // 📝 LOGGER: Логирование неверного кода
+                Logger::warning("Неверный код подтверждения", ['email' => $email]);
             }
         }
         
@@ -152,6 +191,7 @@ class AuthController
         }
         
         $user = User::getUserByEmail($email);
+        
         if (!$user || $user['verified']) {
             header('Location: /auth/verify-code?error=already_verified');
             exit;
@@ -159,10 +199,17 @@ class AuthController
         
         // 🔐 Генерация нового кода
         $newCode = User::resendVerificationCode($email);
+        
         if ($newCode) {
             Auth::resendVerificationCode($email, $newCode, $user['name']);
+            
+            // 📝 LOGGER: Логирование повторной отправки кода
+            Logger::info("Код подтверждения отправлен повторно", ['email' => $email]);
+            
             header('Location: /auth/verify-code?resent=1');
         } else {
+            // 📝 LOGGER: Логирование ошибки отправки
+            Logger::error("Ошибка отправки кода подтверждения", ['email' => $email]);
             header('Location: /auth/verify-code?error=resend_failed');
         }
         exit;
@@ -175,14 +222,19 @@ class AuthController
         
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $email = trim($_POST['email'] ?? '');
+            
             if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $errors[] = 'email_invalid';
             } else {
                 $user = User::getUserByEmail($email);
+                
                 if ($user) {
                     $token = User::generateResetToken($user['id']);
                     if ($token) {
                         Auth::sendPasswordResetEmail($user['email'], $token, $user['name']);
+                        
+                        // 📝 LOGGER: Логирование запроса сброса пароля
+                        Logger::info("Запрос сброса пароля", ['email' => $email]);
                     }
                 }
                 $success = true;
@@ -212,7 +264,15 @@ class AuthController
             elseif ($password !== $password_confirm) $errors[] = 'password_mismatch';
             else {
                 User::updatePassword($userId, $password);
-                User::updateUser($userId, ['verification_token' => null, 'token_expires' => null, 'verified' => true]);
+                User::updateUser($userId, [
+                    'verification_token' => null,
+                    'token_expires' => null,
+                    'verified' => true
+                ]);
+                
+                // 📝 LOGGER: Логирование смены пароля
+                Logger::info("Пароль изменён через сброс", ['user_id' => $userId]);
+                
                 header('Location: /auth/login?reset_success=1');
                 exit;
             }
