@@ -1,4 +1,5 @@
 <?php
+
 namespace Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
@@ -89,8 +90,10 @@ class UserTest extends TestCase
         ];
 
         $userId = User::createUser($userData);
-        User::verifyUserByCode($userData['email'], 
-            User::getUserById($userId)['verification_code']);
+        User::verifyUserByCode(
+            $userData['email'],
+            User::getUserById($userId)['verification_code']
+        );
 
         $result = User::validateLogin($userData['email'], 'password123');
 
@@ -183,7 +186,7 @@ class UserTest extends TestCase
     public function testCreateUserWithExistingEmail(): void
     {
         $email = 'duplicate' . time() . '@example.com';
-        
+
         $userData1 = [
             'name' => 'Пользователь 1',
             'email' => $email,

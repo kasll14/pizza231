@@ -1,4 +1,5 @@
 <?php
+
 namespace Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
@@ -11,7 +12,7 @@ class LanguageTest extends TestCase
         parent::setUp();
         $_SESSION = [];
         $_GET = [];
-        
+
         $reflection = new \ReflectionClass(Language::class);
         $currentLang = $reflection->getProperty('currentLang');
         $currentLang->setAccessible(true);
@@ -59,7 +60,7 @@ class LanguageTest extends TestCase
     public function testGetTranslationExists(): void
     {
         Language::init();
-        
+
         $translation = Language::get('nav_home');
         $this->assertIsString($translation);
         $this->assertNotEmpty($translation);
@@ -68,7 +69,7 @@ class LanguageTest extends TestCase
     public function testGetTranslationWithParams(): void
     {
         Language::init();
-        
+
         $translation = Language::get('nav_home', ['test' => 'value']);
         $this->assertIsString($translation);
     }
@@ -77,7 +78,7 @@ class LanguageTest extends TestCase
     {
         Language::setLang('en');
         Language::init();
-        
+
         $translation = Language::get('nav_home');
         $this->assertIsString($translation);
         $this->assertNotEmpty($translation);
@@ -86,7 +87,7 @@ class LanguageTest extends TestCase
     public function testGetTranslationKeyNotFound(): void
     {
         Language::init();
-        
+
         $translation = Language::get('nonexistent_key_12345');
         $this->assertEquals('nonexistent_key_12345', $translation);
     }
@@ -124,9 +125,9 @@ class LanguageTest extends TestCase
     {
         $coursesFile = __DIR__ . '/../../data/courses.php';
         $this->assertFileExists($coursesFile);
-        
+
         $courses = require $coursesFile;
-        
+
         foreach ($courses as $course) {
             $this->assertArrayHasKey('ru', $course['title']);
             $this->assertArrayHasKey('en', $course['title']);
@@ -139,9 +140,9 @@ class LanguageTest extends TestCase
     {
         $langFile = __DIR__ . '/../../data/languages.php';
         $this->assertFileExists($langFile);
-        
+
         $translations = require $langFile;
-        
+
         $this->assertArrayHasKey('ru', $translations);
         $this->assertArrayHasKey('en', $translations);
         $this->assertIsArray($translations['ru']);
@@ -152,13 +153,13 @@ class LanguageTest extends TestCase
     {
         $langFile = __DIR__ . '/../../data/languages.php';
         $translations = require $langFile;
-        
+
         $ruKeys = array_keys($translations['ru']);
         $enKeys = array_keys($translations['en']);
-        
+
         $missingInEn = array_diff($ruKeys, $enKeys);
         $missingInRu = array_diff($enKeys, $ruKeys);
-        
+
         $this->assertEmpty($missingInEn, 'Следующие ключи отсутствуют в EN: ' . implode(', ', $missingInEn));
         $this->assertEmpty($missingInRu, 'Следующие ключи отсутствуют в RU: ' . implode(', ', $missingInRu));
     }

@@ -1,5 +1,7 @@
 <?php
+
 namespace Controllers;
+
 use Views\OrderTemplate;
 use Lib\User;
 use Lib\DataLoader;
@@ -9,13 +11,13 @@ use Lib\Language;
 class OrderController
 {
     private array $orders = [];
-    
+
     // Конфигурация email
     private const ADMIN_EMAIL = 'toni.maslennikov.08@inbox.ru';
     private const FROM_EMAIL = 'noreply@kemt.local';
     private const FROM_NAME = 'Geek LegendS';
     private const REPLY_TO = 'info@kemt.ru';
-    
+
     public function __construct()
     {
         if (session_status() === PHP_SESSION_NONE) {
@@ -26,7 +28,7 @@ class OrderController
             $this->orders = json_decode(file_get_contents($ordersFile), true) ?? [];
         }
     }
-    
+
     public function checkout(): string
     {
         if (session_status() === PHP_SESSION_NONE) {
@@ -39,7 +41,7 @@ class OrderController
         }
         return OrderTemplate::getCheckoutTemplate($cartItems);
     }
-    
+
     public function process(): void
     {
         if (session_status() === PHP_SESSION_NONE) {
@@ -50,40 +52,46 @@ class OrderController
             header('Location: /cart?error=empty_cart');
             exit;
         }
-        
+
         // Получаем данные из формы
         $name = trim($_POST['name'] ?? '');
         $email = trim($_POST['email'] ?? '');
         $phone = trim($_POST['phone'] ?? '');
         $paymentMethod = $_POST['payment_method'] ?? 'card';
         $comment = trim($_POST['comment'] ?? '');
-        
+
         // Валидация
         $errors = [];
-        if (empty($name)) $errors[] = 'name';
-        if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = 'email';
-        if (empty($phone)) $errors[] = 'phone';
-        
+        if (empty($name)) {
+            $errors[] = 'name';
+        }
+        if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $errors[] = 'email';
+        }
+        if (empty($phone)) {
+            $errors[] = 'phone';
+        }
+
         if (!empty($errors)) {
             $_SESSION['order_errors'] = $errors;
             $_SESSION['order_data'] = $_POST;
             header('Location: /cart/checkout');
             exit;
         }
-        
+
         // Создаем заказ
         $orderId = 'ORD-' . date('Ymd') . '-' . strtoupper(substr(uniqid(), -6));
         $totalPrice = 0;
-        
+
         if (\Lib\User::isLoggedIn()) {
             \Lib\User::linkOrderToUser($_SESSION['user_id'], $orderId);
         }
-        
+
         foreach ($cartItems as $item) {
             $priceNum = (int)preg_replace('/[^0-9]/', '', $item['price']);
             $totalPrice += $priceNum;
         }
-        
+
         $order = [
             'id' => $orderId,
             'name' => $name,
@@ -99,29 +107,29 @@ class OrderController
             'user_id' => null,
             'user_email' => null
         ];
-        
+
         // 🔐 Привязка заказа к пользователю если авторизован
         if (User::isLoggedIn()) {
             $currentUser = User::getCurrentUser();
             $order['user_id'] = $currentUser['id'];
             $order['user_email'] = $currentUser['email'];
-            
+
             // Обновляем данные пользователя если email изменился
             if ($currentUser['email'] !== $email) {
                 User::updateUser($currentUser['id'], ['email' => $email]);
             }
         }
-        
+
         // Сохраняем заказ
         $this->orders[] = $order;
         $ordersFile = __DIR__ . '/../data/orders.json';
         if (!is_dir(dirname($ordersFile))) {
             mkdir(dirname($ordersFile), 0755, true);
         }
-        
+
         try {
             file_put_contents($ordersFile, json_encode($this->orders, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
-            
+
             // 📝 LOGGER: Логирование создания заказа
             Logger::info("Заказ успешно создан", [
                 'order_id' => $orderId,
@@ -137,16 +145,16 @@ class OrderController
             ]);
             throw $e;
         }
-        
+
         // Очищаем корзину
         $_SESSION['cart'] = [];
         unset($_SESSION['order_errors']);
         unset($_SESSION['order_data']);
-        
+
         // 📧 ОТПРАВКА EMAIL
         $emailSent = $this->sendOrderEmail($order);
         $this->sendAdminNotification($order);
-        
+
         // 📝 LOGGER: Логируем результат отправки email
         if (!$emailSent) {
             Logger::warning("Не удалось отправить email покупателю", [
@@ -154,22 +162,22 @@ class OrderController
                 'email' => $email
             ]);
         }
-        
+
         header('Location: /cart/success?order=' . $orderId);
         exit;
     }
-    
+
     public function success(): string
     {
         $orderId = $_GET['order'] ?? '';
         return OrderTemplate::getSuccessTemplate($orderId);
     }
-    
+
     public function getOrders(): array
     {
         return $this->orders;
     }
-    
+
     // ============================================================
     // 📧 МЕТОД 1: Отправка письма покупателю
     // ============================================================
@@ -181,15 +189,15 @@ class OrderController
             Logger::error("Невалидный email для отправки", ['email' => $to]);
             return false;
         }
-        
+
         $subject = 'Заказ №' . $order['id'] . ' подтверждён - ' . self::FROM_NAME;
         $message = $this->buildCustomerEmailBody($order);
         $headers = $this->getEmailHeaders();
-        
+
         $result = @mail($to, $subject, $message, $headers);
         return $result;
     }
-    
+
     // ============================================================
     // 📧 МЕТОД 2: Отправка уведомления администратору
     // ============================================================
@@ -199,18 +207,18 @@ class OrderController
         $subject = '🔔 НОВЫЙ ЗАКАЗ №' . $order['id'] . ' на сумму ' . number_format($order['total'], 0, '.', ' ') . ' ₽';
         $message = $this->buildAdminEmailBody($order);
         $headers = $this->getEmailHeaders();
-        
+
         $result = @mail($to, $subject, $message, $headers);
-        
+
         // 📝 LOGGER: Логирование отправки уведомления админу
         Logger::debug("Уведомление администратору", [
             'order_id' => $order['id'],
             'sent' => $result
         ]);
-        
+
         return $result;
     }
-    
+
     // ============================================================
     // 📧 МЕТОД 3: Заголовки для всех писем
     // ============================================================
@@ -224,7 +232,7 @@ class OrderController
         $headers .= "X-Priority: 3" . "\r\n";
         return $headers;
     }
-    
+
     // ============================================================
     // 📧 МЕТОД 4: HTML-шаблон письма для покупателя
     // ============================================================
@@ -232,21 +240,21 @@ class OrderController
     {
         // 🌐 LANG: Получаем текущий язык пользователя
         $lang = Language::getCurrentLang();
-        
+
         // 🌐 LANG: Вспомогательная функция для получения текста на нужном языке
-        $getText = function($field, $default = '') use ($lang) {
+        $getText = function ($field, $default = '') use ($lang) {
             if (is_array($field)) {
                 return $field[$lang] ?? $field['ru'] ?? $default;
             }
             return $field;
         };
-        
+
         $itemsHtml = '';
         foreach ($order['items'] as $item) {
             // 🌐 LANG: Получаем название и длительность курса на нужном языке
             $courseTitle = $getText($item['title'], $item['title']);
             $courseDuration = $getText($item['duration'], $item['duration']);
-            
+
             $itemsHtml .= '
 <tr>
     <td style="padding: 12px 8px; border-bottom: 1px solid #e2e8f0;">
@@ -260,14 +268,14 @@ class OrderController
     </td>
 </tr>';
         }
-        
+
         $paymentMethods = [
             'card' => 'Банковской картой онлайн',
             'sbp' => 'СБП (Система быстрых платежей)',
             'invoice' => 'Счёт для юридического лица'
         ];
         $paymentText = $paymentMethods[$order['payment_method']] ?? $order['payment_method'];
-        
+
         return '
 <!DOCTYPE html>
 <html lang="ru">
@@ -381,7 +389,7 @@ class OrderController
 </body>
 </html>';
     }
-    
+
     // ============================================================
     // 📧 МЕТОД 5: HTML-шаблон письма для админа
     // ============================================================
@@ -389,25 +397,25 @@ class OrderController
     {
         // 🌐 LANG: Получаем текущий язык
         $lang = Language::getCurrentLang();
-        
+
         // 🌐 LANG: Вспомогательная функция для получения текста на нужном языке
-        $getText = function($field, $default = '') use ($lang) {
+        $getText = function ($field, $default = '') use ($lang) {
             if (is_array($field)) {
                 return $field[$lang] ?? $field['ru'] ?? $default;
             }
             return $field;
         };
-        
+
         $itemsHtml = '';
         foreach ($order['items'] as $item) {
             // 🌐 LANG: Получаем название курса на нужном языке
             $courseTitle = $getText($item['title'], $item['title']);
-            
+
             $itemsHtml .= '<li style="padding: 5px 0; color: #2d3748;">
                 ' . htmlspecialchars($courseTitle) . ' — <strong>' . htmlspecialchars($item['price']) . '</strong>
             </li>';
         }
-        
+
         $userInfo = '';
         if (!empty($order['user_id'])) {
             $userInfo = '<p style="background: #ebf4ff; padding: 15px; border-radius: 6px; margin-top: 15px;">
@@ -415,7 +423,7 @@ class OrderController
                 ID: ' . $order['user_id'] . '
             </p>';
         }
-        
+
         return '
 <!DOCTYPE html>
 <html lang="ru">

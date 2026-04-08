@@ -1,5 +1,7 @@
 <?php
+
 // 🔐 ОБНОВЛЕНО: Добавлена отправка кода для смены пароля
+
 namespace Lib;
 
 class Auth
@@ -7,31 +9,31 @@ class Auth
     private const FROM_EMAIL = 'noreply@kemt.local';
     private const FROM_NAME = 'Geek LegendS';
     private const REPLY_TO = 'info@kemt.ru';
-    
+
     public static function sendVerificationEmail(string $email, string $code, string $name): bool
     {
         $to = $email;
         $subject = 'Код подтверждения регистрации - ' . self::FROM_NAME;
         $message = self::buildVerificationEmailWithCode($name, $code);
         $headers = self::getHeaders();
-        
+
         $result = @mail($to, $subject, $message, $headers);
         error_log("Verification email to {$email}: " . ($result ? 'SENT' : 'FAILED'));
         return $result;
     }
-    
+
     public static function resendVerificationCode(string $email, string $code, string $name): bool
     {
         $to = $email;
         $subject = 'Новый код подтверждения - ' . self::FROM_NAME;
         $message = self::buildResendCodeEmail($name, $code);
         $headers = self::getHeaders();
-        
+
         $result = @mail($to, $subject, $message, $headers);
         error_log("Resend code email to {$email}: " . ($result ? 'SENT' : 'FAILED'));
         return $result;
     }
-    
+
     // 🔐 ДОБАВЛЕНО: Отправка кода для смены пароля
     public static function sendPasswordChangeCode(string $email, string $code, string $name): bool
     {
@@ -39,12 +41,12 @@ class Auth
         $subject = 'Код подтверждения смены пароля - ' . self::FROM_NAME;
         $message = self::buildPasswordChangeEmail($name, $code);
         $headers = self::getHeaders();
-        
+
         $result = @mail($to, $subject, $message, $headers);
         error_log("Password change code to {$email}: " . ($result ? 'SENT' : 'FAILED'));
         return $result;
     }
-    
+
     public static function sendPasswordResetEmail(string $email, string $token, string $name): bool
     {
         $to = $email;
@@ -52,12 +54,12 @@ class Auth
         $link = 'https://kemt.local/auth/reset-password?token=' . $token;
         $message = self::buildResetEmail($name, $link);
         $headers = self::getHeaders();
-        
+
         $result = @mail($to, $subject, $message, $headers);
         error_log("Password reset email to {$email}: " . ($result ? 'SENT' : 'FAILED'));
         return $result;
     }
-    
+
     private static function getHeaders(): string
     {
         return "MIME-Version: 1.0\r\n" .
@@ -66,7 +68,7 @@ class Auth
                "Reply-To: " . self::REPLY_TO . "\r\n" .
                "X-Mailer: PHP/" . phpversion() . "\r\n";
     }
-    
+
     private static function buildVerificationEmailWithCode(string $name, string $code): string
     {
         return '<!DOCTYPE html>
@@ -94,7 +96,7 @@ class Auth
 </td></tr>
 </table></td></tr></table></body></html>';
     }
-    
+
     private static function buildResendCodeEmail(string $name, string $code): string
     {
         return '<!DOCTYPE html>
@@ -121,7 +123,7 @@ class Auth
 </td></tr>
 </table></td></tr></table></body></html>';
     }
-    
+
     // 🔐 ДОБАВЛЕНО: Шаблон письма для смены пароля
     private static function buildPasswordChangeEmail(string $name, string $code): string
     {
@@ -150,7 +152,7 @@ class Auth
 </td></tr>
 </table></td></tr></table></body></html>';
     }
-    
+
     private static function buildResetEmail(string $name, string $link): string
     {
         return '<!DOCTYPE html>

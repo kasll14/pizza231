@@ -1,4 +1,5 @@
 <?php
+
 // 🌐 LANG: Файл со всеми переводами (RU + EN)
 // 🌙 THEME: Добавлены переводы для тёмной темы
 return [
@@ -489,7 +490,7 @@ return [
 'admin_order_cancelled' => 'Cancelled',
 'admin_search' => 'Search',
 'level_beginner' => 'Beginner Level',
-'level_intermediate' => 'Intermediate Level', 
+'level_intermediate' => 'Intermediate Level',
 'level_advanced' => 'Advanced Level',
 'format_online' => 'Online',
 'format_office' => 'Office',

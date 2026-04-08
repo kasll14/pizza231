@@ -1,5 +1,7 @@
 <?php
+
 // 🔐 ОБНОВЛЕНО: Добавлена проверка кода при смене пароля
+
 namespace Controllers;
 
 use Lib\User;
@@ -19,7 +21,7 @@ class ProfileController
         $orders = User::getUserOrders($user['id']);
         return ProfileTemplate::getProfileTemplate($user, $orders);
     }
-    
+
     // 🔐 ОБНОВЛЕНО: Добавлена логика с кодом для смены пароля
     public function edit(): string
     {
@@ -27,16 +29,16 @@ class ProfileController
             header('Location: /auth/login');
             exit;
         }
-        
+
         $user = User::getCurrentUser();
         $errors = [];
         $success = false;
         $showPasswordForm = false;
         $codeSent = false;
-        
+
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $formType = $_POST['form_type'] ?? 'profile';
-            
+
             $data = [
                 'name' => trim($_POST['name'] ?? ''),
                 'phone' => trim($_POST['phone'] ?? ''),
@@ -45,12 +47,16 @@ class ProfileController
                 'new_password_confirm' => $_POST['new_password_confirm'] ?? '',
                 'verification_code' => trim($_POST['verification_code'] ?? '')
             ];
-            
+
             if ($formType === 'profile') {
                 // Валидация для формы редактирования профиля
-                if (empty($data['name'])) $errors[] = 'name_required';
-                if (empty($data['phone'])) $errors[] = 'phone_required';
-                
+                if (empty($data['name'])) {
+                    $errors[] = 'name_required';
+                }
+                if (empty($data['phone'])) {
+                    $errors[] = 'phone_required';
+                }
+
                 if (empty($errors)) {
                     $updateData = ['name' => $data['name'], 'phone' => $data['phone']];
                     User::updateUser($user['id'], $updateData);
@@ -93,10 +99,10 @@ class ProfileController
                 }
             }
         }
-        
+
         return ProfileTemplate::getEditTemplate($user, $errors, $success, $showPasswordForm, $codeSent);
     }
-    
+
     public function orders(): string
     {
         if (!User::isLoggedIn()) {

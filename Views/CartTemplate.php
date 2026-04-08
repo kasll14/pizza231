@@ -1,29 +1,32 @@
 <?php
+
 namespace Views;
+
 use Lib\Language;
+
 class CartTemplate extends BaseTemplate
 {
     public static function getTemplate(): string
     {
         $template = parent::getTemplate();
         $title = Language::get('cart_title') . ' - ' . Language::get('site_name');
-        
+
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
-        
+
         $cartItems = $_SESSION['cart'] ?? [];
         $cartCount = count($cartItems);
         $lang = Language::getCurrentLang();
-        
+
         // Вспомогательная функция для получения текста на нужном языке
-        $getText = function($field, $default = '') use ($lang) {
+        $getText = function ($field, $default = '') use ($lang) {
             if (is_array($field)) {
                 return $field[$lang] ?? $field['ru'] ?? $default;
             }
             return $field;
         };
-        
+
         $successMessage = '';
         $errorMessage = '';
         if (isset($_GET['success'])) {
@@ -49,7 +52,7 @@ class CartTemplate extends BaseTemplate
                     break;
             }
         }
-        
+
         $customStyles = '<style>
 .cart-container {
 background: var(--surface);
@@ -228,19 +231,19 @@ padding: 2rem 1rem;
 }
 }
 </style>';
-        
+
         $cartItemsHtml = '';
         $totalPrice = 0;
-        
+
         if ($cartCount > 0) {
             foreach ($cartItems as $item) {
                 $priceNum = (int)preg_replace('/[^0-9]/', '', $item['price']);
                 $totalPrice += $priceNum;
-                
+
                 // Получаем название курса на нужном языке
                 $courseTitle = $getText($item['title']);
                 $courseDuration = $getText($item['duration']);
-                
+
                 $cartItemsHtml .= '
 <div class="cart-item">
     <div class="cart-item-icon">' . strtoupper(substr($courseTitle, 0, 2)) . '</div>
@@ -255,7 +258,7 @@ padding: 2rem 1rem;
     </form>
 </div>';
             }
-            
+
             $confirmClear = addslashes(Language::get('confirm_clear_cart'));
             $cartItemsHtml .= '
 <div class="cart-summary">
@@ -289,7 +292,7 @@ padding: 2rem 1rem;
     </a>
 </div>';
         }
-        
+
         $alertHtml = '';
         if ($successMessage) {
             $alertHtml = '<div class="alert-success">' . $successMessage . '</div>';
@@ -297,7 +300,7 @@ padding: 2rem 1rem;
         if ($errorMessage) {
             $alertHtml = '<div class="alert-error">' . $errorMessage . '</div>';
         }
-        
+
         $content = $customStyles . '
 <section class="container py-5">
     <h1 class="display-5 fw-bold text-center mb-4" style="color: var(--text);">' . Language::get('cart_title') . '</h1>
@@ -306,7 +309,7 @@ padding: 2rem 1rem;
         ' . $cartItemsHtml . '
     </div>
 </section>';
-        
+
         return str_replace(['{{TITLE}}', '{{CONTENT}}'], [$title, $content], $template);
     }
 }

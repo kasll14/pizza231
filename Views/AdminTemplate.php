@@ -1,14 +1,17 @@
 <?php
+
 namespace Views;
+
 use Lib\Language;
+
 class AdminTemplate extends BaseTemplate
 {
-// ✅ Дашборд администратора
-public static function getDashboardTemplate(array $stats): string
-{
-$template = parent::getTemplate();
-$title = Language::get('admin_dashboard') . ' - ' . Language::get('site_name');
-$content = '
+    // ✅ Дашборд администратора
+    public static function getDashboardTemplate(array $stats): string
+    {
+        $template = parent::getTemplate();
+        $title = Language::get('admin_dashboard') . ' - ' . Language::get('site_name');
+        $content = '
 <style>
 /* 🌙 ТЁМНАЯ ТЕМА: Стили для админ-панели */
 .admin-container {
@@ -195,39 +198,39 @@ padding: 0.25rem 0;
 <div>' . Language::get('admin_status') . '</div>
 <div>' . Language::get('admin_date') . '</div>
 </div>';
-$statusColors = [
-'pending' => '#ed8936',
-'paid' => '#4299e1',
-'shipped' => '#48bb78',
-'completed' => '#38a169',
-'cancelled' => '#e53e3e'
-];
-$statusNames = [
-'pending' => Language::get('admin_order_pending'),
-'paid' => Language::get('admin_order_paid'),
-'shipped' => Language::get('admin_order_shipped'),
-'completed' => Language::get('admin_order_completed'),
-'cancelled' => Language::get('admin_order_cancelled')
-];
-foreach ($stats['recentOrders'] as $order) {
-$content .= '<div class="order-row">
+        $statusColors = [
+        'pending' => '#ed8936',
+        'paid' => '#4299e1',
+        'shipped' => '#48bb78',
+        'completed' => '#38a169',
+        'cancelled' => '#e53e3e'
+        ];
+        $statusNames = [
+        'pending' => Language::get('admin_order_pending'),
+        'paid' => Language::get('admin_order_paid'),
+        'shipped' => Language::get('admin_order_shipped'),
+        'completed' => Language::get('admin_order_completed'),
+        'cancelled' => Language::get('admin_order_cancelled')
+        ];
+        foreach ($stats['recentOrders'] as $order) {
+            $content .= '<div class="order-row">
 <div><a href="/admin/order?id=' . htmlspecialchars($order['id']) . '" style="color: var(--primary);">' . htmlspecialchars($order['id']) . '</a></div>
 <div>' . htmlspecialchars($order['name']) . '</div>
 <div>' . number_format($order['total'], 0, '.', ' ') . ' ₽</div>
 <div><span class="status-badge" style="background: ' . $statusColors[$order['status']] . '">' . $statusNames[$order['status']] . '</span></div>
 <div>' . date('d.m.Y', strtotime($order['created_at'])) . '</div>
 </div>';
-}
-$content .= '</div></div></section>';
-return str_replace(['{{TITLE}}', '{{CONTENT}}'], [$title, $content], $template);
-}
+        }
+        $content .= '</div></div></section>';
+        return str_replace(['{{TITLE}}', '{{CONTENT}}'], [$title, $content], $template);
+    }
 
-// ✅ СПИСОК ЗАКАЗОВ
-public static function getOrdersTemplate(array $orders, string $status = 'all', string $search = ''): string
-{
-$template = parent::getTemplate();
-$title = Language::get('admin_orders') . ' - ' . Language::get('site_name');
-$content = '
+    // ✅ СПИСОК ЗАКАЗОВ
+    public static function getOrdersTemplate(array $orders, string $status = 'all', string $search = ''): string
+    {
+        $template = parent::getTemplate();
+        $title = Language::get('admin_orders') . ' - ' . Language::get('site_name');
+        $content = '
 <style>
 .admin-container {
 max-width: 1400px;
@@ -383,22 +386,22 @@ padding: 0.25rem 0;
 <div>' . Language::get('admin_date') . '</div>
 <div>' . Language::get('admin_actions') . '</div>
 </div>';
-$statusColors = [
-'pending' => '#ed8936',
-'paid' => '#4299e1',
-'shipped' => '#48bb78',
-'completed' => '#38a169',
-'cancelled' => '#e53e3e'
-];
-$statusNames = [
-'pending' => Language::get('admin_order_pending'),
-'paid' => Language::get('admin_order_paid'),
-'shipped' => Language::get('admin_order_shipped'),
-'completed' => Language::get('admin_order_completed'),
-'cancelled' => Language::get('admin_order_cancelled')
-];
-foreach ($orders as $order) {
-$content .= '<div class="order-row">
+        $statusColors = [
+        'pending' => '#ed8936',
+        'paid' => '#4299e1',
+        'shipped' => '#48bb78',
+        'completed' => '#38a169',
+        'cancelled' => '#e53e3e'
+        ];
+        $statusNames = [
+        'pending' => Language::get('admin_order_pending'),
+        'paid' => Language::get('admin_order_paid'),
+        'shipped' => Language::get('admin_order_shipped'),
+        'completed' => Language::get('admin_order_completed'),
+        'cancelled' => Language::get('admin_order_cancelled')
+        ];
+        foreach ($orders as $order) {
+            $content .= '<div class="order-row">
 <div>' . htmlspecialchars($order['id']) . '</div>
 <div>' . htmlspecialchars($order['name']) . '<br><small>' . htmlspecialchars($order['email']) . '</small></div>
 <div>' . number_format($order['total'], 0, '.', ' ') . ' ₽</div>
@@ -406,74 +409,74 @@ $content .= '<div class="order-row">
 <div>' . date('d.m.Y', strtotime($order['created_at'])) . '</div>
 <div><a href="/admin/order?id=' . htmlspecialchars($order['id']) . '" class="btn-view">' . Language::get('admin_view') . '</a></div>
 </div>';
-}
-$content .= '</div></div></section>';
-return str_replace(['{{TITLE}}', '{{CONTENT}}'], [$title, $content], $template);
-}
-
-// ✅ ============================================================================
-// ✅ ДЕТАЛИ ЗАКАЗА (🔧 ИСПРАВЛЕНО: Обработка массивов для многоязычности)
-// ✅ ============================================================================
-public static function getOrderDetailTemplate(array $order): string
-{
-$template = parent::getTemplate();
-$title = Language::get('admin_order_id') . ' ' . $order['id'] . ' - ' . Language::get('site_name');
-$statusOptions = [
-'pending' => Language::get('admin_order_pending'),
-'paid' => Language::get('admin_order_paid'),
-'shipped' => Language::get('admin_order_shipped'),
-'completed' => Language::get('admin_order_completed'),
-'cancelled' => Language::get('admin_order_cancelled')
-];
-
-// 🌐 ============================================================================
-// 🔧 ИЗМЕНЕНИЕ #1: Получаем текущий язык для отображения
-// 🌐 ============================================================================
-$lang = Language::getCurrentLang();
-
-// 🌐 ============================================================================
-// 🔧 ИЗМЕНЕНИЕ #2: Вспомогательная функция для получения текста на нужном языке
-// 🌐 ============================================================================
-$getText = function($field, $default = '') use ($lang) {
-    if (is_array($field)) {
-        return $field[$lang] ?? $field['ru'] ?? $default;
+        }
+        $content .= '</div></div></section>';
+        return str_replace(['{{TITLE}}', '{{CONTENT}}'], [$title, $content], $template);
     }
-    return $field;
-};
 
-$itemsHtml = '';
-if (!empty($order['items']) && is_array($order['items'])) {
-    foreach ($order['items'] as $item) {
-        if (is_array($item)) {
-            // 🌐 ============================================================================
-            // 🔧 ИЗМЕНЕНИЕ #3: Получаем название и длительность на нужном языке
-            // 🌐 ============================================================================
-            $courseTitle = $getText($item['title'], '');
-            $courseDuration = $getText($item['duration'], '');
-            $coursePrice = is_array($item['price']) ? '' : (string)$item['price'];
-            
-            $itemsHtml .= '<tr>
+    // ✅ ============================================================================
+    // ✅ ДЕТАЛИ ЗАКАЗА (🔧 ИСПРАВЛЕНО: Обработка массивов для многоязычности)
+    // ✅ ============================================================================
+    public static function getOrderDetailTemplate(array $order): string
+    {
+        $template = parent::getTemplate();
+        $title = Language::get('admin_order_id') . ' ' . $order['id'] . ' - ' . Language::get('site_name');
+        $statusOptions = [
+        'pending' => Language::get('admin_order_pending'),
+        'paid' => Language::get('admin_order_paid'),
+        'shipped' => Language::get('admin_order_shipped'),
+        'completed' => Language::get('admin_order_completed'),
+        'cancelled' => Language::get('admin_order_cancelled')
+        ];
+
+        // 🌐 ============================================================================
+        // 🔧 ИЗМЕНЕНИЕ #1: Получаем текущий язык для отображения
+        // 🌐 ============================================================================
+        $lang = Language::getCurrentLang();
+
+        // 🌐 ============================================================================
+        // 🔧 ИЗМЕНЕНИЕ #2: Вспомогательная функция для получения текста на нужном языке
+        // 🌐 ============================================================================
+        $getText = function ($field, $default = '') use ($lang) {
+            if (is_array($field)) {
+                return $field[$lang] ?? $field['ru'] ?? $default;
+            }
+            return $field;
+        };
+
+        $itemsHtml = '';
+        if (!empty($order['items']) && is_array($order['items'])) {
+            foreach ($order['items'] as $item) {
+                if (is_array($item)) {
+                    // 🌐 ============================================================================
+                    // 🔧 ИЗМЕНЕНИЕ #3: Получаем название и длительность на нужном языке
+                    // 🌐 ============================================================================
+                    $courseTitle = $getText($item['title'], '');
+                    $courseDuration = $getText($item['duration'], '');
+                    $coursePrice = is_array($item['price']) ? '' : (string)$item['price'];
+
+                    $itemsHtml .= '<tr>
                 <td>' . htmlspecialchars($courseTitle) . '</td>
                 <td>' . htmlspecialchars($courseDuration) . '</td>
                 <td>' . htmlspecialchars($coursePrice) . '</td>
             </tr>';
+                }
+            }
         }
-    }
-}
 
-// 🔧 ============================================================================
-// 🔧 ИЗМЕНЕНИЕ #4: Проверка типов перед htmlspecialchars для всех полей заказа
-// 🔧 ============================================================================
-$orderName = is_string($order['name']) ? $order['name'] : '';
-$orderEmail = is_string($order['email']) ? $order['email'] : '';
-$orderPhone = is_string($order['phone']) ? $order['phone'] : '';
-$orderIp = is_string($order['ip']) ? $order['ip'] : '';
-$orderPaymentMethod = is_string($order['payment_method']) ? $order['payment_method'] : '';
-$orderComment = is_string($order['comment']) ? $order['comment'] : '';
-$orderStatus = is_string($order['status']) ? $order['status'] : 'pending';
-$orderCreatedAt = is_string($order['created_at']) ? $order['created_at'] : '';
+        // 🔧 ============================================================================
+        // 🔧 ИЗМЕНЕНИЕ #4: Проверка типов перед htmlspecialchars для всех полей заказа
+        // 🔧 ============================================================================
+        $orderName = is_string($order['name']) ? $order['name'] : '';
+        $orderEmail = is_string($order['email']) ? $order['email'] : '';
+        $orderPhone = is_string($order['phone']) ? $order['phone'] : '';
+        $orderIp = is_string($order['ip']) ? $order['ip'] : '';
+        $orderPaymentMethod = is_string($order['payment_method']) ? $order['payment_method'] : '';
+        $orderComment = is_string($order['comment']) ? $order['comment'] : '';
+        $orderStatus = is_string($order['status']) ? $order['status'] : 'pending';
+        $orderCreatedAt = is_string($order['created_at']) ? $order['created_at'] : '';
 
-$content = '
+        $content = '
 <style>
 .admin-container {
 max-width: 1000px;
@@ -640,24 +643,24 @@ grid-template-columns: 1fr;
 <form class="status-form" method="POST" action="/admin/order/update">
 <input type="hidden" name="order_id" value="' . htmlspecialchars($order['id']) . '">
 <select name="status">';
-foreach ($statusOptions as $value => $label) {
-$selected = $orderStatus === $value ? 'selected' : '';
-$content .= '<option value="' . $value . '" ' . $selected . '>' . $label . '</option>';
-}
-$content .= '</select><button type="submit">' . Language::get('admin_update_status') . '</button></form></div>';
-if (!empty($orderComment)) {
-$content .= '<div class="detail-section"><h3>' . Language::get('checkout_comment') . '</h3><div class="info-item"><p style="margin:0">' . htmlspecialchars($orderComment) . '</p></div></div>';
-}
-$content .= '</div></div></section>';
-return str_replace(['{{TITLE}}', '{{CONTENT}}'], [$title, $content], $template);
-}
+        foreach ($statusOptions as $value => $label) {
+            $selected = $orderStatus === $value ? 'selected' : '';
+            $content .= '<option value="' . $value . '" ' . $selected . '>' . $label . '</option>';
+        }
+        $content .= '</select><button type="submit">' . Language::get('admin_update_status') . '</button></form></div>';
+        if (!empty($orderComment)) {
+            $content .= '<div class="detail-section"><h3>' . Language::get('checkout_comment') . '</h3><div class="info-item"><p style="margin:0">' . htmlspecialchars($orderComment) . '</p></div></div>';
+        }
+        $content .= '</div></div></section>';
+        return str_replace(['{{TITLE}}', '{{CONTENT}}'], [$title, $content], $template);
+    }
 
-// ✅ СПИСОК ПОЛЬЗОВАТЕЛЕЙ
-public static function getUsersTemplate(array $users): string
-{
-$template = parent::getTemplate();
-$title = Language::get('admin_users') . ' - ' . Language::get('site_name');
-$content = '
+    // ✅ СПИСОК ПОЛЬЗОВАТЕЛЕЙ
+    public static function getUsersTemplate(array $users): string
+    {
+        $template = parent::getTemplate();
+        $title = Language::get('admin_users') . ' - ' . Language::get('site_name');
+        $content = '
 <style>
 .admin-container {
 max-width: 1400px;
@@ -778,18 +781,18 @@ padding: 0.25rem 0;
 <div>' . Language::get('admin_date') . '</div>
 <div>' . Language::get('admin_actions') . '</div>
 </div>';
-foreach ($users as $user) {
-$roleClass = $user['role'] === 'admin' ? 'role-admin' : 'role-user';
-$roleName = $user['role'] === 'admin' ? Language::get('auth_role_admin') : Language::get('auth_role_user');
-$verifiedBadge = $user['verified']
-? '<span class="verified-badge">✓ ' . Language::get('admin_verified') . '</span>'
-: '<span class="unverified-badge">○ ' . Language::get('admin_not_verified') . '</span>';
-$deleteButton = $user['id'] == 1 ? '' :
-'<form method="POST" action="/admin/user/delete" style="display:inline;" onsubmit="return confirm(\'Удалить пользователя?\')">' .
-'<input type="hidden" name="user_id" value="' . $user['id'] . '">' .
-'<button type="submit" class="btn-delete">' . Language::get('admin_delete_user') . '</button>' .
-'</form>';
-$content .= '<div class="user-row">
+        foreach ($users as $user) {
+            $roleClass = $user['role'] === 'admin' ? 'role-admin' : 'role-user';
+            $roleName = $user['role'] === 'admin' ? Language::get('auth_role_admin') : Language::get('auth_role_user');
+            $verifiedBadge = $user['verified']
+            ? '<span class="verified-badge">✓ ' . Language::get('admin_verified') . '</span>'
+            : '<span class="unverified-badge">○ ' . Language::get('admin_not_verified') . '</span>';
+            $deleteButton = $user['id'] == 1 ? '' :
+            '<form method="POST" action="/admin/user/delete" style="display:inline;" onsubmit="return confirm(\'Удалить пользователя?\')">' .
+            '<input type="hidden" name="user_id" value="' . $user['id'] . '">' .
+            '<button type="submit" class="btn-delete">' . Language::get('admin_delete_user') . '</button>' .
+            '</form>';
+            $content .= '<div class="user-row">
 <div>' . $user['id'] . '</div>
 <div>' . htmlspecialchars($user['name']) . '<br><small>' . htmlspecialchars($user['email']) . '</small></div>
 <div><span class="role-badge ' . $roleClass . '">' . $roleName . '</span></div>
@@ -797,32 +800,38 @@ $content .= '<div class="user-row">
 <div>' . date('d.m.Y', strtotime($user['created_at'])) . '</div>
 <div>' . $deleteButton . '</div>
 </div>';
-}
-$content .= '</div></div></section>';
-return str_replace(['{{TITLE}}', '{{CONTENT}}'], [$title, $content], $template);
-}
+        }
+        $content .= '</div></div></section>';
+        return str_replace(['{{TITLE}}', '{{CONTENT}}'], [$title, $content], $template);
+    }
 
-// 📝 LOGGER: Просмотр логов
-public static function getLogsTemplate(array $logs, array $stats, int $limit): string
-{
-$template = parent::getTemplate();
-$title = Language::get('admin_logs') . ' - ' . Language::get('site_name');
-$successHtml = isset($_GET['success']) && $_GET['success'] === 'cleared'
-? '<div class="alert alert-success">' . Language::get('admin_log_cleared') . '</div>'
-: '';
-$logsHtml = '';
-foreach ($logs as $log) {
-$logClass = 'log-entry-default';
-if (strpos($log, '[ERROR]') !== false) $logClass = 'log-entry-error';
-elseif (strpos($log, '[WARNING]') !== false) $logClass = 'log-entry-warning';
-elseif (strpos($log, '[CRITICAL]') !== false) $logClass = 'log-entry-critical';
-elseif (strpos($log, '[INFO]') !== false) $logClass = 'log-entry-info';
-elseif (strpos($log, '[DEBUG]') !== false) $logClass = 'log-entry-debug';
-$logsHtml .= '<div class="log-entry ' . $logClass . '">'
-. htmlspecialchars($log) . '</div>';
-}
-$clearConfirm = Language::get('admin_log_clear_confirm');
-$content = '
+    // 📝 LOGGER: Просмотр логов
+    public static function getLogsTemplate(array $logs, array $stats, int $limit): string
+    {
+        $template = parent::getTemplate();
+        $title = Language::get('admin_logs') . ' - ' . Language::get('site_name');
+        $successHtml = isset($_GET['success']) && $_GET['success'] === 'cleared'
+        ? '<div class="alert alert-success">' . Language::get('admin_log_cleared') . '</div>'
+        : '';
+        $logsHtml = '';
+        foreach ($logs as $log) {
+            $logClass = 'log-entry-default';
+            if (strpos($log, '[ERROR]') !== false) {
+                $logClass = 'log-entry-error';
+            } elseif (strpos($log, '[WARNING]') !== false) {
+                $logClass = 'log-entry-warning';
+            } elseif (strpos($log, '[CRITICAL]') !== false) {
+                $logClass = 'log-entry-critical';
+            } elseif (strpos($log, '[INFO]') !== false) {
+                $logClass = 'log-entry-info';
+            } elseif (strpos($log, '[DEBUG]') !== false) {
+                $logClass = 'log-entry-debug';
+            }
+            $logsHtml .= '<div class="log-entry ' . $logClass . '">'
+            . htmlspecialchars($log) . '</div>';
+        }
+        $clearConfirm = Language::get('admin_log_clear_confirm');
+        $content = '
 <style>
 .admin-container { max-width: 1400px; margin: 2rem auto; padding: 0 1rem; }
 .admin-header { background: linear-gradient(135deg, var(--primary), var(--primary-dark));
@@ -979,6 +988,6 @@ onsubmit="return confirm(\'' . $clearConfirm . '\')">
 </div>
 </div>
 </section>';
-return str_replace(['{{TITLE}}', '{{CONTENT}}'], [$title, $content], $template);
-}
+        return str_replace(['{{TITLE}}', '{{CONTENT}}'], [$title, $content], $template);
+    }
 }

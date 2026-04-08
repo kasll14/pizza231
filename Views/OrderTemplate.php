@@ -1,5 +1,7 @@
 <?php
+
 namespace Views;
+
 use Lib\Language;
 
 class OrderTemplate extends BaseTemplate
@@ -8,18 +10,18 @@ class OrderTemplate extends BaseTemplate
     {
         $template = parent::getTemplate();
         $title = Language::get('checkout_title') . ' - ' . Language::get('site_name');
-        
+
         $errors = $_SESSION['order_errors'] ?? [];
         $data = $_SESSION['order_data'] ?? [];
         unset($_SESSION['order_errors']);
         unset($_SESSION['order_data']);
-        
+
         $totalPrice = 0;
         foreach ($cartItems as $item) {
             $priceNum = (int)preg_replace('/[^0-9]/', '', $item['price']);
             $totalPrice += $priceNum;
         }
-        
+
         $customStyles = '
         <style>
             /* 🌙 ТЁМНАЯ ТЕМА: Стили для оформления заказа */
@@ -246,35 +248,41 @@ class OrderTemplate extends BaseTemplate
                 }
             }
         </style>';
-        
+
         $orderItemsHtml = '';
         foreach ($cartItems as $item) {
             // 🔧 ИСПРАВЛЕНИЕ: Проверка типа данных перед htmlspecialchars
             $title = is_array($item['title']) ? '' : (string)$item['title'];
             $price = is_array($item['price']) ? '' : (string)$item['price'];
-            
+
             $orderItemsHtml .= '
             <div class="order-item">
                 <span>' . htmlspecialchars($title) . '</span>
                 <span class="fw-bold">' . htmlspecialchars($price) . '</span>
             </div>';
         }
-        
+
         $errorHtml = '';
         if (!empty($errors)) {
             $errorMessages = [];
-            if (in_array('name', $errors)) $errorMessages[] = Language::get('checkout_error_name');
-            if (in_array('email', $errors)) $errorMessages[] = Language::get('checkout_error_email');
-            if (in_array('phone', $errors)) $errorMessages[] = Language::get('checkout_error_phone');
+            if (in_array('name', $errors)) {
+                $errorMessages[] = Language::get('checkout_error_name');
+            }
+            if (in_array('email', $errors)) {
+                $errorMessages[] = Language::get('checkout_error_email');
+            }
+            if (in_array('phone', $errors)) {
+                $errorMessages[] = Language::get('checkout_error_phone');
+            }
             $errorHtml = '<div class="error-message">' . implode(', ', $errorMessages) . '</div>';
         }
-        
+
         // 🔧 ИСПРАВЛЕНИЕ: Проверка типа данных для полей формы
         $nameValue = isset($data['name']) && !is_array($data['name']) ? htmlspecialchars((string)$data['name']) : '';
         $emailValue = isset($data['email']) && !is_array($data['email']) ? htmlspecialchars((string)$data['email']) : '';
         $phoneValue = isset($data['phone']) && !is_array($data['phone']) ? htmlspecialchars((string)$data['phone']) : '';
         $commentValue = isset($data['comment']) && !is_array($data['comment']) ? htmlspecialchars((string)$data['comment']) : '';
-        
+
         $content = $customStyles . '
         <section class="container py-5">
             <div class="row justify-content-center">
@@ -359,7 +367,7 @@ class OrderTemplate extends BaseTemplate
                 }
             });
         </script>';
-        
+
         return str_replace(['{{TITLE}}', '{{CONTENT}}'], [$title, $content], $template);
     }
 
@@ -367,7 +375,7 @@ class OrderTemplate extends BaseTemplate
     {
         $template = parent::getTemplate();
         $title = Language::get('order_success_title') . ' - ' . Language::get('site_name');
-        
+
         $customStyles = '
         <style>
             .success-container {
@@ -466,7 +474,7 @@ class OrderTemplate extends BaseTemplate
                 }
             }
         </style>';
-        
+
         $content = $customStyles . '
         <section class="container py-5">
             <div class="row justify-content-center">
@@ -508,7 +516,7 @@ class OrderTemplate extends BaseTemplate
                 </div>
             </div>
         </section>';
-        
+
         return str_replace(['{{TITLE}}', '{{CONTENT}}'], [$title, $content], $template);
     }
 }

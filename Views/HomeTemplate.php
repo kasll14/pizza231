@@ -1,5 +1,7 @@
 <?php
+
 namespace Views;
+
 use Lib\Language;
 
 class HomeTemplate extends BaseTemplate
@@ -8,7 +10,7 @@ class HomeTemplate extends BaseTemplate
     {
         $template = parent::getTemplate();
         $title = Language::get('home_hero_title') . ' - ' . Language::get('site_name');
-        
+
         $heroTitle = Language::get('home_hero_title');
         $heroSubtitle = Language::get('home_hero_subtitle');
         $featuresTitle = Language::get('home_features_title');
@@ -22,7 +24,7 @@ class HomeTemplate extends BaseTemplate
         $statsStudents = Language::get('home_stats_students');
         $statsCourses = Language::get('home_stats_courses');
         $statsEmployment = Language::get('home_stats_employment');
-        
+
         $customStyles = '
         <style>
             /* 🌙 ТЁМНАЯ ТЕМА: Hero секция */
@@ -209,7 +211,7 @@ class HomeTemplate extends BaseTemplate
                 }
             }
         </style>';
-        
+
         $content = $customStyles . '
         <section class="hero-section text-center">
             <div class="container">
@@ -261,7 +263,7 @@ class HomeTemplate extends BaseTemplate
                 </div>
             </div>
         </section>';
-        
+
         return str_replace(['{{TITLE}}', '{{CONTENT}}'], [$title, $content], $template);
     }
 }

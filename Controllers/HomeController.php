@@ -1,5 +1,7 @@
 <?php
+
 namespace Controllers;
+
 use Views\HomeTemplate;
 // 🌐 LANG: Добавлен импорт Language
 use Lib\Language;

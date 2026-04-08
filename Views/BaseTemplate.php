@@ -1,5 +1,7 @@
 <?php
+
 namespace Views;
+
 use Lib\Language;
 use Lib\User;
 
@@ -11,7 +13,7 @@ class BaseTemplate
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
-        
+
         $cartCount = count($_SESSION['cart'] ?? []);
         $cartBadge = $cartCount > 0 ? '<span class="cart-count">' . $cartCount . '</span>' : '';
         $currentLang = Language::getCurrentLang();
@@ -19,7 +21,7 @@ class BaseTemplate
         $isLoggedIn = User::isLoggedIn();
         $currentUser = $isLoggedIn ? User::getCurrentUser() : null;
         $isAdmin = $isLoggedIn && User::isAdmin();
-        
+
         $userName = '';
         $userInitial = '?';
         if ($currentUser !== null) {
@@ -34,13 +36,13 @@ class BaseTemplate
         if ($userName !== '') {
             $userInitial = strtoupper(mb_substr($userName, 0, 1, 'UTF-8'));
         }
-        
+
         // 🌙 ТЁМНАЯ ТЕМА: Определение текущей темы
         $defaultTheme = 'light';
         if (isset($_SESSION['theme'])) {
             $defaultTheme = $_SESSION['theme'];
         }
-        
+
         $toastAdded = Language::get('toast_added');
         $toastError = Language::get('toast_error');
         $toastNetwork = Language::get('toast_network');

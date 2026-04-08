@@ -1,4 +1,5 @@
 <?php
+
 namespace Tests\Integration;
 
 use PHPUnit\Framework\TestCase;
@@ -22,7 +23,7 @@ class AdminControllerTest extends TestCase
             $stats = [
                 'totalOrders' => count($orders),
                 'totalRevenue' => array_sum(array_column($orders, 'total')),
-                'pendingOrders' => count(array_filter($orders, fn($o) => $o['status'] === 'pending')),
+                'pendingOrders' => count(array_filter($orders, fn ($o) => $o['status'] === 'pending')),
             ];
 
             $this->assertIsInt($stats['totalOrders']);
@@ -43,14 +44,14 @@ class AdminControllerTest extends TestCase
         // ✅ ИСПРАВЛЕНО: добавлены ассерты
         $this->assertIsArray($users);
         $this->assertNotEmpty($users);
-        
+
         // Пользователь с ID 2 - админ, не должен удаляться
         if (isset($users[2])) {
             $this->assertEquals('admin', $users[2]['role']);
         }
-        
+
         // Проверяем что есть хотя бы один админ
-        $adminUsers = array_filter($users, fn($u) => $u['role'] === 'admin');
+        $adminUsers = array_filter($users, fn ($u) => $u['role'] === 'admin');
         $this->assertNotEmpty($adminUsers);
     }
 
@@ -58,7 +59,7 @@ class AdminControllerTest extends TestCase
     {
         $users = User::getAllUsers();
 
-        $adminUsers = array_filter($users, fn($u) => $u['role'] === 'admin');
+        $adminUsers = array_filter($users, fn ($u) => $u['role'] === 'admin');
 
         // ✅ ИСПРАВЛЕНО: в данных 2 админа (ID 2 и 4)
         $this->assertGreaterThanOrEqual(1, count($adminUsers));

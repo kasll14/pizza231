@@ -1,5 +1,7 @@
 <?php
+
 namespace Views;
+
 use Lib\Language;
 
 class AuthTemplate extends BaseTemplate
@@ -8,7 +10,7 @@ class AuthTemplate extends BaseTemplate
     {
         $template = parent::getTemplate();
         $title = Language::get('auth_register') . ' - ' . Language::get('site_name');
-        
+
         $errorMessages = [
             'name_required' => Language::get('auth_name_required'),
             'email_invalid' => Language::get('checkout_error_email'),
@@ -17,12 +19,12 @@ class AuthTemplate extends BaseTemplate
             'password_short' => Language::get('auth_password_short'),
             'password_mismatch' => Language::get('auth_password_mismatch')
         ];
-        
+
         $errorHtml = '';
         foreach ($errors as $error) {
             $errorHtml .= '<div class="alert-error">' . ($errorMessages[$error] ?? $error) . '</div>';
         }
-        
+
         $content = '
         <style>
             /* 🌙 ТЁМНАЯ ТЕМА: Стили для регистрации */
@@ -181,7 +183,7 @@ class AuthTemplate extends BaseTemplate
                 <div class="auth-link">' . Language::get('auth_login') . '? <a href="/auth/login">' . Language::get('auth_login') . '</a></div>
             </div>
         </section>';
-        
+
         return str_replace(['{{TITLE}}', '{{CONTENT}}'], [$title, $content], $template);
     }
 
@@ -189,23 +191,29 @@ class AuthTemplate extends BaseTemplate
     {
         $template = parent::getTemplate();
         $title = Language::get('auth_login') . ' - ' . Language::get('site_name');
-        
+
         $errorMessages = [
             'fields_required' => 'Введите email и пароль',
             'invalid_credentials' => Language::get('auth_invalid_credentials'),
             'email_not_verified' => Language::get('auth_email_not_verified')
         ];
-        
+
         $errorHtml = '';
         foreach ($errors as $error) {
             $errorHtml .= '<div class="alert-error">' . ($errorMessages[$error] ?? $error) . '</div>';
         }
-        
+
         $successHtml = '';
-        if ($registered) $successHtml = '<div class="alert-success">' . Language::get('auth_registration_success') . '</div>';
-        if ($verified) $successHtml = '<div class="alert-success">' . Language::get('auth_email_verified') . '</div>';
-        if ($resetSuccess) $successHtml = '<div class="alert-success">' . Language::get('auth_password_changed') . '</div>';
-        
+        if ($registered) {
+            $successHtml = '<div class="alert-success">' . Language::get('auth_registration_success') . '</div>';
+        }
+        if ($verified) {
+            $successHtml = '<div class="alert-success">' . Language::get('auth_email_verified') . '</div>';
+        }
+        if ($resetSuccess) {
+            $successHtml = '<div class="alert-success">' . Language::get('auth_password_changed') . '</div>';
+        }
+
         $content = '
         <style>
             /* 🌙 ТЁМНАЯ ТЕМА: Стили для входа */
@@ -344,7 +352,7 @@ class AuthTemplate extends BaseTemplate
                 <div class="auth-link">' . Language::get('auth_register') . '? <a href="/auth/register">' . Language::get('auth_register') . '</a></div>
             </div>
         </section>';
-        
+
         return str_replace(['{{TITLE}}', '{{CONTENT}}'], [$title, $content], $template);
     }
 
@@ -352,7 +360,7 @@ class AuthTemplate extends BaseTemplate
     {
         $template = parent::getTemplate();
         $title = Language::get('auth_verify_email') . ' - ' . Language::get('site_name');
-        
+
         $errorMessages = [
             'code_invalid' => 'Код должен содержать 6 цифр',
             'code_wrong' => 'Неверный код',
@@ -360,15 +368,15 @@ class AuthTemplate extends BaseTemplate
             'already_verified' => 'Email уже подтверждён',
             'resend_failed' => 'Ошибка отправки кода'
         ];
-        
+
         $errorHtml = '';
         foreach ($errors as $error) {
             $errorHtml .= '<div class="alert-error">' . ($errorMessages[$error] ?? $error) . '</div>';
         }
-        
+
         $resent = isset($_GET['resent']);
         $successHtml = $resent ? '<div class="alert-success">Новый код отправлен на ' . htmlspecialchars($email) . '</div>' : '';
-        
+
         $content = '
         <style>
             .auth-container {
@@ -495,7 +503,7 @@ class AuthTemplate extends BaseTemplate
                 ' . ($loginAttempt ? '<div class="auth-link" style="margin-top:1.5rem"><a href="/auth/login">← Вернуться ко входу</a></div>' : '') . '
             </div>
         </section>';
-        
+
         return str_replace(['{{TITLE}}', '{{CONTENT}}'], [$title, $content], $template);
     }
 
@@ -503,14 +511,14 @@ class AuthTemplate extends BaseTemplate
     {
         $template = parent::getTemplate();
         $title = Language::get('auth_forgot_password') . ' - ' . Language::get('site_name');
-        
+
         $errorHtml = '';
         foreach ($errors as $error) {
             $errorHtml .= '<div class="alert-error">' . Language::get('checkout_error_email') . '</div>';
         }
-        
+
         $successHtml = $success ? '<div class="alert-success">Если email зарегистрирован, мы отправили инструкцию по сбросу пароля</div>' : '';
-        
+
         $content = '
         <style>
             .auth-container {
@@ -623,7 +631,7 @@ class AuthTemplate extends BaseTemplate
                 <div class="auth-link"><a href="/auth/login">← Вернуться ко входу</a></div>
             </div>
         </section>';
-        
+
         return str_replace(['{{TITLE}}', '{{CONTENT}}'], [$title, $content], $template);
     }
 
@@ -631,22 +639,22 @@ class AuthTemplate extends BaseTemplate
     {
         $template = parent::getTemplate();
         $title = Language::get('auth_reset_password') . ' - ' . Language::get('site_name');
-        
+
         $errorMessages = [
             'password_short' => Language::get('auth_password_short'),
             'password_mismatch' => Language::get('auth_password_mismatch')
         ];
-        
+
         $errorHtml = '';
         foreach ($errors as $error) {
             $errorHtml .= '<div class="alert-error">' . ($errorMessages[$error] ?? $error) . '</div>';
         }
-        
+
         if (!$validToken) {
             $content = '<section class="container py-5"><div class="auth-container"><h1 class="auth-title">Ошибка</h1><p style="text-align:center;color:var(--text-muted)">Ссылка недействительна или истекла</p><div class="auth-link"><a href="/auth/forgot-password">Запросить сброс пароля</a></div></div></section>';
             return str_replace(['{{TITLE}}', '{{CONTENT}}'], [$title, $content], $template);
         }
-        
+
         $content = '
         <style>
             .auth-container {
@@ -740,7 +748,7 @@ class AuthTemplate extends BaseTemplate
                 </form>
             </div>
         </section>';
-        
+
         return str_replace(['{{TITLE}}', '{{CONTENT}}'], [$title, $content], $template);
     }
 }

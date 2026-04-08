@@ -1,5 +1,7 @@
 <?php
+
 // tests/Security/InputValidationTest.php
+
 namespace Tests\Security;
 
 use PHPUnit\Framework\TestCase;
@@ -63,7 +65,7 @@ class InputValidationTest extends TestCase
     public function testXSSPrevention(): void
     {
         // ✅ ИСПРАВЛЕНО: Разделяем тесты по типам XSS векторов
-        
+
         // 1. Тесты с тегами (содержат < и >)
         $tagBasedXSS = [
             '<script>alert("XSS")</script>',
@@ -103,7 +105,7 @@ class InputValidationTest extends TestCase
 
         foreach ($nonTagXSS as $input) {
             $sanitized = htmlspecialchars($input, ENT_QUOTES, 'UTF-8');
-            
+
             // Эти векторы не содержат < >, поэтому проверяем что они не изменены
             // (htmlspecialchars не меняет текст без спецсимволов)
             $this->assertIsString($sanitized);

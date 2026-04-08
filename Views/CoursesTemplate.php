@@ -1,7 +1,10 @@
 <?php
+
 namespace Views;
+
 use Lib\DataLoader;
 use Lib\Language;
+
 class CoursesTemplate extends BaseTemplate
 {
     public static function getTemplate(): string
@@ -10,15 +13,15 @@ class CoursesTemplate extends BaseTemplate
         $title = Language::get('courses_title') . ' — ' . Language::get('site_name');
         $courses = DataLoader::loadCourses();
         $lang = Language::getCurrentLang();
-        
+
         // Вспомогательная функция для получения текста на нужном языке
-        $getText = function($field, $default = '') use ($lang) {
+        $getText = function ($field, $default = '') use ($lang) {
             if (is_array($field)) {
                 return $field[$lang] ?? $field['ru'] ?? $default;
             }
             return $field;
         };
-        
+
         $customStyles = '
 <style>
 /* 🌙 ТЁМНАЯ ТЕМА: Стили для страницы курсов */
@@ -202,7 +205,7 @@ width: 100%;
 }
 }
 </style>';
-        
+
         $coursesHtml = '';
         foreach ($courses as $course) {
             $coursesHtml .= '
@@ -223,7 +226,7 @@ width: 100%;
     </div>
 </a>';
         }
-        
+
         $content = $customStyles . '
 <section class="container py-4 py-md-5">
     <div class="page-header">
@@ -234,7 +237,7 @@ width: 100%;
         ' . $coursesHtml . '
     </div>
 </section>';
-        
+
         return str_replace(['{{TITLE}}', '{{CONTENT}}'], [$title, $content], $template);
     }
 }

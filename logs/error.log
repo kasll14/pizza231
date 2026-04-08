@@ -841,3 +841,4 @@
 [2026-03-30 11:11:10] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
 [2026-03-30 11:11:10] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
 [2026-03-30 11:11:10] [DEBUG] [IP:unknown] [User:guest] [URI:unknown] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-04-07 06:19:21] [DEBUG] [IP:::1] [User:guest] [URI:/favicon.ico] Request | Context: {"uri":"\/favicon.ico","method":"GET"}

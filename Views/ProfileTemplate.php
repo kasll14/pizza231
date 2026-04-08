@@ -1,5 +1,7 @@
 <?php
+
 namespace Views;
+
 use Lib\Language;
 
 class ProfileTemplate extends BaseTemplate
@@ -8,10 +10,10 @@ class ProfileTemplate extends BaseTemplate
     {
         $template = parent::getTemplate();
         $title = Language::get('auth_profile') . ' - ' . Language::get('site_name');
-        
+
         $recentOrders = array_slice($orders, 0, 5);
         $ordersHtml = '';
-        
+
         if (!empty($recentOrders)) {
             $statusColors = [
                 'pending' => '#ed8936',
@@ -27,7 +29,7 @@ class ProfileTemplate extends BaseTemplate
                 'completed' => Language::get('admin_order_completed'),
                 'cancelled' => Language::get('admin_order_cancelled')
             ];
-            
+
             foreach ($recentOrders as $order) {
                 $ordersHtml .= '
                 <div class="order-item">
@@ -43,7 +45,7 @@ class ProfileTemplate extends BaseTemplate
         } else {
             $ordersHtml = '<p class="text-muted">' . Language::get('auth_no_orders') . '</p>';
         }
-        
+
         $content = '
         <style>
             /* 🌙 ТЁМНАЯ ТЕМА: Стили для профиля */
@@ -219,7 +221,7 @@ class ProfileTemplate extends BaseTemplate
                 </div>
             </div>
         </section>';
-        
+
         return str_replace(['{{TITLE}}', '{{CONTENT}}'], [$title, $content], $template);
     }
 
@@ -227,7 +229,7 @@ class ProfileTemplate extends BaseTemplate
     {
         $template = parent::getTemplate();
         $title = Language::get('auth_edit_profile') . ' - ' . Language::get('site_name');
-        
+
         $errorMessages = [
             'name_required' => Language::get('auth_name_required'),
             'phone_required' => Language::get('auth_phone_required'),
@@ -239,15 +241,15 @@ class ProfileTemplate extends BaseTemplate
             'code_required' => 'Введите код из email',
             'code_invalid' => 'Неверный код или истёк срок действия'
         ];
-        
+
         $errorHtml = '';
         foreach ($errors as $error) {
             $errorHtml .= '<div class="alert-error">' . ($errorMessages[$error] ?? $error) . '</div>';
         }
-        
+
         $successHtml = $success ? '<div class="alert-success">' . Language::get('auth_save_changes') . '!</div>' : '';
         $codeSentHtml = $codeSent ? '<div class="alert-success">Код отправлен на email ' . htmlspecialchars($user['email']) . '</div>' : '';
-        
+
         $content = '
         <style>
             .profile-container {
@@ -417,7 +419,7 @@ class ProfileTemplate extends BaseTemplate
                 </div>
             </div>
         </section>';
-        
+
         return str_replace(['{{TITLE}}', '{{CONTENT}}'], [$title, $content], $template);
     }
 
@@ -425,7 +427,7 @@ class ProfileTemplate extends BaseTemplate
     {
         $template = parent::getTemplate();
         $title = Language::get('auth_order_history') . ' - ' . Language::get('site_name');
-        
+
         $ordersHtml = '';
         if (!empty($orders)) {
             $statusColors = [
@@ -442,13 +444,13 @@ class ProfileTemplate extends BaseTemplate
                 'completed' => Language::get('admin_order_completed'),
                 'cancelled' => Language::get('admin_order_cancelled')
             ];
-            
+
             foreach ($orders as $order) {
                 $itemsHtml = '';
                 foreach ($order['items'] as $item) {
                     $itemsHtml .= '<li>' . htmlspecialchars($item['title']) . ' — ' . htmlspecialchars($item['price']) . '</li>';
                 }
-                
+
                 $ordersHtml .= '
                 <div class="order-card">
                     <div class="order-header">
@@ -474,7 +476,7 @@ class ProfileTemplate extends BaseTemplate
                 <a href="/courses" class="btn-primary">' . Language::get('nav_courses') . '</a>
             </div>';
         }
-        
+
         $content = '
         <style>
             .orders-container {
@@ -602,7 +604,7 @@ class ProfileTemplate extends BaseTemplate
                 </div>
             </div>
         </section>';
-        
+
         return str_replace(['{{TITLE}}', '{{CONTENT}}'], [$title, $content], $template);
     }
 }

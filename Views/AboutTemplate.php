@@ -1,5 +1,7 @@
 <?php
+
 namespace Views;
+
 use Lib\Language;
 
 class AboutTemplate extends BaseTemplate
@@ -8,7 +10,7 @@ class AboutTemplate extends BaseTemplate
     {
         $template = parent::getTemplate();
         $title = Language::get('about_title') . ' - ' . Language::get('site_name');
-        
+
         $customStyles = '
         <style>
             /* 🌙 ТЁМНАЯ ТЕМА: Стили для страницы "О нас" */
@@ -161,7 +163,7 @@ class AboutTemplate extends BaseTemplate
                 }
             }
         </style>';
-        
+
         $content = $customStyles . '
         <section class="container py-5">
             <div class="row justify-content-center">
@@ -263,7 +265,7 @@ class AboutTemplate extends BaseTemplate
                 </div>
             </div>
         </section>';
-        
+
         return str_replace(['{{TITLE}}', '{{CONTENT}}'], [$title, $content], $template);
     }
 }

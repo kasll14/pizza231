@@ -1,11 +1,12 @@
 <?php
+
 session_start();
 
 // 📝 LOGGER: Подключение логгера
 require_once __DIR__ . '/Lib/Logger.php';
 
 // 📝 LOGGER: Глобальный обработчик ошибок
-set_error_handler(function($errno, $errstr, $errfile, $errline) {
+set_error_handler(function ($errno, $errstr, $errfile, $errline) {
     $errorTypes = [
         E_ERROR => 'ERROR',
         E_WARNING => 'WARNING',
@@ -23,7 +24,7 @@ set_error_handler(function($errno, $errstr, $errfile, $errline) {
         E_DEPRECATED => 'DEPRECATED',
         E_USER_DEPRECATED => 'USER_DEPRECATED'
     ];
-    
+
     $type = $errorTypes[$errno] ?? 'UNKNOWN';
     \Lib\Logger::error("PHP Error: {$errstr}", [
         'type' => $type,
@@ -31,19 +32,19 @@ set_error_handler(function($errno, $errstr, $errfile, $errline) {
         'line' => $errline,
         'errno' => $errno
     ]);
-    
+
     return false;
 });
 
 // 📝 LOGGER: Глобальный обработчик исключений
-set_exception_handler(function($exception) {
+set_exception_handler(function ($exception) {
     \Lib\Logger::critical("Uncaught Exception: " . $exception->getMessage(), [
         'file' => $exception->getFile(),
         'line' => $exception->getLine(),
         'trace' => $exception->getTraceAsString(),
         'code' => $exception->getCode()
     ]);
-    
+
     http_response_code(500);
     echo '<div class="container text-center my-5">
         <h1 class="display-1 text-danger">500</h1>
@@ -54,7 +55,7 @@ set_exception_handler(function($exception) {
 });
 
 // 📝 LOGGER: Shutdown функция для фатальных ошибок
-register_shutdown_function(function() {
+register_shutdown_function(function () {
     $error = error_get_last();
     if ($error !== null && in_array($error['type'], [E_ERROR, E_PARSE, E_CORE_ERROR, E_COMPILE_ERROR])) {
         \Lib\Logger::critical("Fatal Error: " . $error['message'], [
@@ -66,19 +67,29 @@ register_shutdown_function(function() {
 });
 
 use Lib\Language;
+
 spl_autoload_register(function ($class) {
     $class = ltrim($class, '\\');
     if (strpos($class, 'Lib\\') === 0) {
         $fileName = __DIR__ . '/Lib/' . substr($class, 4) . '.php';
-        if (file_exists($fileName)) { require $fileName; return; }
+        if (file_exists($fileName)) {
+            require $fileName;
+            return;
+        }
     }
     if (strpos($class, 'Controllers\\') === 0) {
         $fileName = __DIR__ . '/Controllers/' . substr($class, 12) . '.php';
-        if (file_exists($fileName)) { require $fileName; return; }
+        if (file_exists($fileName)) {
+            require $fileName;
+            return;
+        }
     }
     if (strpos($class, 'Views\\') === 0) {
         $fileName = __DIR__ . '/Views/' . substr($class, 6) . '.php';
-        if (file_exists($fileName)) { require $fileName; return; }
+        if (file_exists($fileName)) {
+            require $fileName;
+            return;
+        }
     }
 });
 
@@ -106,7 +117,7 @@ switch ($uri) {
         $controller = new Controllers\AuthController();
         $controller->resendCode();
         break;
-    // === СУЩЕСТВУЮЩИЕ МАРШРУТЫ ===
+        // === СУЩЕСТВУЮЩИЕ МАРШРУТЫ ===
     case '/auth/register':
         $controller = new Controllers\AuthController();
         echo $controller->register();
@@ -163,7 +174,7 @@ switch ($uri) {
         $controller = new Controllers\AdminController();
         $controller->deleteUser();
         break;
-    // 📝 LOGGER: Новый маршрут для просмотра логов
+        // 📝 LOGGER: Новый маршрут для просмотра логов
     case '/admin/logs':
         $controller = new Controllers\AdminController();
         echo $controller->logs();

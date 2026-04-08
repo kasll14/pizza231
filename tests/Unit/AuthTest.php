@@ -1,4 +1,5 @@
 <?php
+
 namespace Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
@@ -17,12 +18,12 @@ class AuthTest extends TestCase
         $reflection = new \ReflectionClass(Auth::class);
         $method = $reflection->getMethod('buildVerificationEmailWithCode');
         $method->setAccessible(true);
-        
+
         $name = 'Тестовый Пользователь';
         $code = '123456';
-        
+
         $emailBody = $method->invoke(null, $name, $code);
-        
+
         $this->assertIsString($emailBody);
         $this->assertStringContainsString($name, $emailBody);
         $this->assertStringContainsString($code, $emailBody);
@@ -35,12 +36,12 @@ class AuthTest extends TestCase
         $reflection = new \ReflectionClass(Auth::class);
         $method = $reflection->getMethod('buildResetEmail');
         $method->setAccessible(true);
-        
+
         $name = 'Тест';
         $token = bin2hex(random_bytes(32));
-        
+
         $emailBody = $method->invoke(null, $name, $token);
-        
+
         $this->assertIsString($emailBody);
         $this->assertStringContainsString($name, $emailBody);
         $this->assertStringContainsString($token, $emailBody);
@@ -53,12 +54,12 @@ class AuthTest extends TestCase
         $reflection = new \ReflectionClass(Auth::class);
         $method = $reflection->getMethod('buildPasswordChangeEmail');
         $method->setAccessible(true);
-        
+
         $name = 'Тест';
         $code = '654321';
-        
+
         $emailBody = $method->invoke(null, $name, $code);
-        
+
         $this->assertIsString($emailBody);
         $this->assertStringContainsString($name, $emailBody);
         $this->assertStringContainsString($code, $emailBody);
@@ -70,9 +71,9 @@ class AuthTest extends TestCase
         $reflection = new \ReflectionClass(Auth::class);
         $method = $reflection->getMethod('getHeaders');
         $method->setAccessible(true);
-        
+
         $headers = $method->invoke(null);
-        
+
         $this->assertIsString($headers);
         $this->assertStringContainsString('MIME-Version: 1.0', $headers);
         $this->assertStringContainsString('Content-type: text/html', $headers);
@@ -100,12 +101,12 @@ class AuthTest extends TestCase
         $reflection = new \ReflectionClass(Auth::class);
         $method = $reflection->getMethod('buildResendCodeEmail');
         $method->setAccessible(true);
-        
+
         $name = 'Тест';
         $code = '111222';
-        
+
         $emailBody = $method->invoke(null, $name, $code);
-        
+
         $this->assertIsString($emailBody);
         $this->assertStringContainsString('Новый код подтверждения', $emailBody);
         $this->assertStringContainsString($code, $emailBody);
@@ -116,12 +117,12 @@ class AuthTest extends TestCase
         $reflection = new \ReflectionClass(Auth::class);
         $method = $reflection->getMethod('buildVerificationEmailWithCode');
         $method->setAccessible(true);
-        
+
         $maliciousName = '<script>alert("XSS")</script>';
         $code = '123456';
-        
+
         $emailBody = $method->invoke(null, $maliciousName, $code);
-        
+
         $this->assertStringNotContainsString('<script>', $emailBody);
         $this->assertStringContainsString('&lt;script&gt;', $emailBody);
     }

@@ -1,5 +1,7 @@
 <?php
+
 namespace Controllers;
+
 use Views\AboutTemplate;
 
 class AboutController

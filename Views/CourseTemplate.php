@@ -1,7 +1,10 @@
 <?php
+
 namespace Views;
+
 use Lib\DataLoader;
 use Lib\Language;
+
 class CourseTemplate extends BaseTemplate
 {
     public static function renderCourse(int $courseId): string
@@ -9,22 +12,22 @@ class CourseTemplate extends BaseTemplate
         $template = parent::getTemplate();
         $course = DataLoader::loadCourse($courseId);
         $lang = Language::getCurrentLang();
-        
+
         // Вспомогательная функция для получения текста на нужном языке
-        $getText = function($field, $default = '') use ($lang) {
+        $getText = function ($field, $default = '') use ($lang) {
             if (is_array($field)) {
                 return $field[$lang] ?? $field['ru'] ?? $default;
             }
             return $field;
         };
-        
+
         if (!$course) {
             http_response_code(404);
             return '<div class="container py-5"><h1 style="color: var(--text);">' . Language::get('course_not_found') . '</h1><a href="/courses" class="btn btn-primary">' . Language::get('course_back_list') . '</a></div>';
         }
-        
+
         $title = $getText($course['title']) . ' — ' . Language::get('site_name');
-        
+
         $customStyles = '
 <style>
 /* 🌙 ТЁМНАЯ ТЕМА: Улучшение рендеринга текста */
@@ -211,22 +214,22 @@ font-size: 1.5rem;
 }
 }
 </style>';
-        
+
         $featuresHtml = '';
         foreach ($course['features'] as $feature) {
             $featuresHtml .= '<li>' . htmlspecialchars($getText($feature)) . '</li>';
         }
-        
+
         $formatHtml = '';
         foreach ($course['format'] as $fmt) {
             $formatHtml .= '<span class="info-badge">' . htmlspecialchars($getText($fmt)) . '</span>';
         }
-        
+
         $certificateText = $course['certificate'] ? Language::get('issued') : Language::get('not_issued');
         $jobAssistanceText = $course['job_assistance'] ? Language::get('assistance_provided') : Language::get('assistance_not_provided');
         $certificateCheck = $course['certificate'] ? '✓ ' . Language::get('course_certificate') . '<br>' : '';
         $jobAssistanceCheck = $course['job_assistance'] ? '✓ ' . Language::get('course_job_assistance') : '';
-        
+
         $content = $customStyles . '
 <section class="container py-5">
     <a href="/courses" class="back-link">
@@ -255,7 +258,7 @@ font-size: 1.5rem;
                     </div>
                     <div class="col-md-6">
                         <strong style="color: var(--text);">' . Language::get('course_format') . ':</strong>
-                        <p class="text-muted">' . implode(', ', array_map(fn($f) => $getText($f), $course['format'])) . '</p>
+                        <p class="text-muted">' . implode(', ', array_map(fn ($f) => $getText($f), $course['format'])) . '</p>
                     </div>
                     <div class="col-md-6">
                         <strong style="color: var(--text);">' . Language::get('course_certificate') . ':</strong>
@@ -289,7 +292,7 @@ font-size: 1.5rem;
         </div>
     </div>
 </section>';
-        
+
         return str_replace(['{{TITLE}}', '{{CONTENT}}'], [$title, $content], $template);
     }
 }

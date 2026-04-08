@@ -1,5 +1,7 @@
 <?php
+
 namespace Controllers;
+
 use Views\CoursesTemplate;
 
 class CoursesController
