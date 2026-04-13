@@ -1,9 +1,8 @@
 <?php
-
 // data/users.php
-return array(
-  2 =>
-  array(
+return array (
+  2 => 
+  array (
     'id' => 2,
     'email' => 'kerji4100@gmail.com',
     'password' => '$2y$10$JKXPIylu5RnEzLKSzfZZ1uFf/7MkZ/tJzjoeWZSdlg5d2C1u.xDy6',
@@ -11,33 +10,16 @@ return array(
     'phone' => '79234879635',
     'role' => 'admin',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-28 18:37:40',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  3 =>
-  array(
-    'id' => 3,
-    'email' => 'kasll2007@inbox.ru',
-    'password' => '$2y$10$tFVUWK2CTPfvaeijLorIxeEF1SPLMFxU10ebhSorjMLx9X54se5gu',
-    'name' => 'maslennikov anton dm',
-    'phone' => '79234879635',
-    'role' => 'user',
-    'verified' => false,
-    'verification_code' => '708548',
-    'code_expires' => '2026-03-28 21:22:51',
-    'verification_token' => null,
-    'created_at' => '2026-03-28 21:07:44',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
-  ),
-  4 =>
-  array(
+  4 => 
+  array (
     'id' => 4,
     'email' => 'toni.maslennikov.08@inbox.ru',
     'password' => '$2y$10$xLXTIcDlCpncFabvwPpLSep3yaoJjhajfJdpC5t7JRTsTsjoGMNkW',
@@ -45,16 +27,16 @@ return array(
     'phone' => '79234879635',
     'role' => 'admin',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-28 21:09:27',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  5 =>
-  array(
+  5 => 
+  array (
     'id' => 5,
     'email' => 'test@example.com',
     'password' => '$2y$10$TU28hQidJ9sVrBUya42Of.JJ6lKFhbSuCUZg7ZemX4VhRWlL2JuRu',
@@ -64,14 +46,14 @@ return array(
     'verified' => false,
     'verification_code' => '183069',
     'code_expires' => '2026-03-30 10:45:16',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:30:16',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  6 =>
-  array(
+  6 => 
+  array (
     'id' => 6,
     'email' => 'duplicate@example.com',
     'password' => '$2y$10$rVVXSM7zF98jgyKSFKqpZe/OqwRG/lPL8gUuIKh2aYTGqU2ie6fCa',
@@ -81,14 +63,14 @@ return array(
     'verified' => false,
     'verification_code' => '719539',
     'code_expires' => '2026-03-30 10:45:16',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:30:16',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  7 =>
-  array(
+  7 => 
+  array (
     'id' => 7,
     'email' => 'hash@test.com',
     'password' => '$2y$10$OlPW.KrVtE4tz/H/vJe0i.iIsuB.fIE0D.P7NAmpj8rnHd7rdp1YS',
@@ -98,14 +80,14 @@ return array(
     'verified' => false,
     'verification_code' => '397689',
     'code_expires' => '2026-03-30 10:45:16',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:30:16',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  8 =>
-  array(
+  8 => 
+  array (
     'id' => 8,
     'email' => 'verify@test.com',
     'password' => '$2y$10$SZQzHMSNsnDRY/Nv6Xt7ouT5f27bqLcR9sjLHezmWZk/P1yv9Fn12',
@@ -113,16 +95,16 @@ return array(
     'phone' => '+79990000003',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:30:17',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  9 =>
-  array(
+  9 => 
+  array (
     'id' => 9,
     'email' => 'wrongcode@test.com',
     'password' => '$2y$10$02Eh8D1D4raIfjis97Zvb.F7KCtUCeEg6MU29lrQN74.kdrmePn3G',
@@ -132,14 +114,14 @@ return array(
     'verified' => false,
     'verification_code' => '189125',
     'code_expires' => '2026-03-30 10:45:17',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:30:17',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  10 =>
-  array(
+  10 => 
+  array (
     'id' => 10,
     'email' => 'login@test.com',
     'password' => '$2y$10$TZkRroZtcrfNCHiZN.4KoOYwfD.VXzL/R.4vf89RhzufOWBzLhRNG',
@@ -147,16 +129,16 @@ return array(
     'phone' => '+79990000005',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:30:17',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  11 =>
-  array(
+  11 => 
+  array (
     'id' => 11,
     'email' => 'wrongpass@test.com',
     'password' => '$2y$10$FSts7C0mVB0QhkPOL3lts.dpAgJ32kFw67hF1m1okp.zpFq/VpSva',
@@ -166,14 +148,14 @@ return array(
     'verified' => false,
     'verification_code' => '276121',
     'code_expires' => '2026-03-30 10:45:17',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:30:17',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  12 =>
-  array(
+  12 => 
+  array (
     'id' => 12,
     'email' => 'notverified@test.com',
     'password' => '$2y$10$42Q.yFX/MrxvMah0MH8VBuDRfP4rDtujcw/3R/pZCAkdT4yMbDklu',
@@ -183,14 +165,14 @@ return array(
     'verified' => false,
     'verification_code' => '142953',
     'code_expires' => '2026-03-30 10:45:17',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:30:17',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  13 =>
-  array(
+  13 => 
+  array (
     'id' => 13,
     'email' => 'passchange@test.com',
     'password' => '$2y$10$kmmnbeuxBmPmh7H2Al.BiO0gYtI0Fy49n.jZHSWOnhYkKQn2N6h1G',
@@ -200,14 +182,14 @@ return array(
     'verified' => false,
     'verification_code' => '093012',
     'code_expires' => '2026-03-30 10:45:17',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:30:17',
-    'last_login' => null,
+    'last_login' => NULL,
     'password_change_code' => '897193',
     'password_change_code_expires' => '2026-03-30 10:40:17',
   ),
-  14 =>
-  array(
+  14 => 
+  array (
     'id' => 14,
     'email' => 'verifypass@test.com',
     'password' => '$2y$10$4i2OZD6r976cSkrvfWgQLu6zTDFpmLcGUR5I4aktAXKZTtPM6xX4S',
@@ -217,14 +199,14 @@ return array(
     'verified' => false,
     'verification_code' => '326934',
     'code_expires' => '2026-03-30 10:45:17',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:30:17',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  15 =>
-  array(
+  15 => 
+  array (
     'id' => 15,
     'email' => 'updatepass@test.com',
     'password' => '$2y$10$rXgZ43V7uTkXm2fsjKHwx.JLMDPIUBnoexoOwE42nyLcShhqGvEPy',
@@ -234,14 +216,14 @@ return array(
     'verified' => false,
     'verification_code' => '350181',
     'code_expires' => '2026-03-30 10:45:17',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:30:17',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  16 =>
-  array(
+  16 => 
+  array (
     'id' => 16,
     'email' => 'test@example.com',
     'password' => '$2y$10$UFdIODoq5XHGTVCj7zEzseg5SWL4RMhn.bDRc6KM8yg0rg.GsYrcW',
@@ -251,14 +233,14 @@ return array(
     'verified' => false,
     'verification_code' => '721455',
     'code_expires' => '2026-03-30 10:46:19',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:19',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  17 =>
-  array(
+  17 => 
+  array (
     'id' => 17,
     'email' => 'duplicate@example.com',
     'password' => '$2y$10$IkQqFhBGvUb8Jtn7cuo3SuSUnvBaINZcFAq8Oq4ZB1l0HzyZlESw.',
@@ -268,14 +250,14 @@ return array(
     'verified' => false,
     'verification_code' => '566475',
     'code_expires' => '2026-03-30 10:46:19',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:19',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  18 =>
-  array(
+  18 => 
+  array (
     'id' => 18,
     'email' => 'hash@test.com',
     'password' => '$2y$10$/yTtjPtuk0R5W5Z61DgI6u1.Ne9eKhpJD/5RdGhcpqL62l/wK4ZpO',
@@ -285,14 +267,14 @@ return array(
     'verified' => false,
     'verification_code' => '291639',
     'code_expires' => '2026-03-30 10:46:19',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:19',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  19 =>
-  array(
+  19 => 
+  array (
     'id' => 19,
     'email' => 'verify@test.com',
     'password' => '$2y$10$QnXBX6riIR9M4VxCopFyaeazMDM6RC1IwrTRwvE6SuQ8DMVsiaN3W',
@@ -300,16 +282,16 @@ return array(
     'phone' => '+79990000003',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:19',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  20 =>
-  array(
+  20 => 
+  array (
     'id' => 20,
     'email' => 'wrongcode@test.com',
     'password' => '$2y$10$ns3UhKW.QVwuL3hXzpyXS.J8AHfL4dpKkWHx1violYYjpm2W.zPZq',
@@ -319,14 +301,14 @@ return array(
     'verified' => false,
     'verification_code' => '745316',
     'code_expires' => '2026-03-30 10:46:19',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:19',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  21 =>
-  array(
+  21 => 
+  array (
     'id' => 21,
     'email' => 'login@test.com',
     'password' => '$2y$10$pmuewLAtR4Aoi/bwgzoJkuWcMxAT5VLQavnQU6GCXUf4oS/gjmJBO',
@@ -334,16 +316,16 @@ return array(
     'phone' => '+79990000005',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:19',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  22 =>
-  array(
+  22 => 
+  array (
     'id' => 22,
     'email' => 'wrongpass@test.com',
     'password' => '$2y$10$.ueE/Pe0uPBYymj3zkM3c.EcaRroJ7dE9kDJPqi33ppc7IF9cDO8G',
@@ -353,14 +335,14 @@ return array(
     'verified' => false,
     'verification_code' => '694244',
     'code_expires' => '2026-03-30 10:46:19',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:19',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  23 =>
-  array(
+  23 => 
+  array (
     'id' => 23,
     'email' => 'notverified@test.com',
     'password' => '$2y$10$b.PMOyiSqYjUT6a0cr.GAeGGdwwukqw3Xg3ESs3t7W83iV08cV.dq',
@@ -370,14 +352,14 @@ return array(
     'verified' => false,
     'verification_code' => '646421',
     'code_expires' => '2026-03-30 10:46:19',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:19',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  24 =>
-  array(
+  24 => 
+  array (
     'id' => 24,
     'email' => 'passchange@test.com',
     'password' => '$2y$10$AoCIOg9AUybymtidu5LPhOmYph3OVJyY/TQpciO/61JmEMGBFFXXO',
@@ -387,14 +369,14 @@ return array(
     'verified' => false,
     'verification_code' => '071914',
     'code_expires' => '2026-03-30 10:46:20',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:20',
-    'last_login' => null,
+    'last_login' => NULL,
     'password_change_code' => '340436',
     'password_change_code_expires' => '2026-03-30 10:41:20',
   ),
-  25 =>
-  array(
+  25 => 
+  array (
     'id' => 25,
     'email' => 'verifypass@test.com',
     'password' => '$2y$10$CdBWOhiJ1dtdsrtsheCXae7o1GpNOU.ZAql/xkzvOgctFXvvJNF5e',
@@ -404,14 +386,14 @@ return array(
     'verified' => false,
     'verification_code' => '885206',
     'code_expires' => '2026-03-30 10:46:20',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:20',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  26 =>
-  array(
+  26 => 
+  array (
     'id' => 26,
     'email' => 'updatepass@test.com',
     'password' => '$2y$10$cfHvN5UyIorbUM..5hH03eHkDyp2UbO/FF30hs0TkgCdPikWjxlUS',
@@ -421,14 +403,14 @@ return array(
     'verified' => false,
     'verification_code' => '855701',
     'code_expires' => '2026-03-30 10:46:20',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:20',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  27 =>
-  array(
+  27 => 
+  array (
     'id' => 27,
     'email' => 'test@example.com',
     'password' => '$2y$10$TI62Sbwoj/9LHxPXiojgv.2vSq.sUdT2GHluoG9L9Kq1lwceJLIcm',
@@ -438,14 +420,14 @@ return array(
     'verified' => false,
     'verification_code' => '748560',
     'code_expires' => '2026-03-30 10:46:27',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:27',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  28 =>
-  array(
+  28 => 
+  array (
     'id' => 28,
     'email' => 'duplicate@example.com',
     'password' => '$2y$10$/oPCzeLklpZ9sfP/nwInye6WT5plTf6lDrRXWjYzidrF/zmh5DzEm',
@@ -455,14 +437,14 @@ return array(
     'verified' => false,
     'verification_code' => '890595',
     'code_expires' => '2026-03-30 10:46:27',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:27',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  29 =>
-  array(
+  29 => 
+  array (
     'id' => 29,
     'email' => 'hash@test.com',
     'password' => '$2y$10$2XAz5fHb6JUh4Ppcvd3kvOZIiahqGLFNyqqp9ih.DkELU8DdsDL1S',
@@ -472,14 +454,14 @@ return array(
     'verified' => false,
     'verification_code' => '376665',
     'code_expires' => '2026-03-30 10:46:28',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:28',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  30 =>
-  array(
+  30 => 
+  array (
     'id' => 30,
     'email' => 'verify@test.com',
     'password' => '$2y$10$B5DCQlY5WcCMLk4isT0fXOsJo9urlT3azMZ2KqplZaWZI0qVDwC2m',
@@ -487,16 +469,16 @@ return array(
     'phone' => '+79990000003',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:28',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  31 =>
-  array(
+  31 => 
+  array (
     'id' => 31,
     'email' => 'wrongcode@test.com',
     'password' => '$2y$10$EVofjjhwhEZrkZzie03jqekGCam8zJS7YFVB1XQaXFZk2cpxEL6hq',
@@ -506,14 +488,14 @@ return array(
     'verified' => false,
     'verification_code' => '610175',
     'code_expires' => '2026-03-30 10:46:28',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:28',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  32 =>
-  array(
+  32 => 
+  array (
     'id' => 32,
     'email' => 'login@test.com',
     'password' => '$2y$10$HocDKRObhOHJFvsJ5micAOPOEe6A6Sgms0KK1c7rXwWvAm6xmyZtu',
@@ -521,16 +503,16 @@ return array(
     'phone' => '+79990000005',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:28',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  33 =>
-  array(
+  33 => 
+  array (
     'id' => 33,
     'email' => 'wrongpass@test.com',
     'password' => '$2y$10$vbLuEJWYcDowespXAwmLGuAhaNvavqd5RQDIhdzRJ8jTnHp6fmmjW',
@@ -540,14 +522,14 @@ return array(
     'verified' => false,
     'verification_code' => '493190',
     'code_expires' => '2026-03-30 10:46:28',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:28',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  34 =>
-  array(
+  34 => 
+  array (
     'id' => 34,
     'email' => 'notverified@test.com',
     'password' => '$2y$10$e5FjZQIfuxZahazxIEx.m.GS75QsAiPfUwgja1YJj2bP0mL7aKQCu',
@@ -557,14 +539,14 @@ return array(
     'verified' => false,
     'verification_code' => '650121',
     'code_expires' => '2026-03-30 10:46:28',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:28',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  35 =>
-  array(
+  35 => 
+  array (
     'id' => 35,
     'email' => 'passchange@test.com',
     'password' => '$2y$10$0fW.KVbMjg2jGbCLA9TUEuxa045hg6NGaoH99rT6MW/0DfmDOrSd.',
@@ -574,14 +556,14 @@ return array(
     'verified' => false,
     'verification_code' => '706085',
     'code_expires' => '2026-03-30 10:46:28',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:28',
-    'last_login' => null,
+    'last_login' => NULL,
     'password_change_code' => '564647',
     'password_change_code_expires' => '2026-03-30 10:41:28',
   ),
-  36 =>
-  array(
+  36 => 
+  array (
     'id' => 36,
     'email' => 'verifypass@test.com',
     'password' => '$2y$10$GhqZkyMpZByz8QwTrSdFquW1FhLmF4oweD.QLgYHyczHpVbET2T.W',
@@ -591,14 +573,14 @@ return array(
     'verified' => false,
     'verification_code' => '376660',
     'code_expires' => '2026-03-30 10:46:28',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:28',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  37 =>
-  array(
+  37 => 
+  array (
     'id' => 37,
     'email' => 'updatepass@test.com',
     'password' => '$2y$10$mCCcX3UUKCLZA9FfxXgs1.R65D3/VdLHy7hR36SoQyz2uyePzsCrC',
@@ -608,14 +590,14 @@ return array(
     'verified' => false,
     'verification_code' => '617328',
     'code_expires' => '2026-03-30 10:46:29',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:29',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  38 =>
-  array(
+  38 => 
+  array (
     'id' => 38,
     'email' => 'passchange@test.com',
     'password' => '$2y$10$j8aGctl9c087Ozr.RBtJvOIweXG07qq/cSKqdsDNukTcC9SpWI63m',
@@ -625,14 +607,14 @@ return array(
     'verified' => false,
     'verification_code' => '410219',
     'code_expires' => '2026-03-30 10:46:39',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:39',
-    'last_login' => null,
+    'last_login' => NULL,
     'password_change_code' => '582171',
     'password_change_code_expires' => '2026-03-30 10:41:39',
   ),
-  39 =>
-  array(
+  39 => 
+  array (
     'id' => 39,
     'email' => 'duplicate@example.com',
     'password' => '$2y$10$I9Ph2nn.Gog.TX8.RqNu9uT48zyseS4yBHNw.LV4ByGquLqs1d5ou',
@@ -642,14 +624,14 @@ return array(
     'verified' => false,
     'verification_code' => '191512',
     'code_expires' => '2026-03-30 10:46:39',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:39',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  40 =>
-  array(
+  40 => 
+  array (
     'id' => 40,
     'email' => 'login@test.com',
     'password' => '$2y$10$QPf48yj8NNQV78.59DaT6eSfbtNXFVr8KXKMGShAv8Gk6Vm2RQj7K',
@@ -657,16 +639,16 @@ return array(
     'phone' => '+79990000005',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:39',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  41 =>
-  array(
+  41 => 
+  array (
     'id' => 41,
     'email' => 'wrongcode@test.com',
     'password' => '$2y$10$kSAcY6.oAgHvv511ogqVhu3nyX08r6mCLw6JskiIVXVI1mZu8e5pO',
@@ -676,14 +658,14 @@ return array(
     'verified' => false,
     'verification_code' => '604439',
     'code_expires' => '2026-03-30 10:46:40',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:40',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  42 =>
-  array(
+  42 => 
+  array (
     'id' => 42,
     'email' => 'test@example.com',
     'password' => '$2y$10$tI39U6bTGRHRpS2MwtOJFO7Ez2FzTCDfKY1o4J/uB76fqKCDpynrO',
@@ -693,14 +675,14 @@ return array(
     'verified' => false,
     'verification_code' => '623602',
     'code_expires' => '2026-03-30 10:46:40',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:40',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  43 =>
-  array(
+  43 => 
+  array (
     'id' => 43,
     'email' => 'verify@test.com',
     'password' => '$2y$10$VSBMeOzqSZzZlcc.tNBlFeviuU6MaHfGgW0vUCtwusmPZiiomWgD.',
@@ -708,16 +690,16 @@ return array(
     'phone' => '+79990000003',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:40',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  44 =>
-  array(
+  44 => 
+  array (
     'id' => 44,
     'email' => 'verifypass@test.com',
     'password' => '$2y$10$1wxKaP8441JETZh1GWn5E.XNeB7e7pjeuqZe0.AacWpaAnSUCmhi6',
@@ -727,14 +709,14 @@ return array(
     'verified' => false,
     'verification_code' => '557493',
     'code_expires' => '2026-03-30 10:46:40',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:40',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  45 =>
-  array(
+  45 => 
+  array (
     'id' => 45,
     'email' => 'wrongpass@test.com',
     'password' => '$2y$10$hyfeHAMcgfz5BREa9quE1uqtNpj/LLc8t/izPDAmL8bSaVE/QoATS',
@@ -744,14 +726,14 @@ return array(
     'verified' => false,
     'verification_code' => '127046',
     'code_expires' => '2026-03-30 10:46:40',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:40',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  46 =>
-  array(
+  46 => 
+  array (
     'id' => 46,
     'email' => 'notverified@test.com',
     'password' => '$2y$10$3NTH8RzhjIfzE1mI3JQsGekv/NqfnbTteq4N6xbNJ9MC8xreXMEUm',
@@ -761,14 +743,14 @@ return array(
     'verified' => false,
     'verification_code' => '991659',
     'code_expires' => '2026-03-30 10:46:40',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:40',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  47 =>
-  array(
+  47 => 
+  array (
     'id' => 47,
     'email' => 'hash@test.com',
     'password' => '$2y$10$yzpPiOMI0MQfQmZMckQ1f.Nra3GGwXlYyvG1AwQolg60xHK8U9.n.',
@@ -778,14 +760,14 @@ return array(
     'verified' => false,
     'verification_code' => '525023',
     'code_expires' => '2026-03-30 10:46:40',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:40',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  48 =>
-  array(
+  48 => 
+  array (
     'id' => 48,
     'email' => 'updatepass@test.com',
     'password' => '$2y$10$bQzhjwLa2co6Ze0Yuwsnce9/q.nldHmVr0DKd8XHPwSiNvHfoNN8q',
@@ -795,14 +777,14 @@ return array(
     'verified' => false,
     'verification_code' => '888186',
     'code_expires' => '2026-03-30 10:46:40',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:31:40',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  49 =>
-  array(
+  49 => 
+  array (
     'id' => 49,
     'email' => 'passchange@test.com',
     'password' => '$2y$10$qwcSg37.otFfkrbqttfNKutrr5IchjcWj/CqE9HJ5GL9z9zUcfpSe',
@@ -812,14 +794,14 @@ return array(
     'verified' => false,
     'verification_code' => '219178',
     'code_expires' => '2026-03-30 10:47:29',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:32:29',
-    'last_login' => null,
+    'last_login' => NULL,
     'password_change_code' => '281700',
     'password_change_code_expires' => '2026-03-30 10:42:29',
   ),
-  50 =>
-  array(
+  50 => 
+  array (
     'id' => 50,
     'email' => 'duplicate@example.com',
     'password' => '$2y$10$UPfvD377vouNrpgTlxNeEuJk2dhCw8DazlbMYAqrvtb7lPEyirCKC',
@@ -829,14 +811,14 @@ return array(
     'verified' => false,
     'verification_code' => '846529',
     'code_expires' => '2026-03-30 10:47:29',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:32:29',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  51 =>
-  array(
+  51 => 
+  array (
     'id' => 51,
     'email' => 'login@test.com',
     'password' => '$2y$10$IcRcjfsf8VgR4eK8ckb2xOOhWDYUjt5Tp4ndJ3vKsGCsG0wOcJbXq',
@@ -844,16 +826,16 @@ return array(
     'phone' => '+79990000005',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:32:29',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  52 =>
-  array(
+  52 => 
+  array (
     'id' => 52,
     'email' => 'wrongcode@test.com',
     'password' => '$2y$10$9ObYcmiTSwchB0Qvy7NcoOuExDUZtoRae0fHlKnUpWj41TvcF.3pO',
@@ -863,14 +845,14 @@ return array(
     'verified' => false,
     'verification_code' => '445683',
     'code_expires' => '2026-03-30 10:47:29',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:32:29',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  53 =>
-  array(
+  53 => 
+  array (
     'id' => 53,
     'email' => 'test@example.com',
     'password' => '$2y$10$KIhtVvABLVA3ZAz84r9xZucGf.Twtu9bagJIgaF7Tm3jk6IjoGW7u',
@@ -880,14 +862,14 @@ return array(
     'verified' => false,
     'verification_code' => '895614',
     'code_expires' => '2026-03-30 10:47:30',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:32:30',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  54 =>
-  array(
+  54 => 
+  array (
     'id' => 54,
     'email' => 'verify@test.com',
     'password' => '$2y$10$hJjvcNmSGRvs8DAhRDV6LuKQN2AeNk61b.Z1AzGq5j2BJ/J5bbSSe',
@@ -895,16 +877,16 @@ return array(
     'phone' => '+79990000003',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:32:30',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  55 =>
-  array(
+  55 => 
+  array (
     'id' => 55,
     'email' => 'verifypass@test.com',
     'password' => '$2y$10$a3Tza6sebCR92LbJMuK0C.o5DsHajUeMbw4P5I1LtonPvPWLfKJJ6',
@@ -914,14 +896,14 @@ return array(
     'verified' => false,
     'verification_code' => '189079',
     'code_expires' => '2026-03-30 10:47:30',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:32:30',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  56 =>
-  array(
+  56 => 
+  array (
     'id' => 56,
     'email' => 'wrongpass@test.com',
     'password' => '$2y$10$MvoKJp8sU0aNI3qAxqQuZ.1ah56nsvWWGPn22uwysFzJ9hJdbXDwm',
@@ -931,14 +913,14 @@ return array(
     'verified' => false,
     'verification_code' => '225445',
     'code_expires' => '2026-03-30 10:47:30',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:32:30',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  57 =>
-  array(
+  57 => 
+  array (
     'id' => 57,
     'email' => 'notverified@test.com',
     'password' => '$2y$10$lWKI6PWkjRkbZZwUpMuaHeRfm1g3Law14SyfAIrIct5gkMhPVqAeW',
@@ -948,14 +930,14 @@ return array(
     'verified' => false,
     'verification_code' => '929714',
     'code_expires' => '2026-03-30 10:47:30',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:32:30',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  58 =>
-  array(
+  58 => 
+  array (
     'id' => 58,
     'email' => 'hash@test.com',
     'password' => '$2y$10$mxFSP10DaQpJIFZS2EUKoO4L9ldwxp1In.xoyDC0Yp87SfgpvBlOK',
@@ -965,14 +947,14 @@ return array(
     'verified' => false,
     'verification_code' => '258086',
     'code_expires' => '2026-03-30 10:47:30',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:32:30',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  59 =>
-  array(
+  59 => 
+  array (
     'id' => 59,
     'email' => 'updatepass@test.com',
     'password' => '$2y$10$79IY6J0M9u8pP/tmRaAMseeztqyYk439Q08pHmFZC9QV6ClkL6dgO',
@@ -982,14 +964,14 @@ return array(
     'verified' => false,
     'verification_code' => '885535',
     'code_expires' => '2026-03-30 10:47:30',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:32:30',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  60 =>
-  array(
+  60 => 
+  array (
     'id' => 60,
     'email' => 'passchange@test.com',
     'password' => '$2y$10$1lMXONILNfeNbfCfnEkwv.XRiBg9ngnoxqrS61R/0HMwDT8fP/euG',
@@ -999,14 +981,14 @@ return array(
     'verified' => false,
     'verification_code' => '646419',
     'code_expires' => '2026-03-30 10:47:56',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:32:56',
-    'last_login' => null,
+    'last_login' => NULL,
     'password_change_code' => '413321',
     'password_change_code_expires' => '2026-03-30 10:42:56',
   ),
-  61 =>
-  array(
+  61 => 
+  array (
     'id' => 61,
     'email' => 'duplicate@example.com',
     'password' => '$2y$10$N4EqWem3r.XB/KL6Gc.ef.qnogyWoHnHOK8D884cvdXGUNi3qH1Ou',
@@ -1016,14 +998,14 @@ return array(
     'verified' => false,
     'verification_code' => '508645',
     'code_expires' => '2026-03-30 10:47:56',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:32:56',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  62 =>
-  array(
+  62 => 
+  array (
     'id' => 62,
     'email' => 'login@test.com',
     'password' => '$2y$10$DhkgRa4VkKG2QEFwQsr72OnrYvrqn2wQDiKk3mE7GNs5QTQSnQ1vK',
@@ -1031,16 +1013,16 @@ return array(
     'phone' => '+79990000005',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:32:56',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  63 =>
-  array(
+  63 => 
+  array (
     'id' => 63,
     'email' => 'wrongcode@test.com',
     'password' => '$2y$10$WSaa11ck.WEgvE57ZqSBteWoF8JaX3HlaxrN0C6zb4gEDeLotbJf2',
@@ -1050,14 +1032,14 @@ return array(
     'verified' => false,
     'verification_code' => '026014',
     'code_expires' => '2026-03-30 10:47:57',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:32:57',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  64 =>
-  array(
+  64 => 
+  array (
     'id' => 64,
     'email' => 'test@example.com',
     'password' => '$2y$10$WB2MaHxf9fGHG.z49J43TugZCoo3qbfw3vrQhR6xBundnAVHd1g.S',
@@ -1067,14 +1049,14 @@ return array(
     'verified' => false,
     'verification_code' => '612631',
     'code_expires' => '2026-03-30 10:47:57',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:32:57',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  65 =>
-  array(
+  65 => 
+  array (
     'id' => 65,
     'email' => 'verify@test.com',
     'password' => '$2y$10$ie7yo9NAtY94wo6fnOHeZu4MlBCljSmjsWnTRTvt8cfYWUD8MAupy',
@@ -1082,16 +1064,16 @@ return array(
     'phone' => '+79990000003',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:32:57',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  66 =>
-  array(
+  66 => 
+  array (
     'id' => 66,
     'email' => 'verifypass@test.com',
     'password' => '$2y$10$w.4si2Zbtva3rKxvg7mgQuqem4ZQHXbn6pDIAKGsNFqQ0mWor9Luy',
@@ -1101,14 +1083,14 @@ return array(
     'verified' => false,
     'verification_code' => '134872',
     'code_expires' => '2026-03-30 10:47:57',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:32:57',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  67 =>
-  array(
+  67 => 
+  array (
     'id' => 67,
     'email' => 'wrongpass@test.com',
     'password' => '$2y$10$.uhQWtz.nNVzho6l/rXH8.59frtFmxGPUUuv7edqFygjWeeiYAbEq',
@@ -1118,14 +1100,14 @@ return array(
     'verified' => false,
     'verification_code' => '496999',
     'code_expires' => '2026-03-30 10:47:57',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:32:57',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  68 =>
-  array(
+  68 => 
+  array (
     'id' => 68,
     'email' => 'notverified@test.com',
     'password' => '$2y$10$ILXF5cMyB5EcyRTwXac3x.tT0LbuskjKFjj4BUI3vC8WrUnLAagF.',
@@ -1135,14 +1117,14 @@ return array(
     'verified' => false,
     'verification_code' => '717862',
     'code_expires' => '2026-03-30 10:47:57',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:32:57',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  69 =>
-  array(
+  69 => 
+  array (
     'id' => 69,
     'email' => 'hash@test.com',
     'password' => '$2y$10$lajdbnDCnheNSRnbxmHyzOZ/xm5peZ/idzM0mQNTO1x4XqcbdvG2q',
@@ -1152,14 +1134,14 @@ return array(
     'verified' => false,
     'verification_code' => '515314',
     'code_expires' => '2026-03-30 10:47:57',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:32:57',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  70 =>
-  array(
+  70 => 
+  array (
     'id' => 70,
     'email' => 'updatepass@test.com',
     'password' => '$2y$10$IlEPVsr8aHPJMm9P5dY2YeGtxPXuc.7qHYlpoU/VgGEorlzLoP0hO',
@@ -1169,14 +1151,14 @@ return array(
     'verified' => false,
     'verification_code' => '214376',
     'code_expires' => '2026-03-30 10:47:57',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:32:57',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  71 =>
-  array(
+  71 => 
+  array (
     'id' => 71,
     'email' => 'passchange@test.com',
     'password' => '$2y$10$IeQ28C.OCqPpArd.T8RVrOPdwpNUicXTJYqfNVtOT0pLztWHyzB2i',
@@ -1186,14 +1168,14 @@ return array(
     'verified' => false,
     'verification_code' => '729772',
     'code_expires' => '2026-03-30 10:50:01',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:35:01',
-    'last_login' => null,
+    'last_login' => NULL,
     'password_change_code' => '042400',
     'password_change_code_expires' => '2026-03-30 10:45:01',
   ),
-  72 =>
-  array(
+  72 => 
+  array (
     'id' => 72,
     'email' => 'duplicate@example.com',
     'password' => '$2y$10$JA9fW2m/upqmbL/gUYAoHuKb4zkuuhrjBaJ/TEBMSYNe5Tqdnxcu6',
@@ -1203,14 +1185,14 @@ return array(
     'verified' => false,
     'verification_code' => '397873',
     'code_expires' => '2026-03-30 10:50:02',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:35:02',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  73 =>
-  array(
+  73 => 
+  array (
     'id' => 73,
     'email' => 'login@test.com',
     'password' => '$2y$10$lpcYBKkOtYW1U8xYJQAmX.PL.iVQBz0hAHd3kwhdoxW0S8/yclsTe',
@@ -1218,16 +1200,16 @@ return array(
     'phone' => '+79990000005',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:35:02',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  74 =>
-  array(
+  74 => 
+  array (
     'id' => 74,
     'email' => 'wrongcode@test.com',
     'password' => '$2y$10$h0eMQxDZNOZYeWzmGJIqo.sGiM976sLxa2MihaN4Onykoo/S7zdMa',
@@ -1237,14 +1219,14 @@ return array(
     'verified' => false,
     'verification_code' => '008404',
     'code_expires' => '2026-03-30 10:50:02',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:35:02',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  75 =>
-  array(
+  75 => 
+  array (
     'id' => 75,
     'email' => 'test@example.com',
     'password' => '$2y$10$xO3EMBcl6UbcC.MgTWS2Zuuwq/kgdp0XqpVP5nlExMwCa9wPJ07ii',
@@ -1254,14 +1236,14 @@ return array(
     'verified' => false,
     'verification_code' => '300161',
     'code_expires' => '2026-03-30 10:50:02',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:35:02',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  76 =>
-  array(
+  76 => 
+  array (
     'id' => 76,
     'email' => 'verify@test.com',
     'password' => '$2y$10$wr6sK7eAIaUqJWmd7GU0rOZmtpSm1wJBEoI.7Iezi50rjU9ks9Fh.',
@@ -1269,16 +1251,16 @@ return array(
     'phone' => '+79990000003',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:35:02',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  77 =>
-  array(
+  77 => 
+  array (
     'id' => 77,
     'email' => 'verifypass@test.com',
     'password' => '$2y$10$aSLuF9Ju3gOJnx/el8xFm.sCz8to9m/7QT3sYgQW5dAbb72keNpKC',
@@ -1288,14 +1270,14 @@ return array(
     'verified' => false,
     'verification_code' => '984364',
     'code_expires' => '2026-03-30 10:50:02',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:35:02',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  78 =>
-  array(
+  78 => 
+  array (
     'id' => 78,
     'email' => 'wrongpass@test.com',
     'password' => '$2y$10$4lwqS4TbriPAWXtCzqUak.lSmmfI93j70d2FU8qhUheVE3wiC/TZa',
@@ -1305,14 +1287,14 @@ return array(
     'verified' => false,
     'verification_code' => '264070',
     'code_expires' => '2026-03-30 10:50:02',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:35:02',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  79 =>
-  array(
+  79 => 
+  array (
     'id' => 79,
     'email' => 'notverified@test.com',
     'password' => '$2y$10$LSRgnaVTAFp2ZNxlGHN6r.rm9CHkdeBG8IPrOo05W0/6tDls5IA.i',
@@ -1322,14 +1304,14 @@ return array(
     'verified' => false,
     'verification_code' => '132723',
     'code_expires' => '2026-03-30 10:50:03',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:35:03',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  80 =>
-  array(
+  80 => 
+  array (
     'id' => 80,
     'email' => 'hash@test.com',
     'password' => '$2y$10$20VRrziYtwHRTC.eLdkU.u/9LAGj8KD.ei0PbdaznQcGK846BIYjW',
@@ -1339,14 +1321,14 @@ return array(
     'verified' => false,
     'verification_code' => '968756',
     'code_expires' => '2026-03-30 10:50:03',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:35:03',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  81 =>
-  array(
+  81 => 
+  array (
     'id' => 81,
     'email' => 'updatepass@test.com',
     'password' => '$2y$10$hXvMdKpUYUW8dkuHnFDXx.IdsiUx2MA9t.XGvQgJMowNp51nfAyyu',
@@ -1356,14 +1338,14 @@ return array(
     'verified' => false,
     'verification_code' => '979844',
     'code_expires' => '2026-03-30 10:50:03',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:35:03',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  82 =>
-  array(
+  82 => 
+  array (
     'id' => 82,
     'email' => 'passchange@test.com',
     'password' => '$2y$10$bYzVL8iVIlOx2iShpAQlze.6mHKZ1Y6Z2dGRzcGCbVW1mx0bw7RaW',
@@ -1373,14 +1355,14 @@ return array(
     'verified' => false,
     'verification_code' => '166708',
     'code_expires' => '2026-03-30 10:50:58',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:35:58',
-    'last_login' => null,
+    'last_login' => NULL,
     'password_change_code' => '548153',
     'password_change_code_expires' => '2026-03-30 10:45:58',
   ),
-  83 =>
-  array(
+  83 => 
+  array (
     'id' => 83,
     'email' => 'duplicate@example.com',
     'password' => '$2y$10$va2d3E3NdHc9og1WUwhJOOK7lPJwqOzZdLD6iOuCWKpu1RdHiM2QK',
@@ -1390,14 +1372,14 @@ return array(
     'verified' => false,
     'verification_code' => '677324',
     'code_expires' => '2026-03-30 10:50:59',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:35:59',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  84 =>
-  array(
+  84 => 
+  array (
     'id' => 84,
     'email' => 'login@test.com',
     'password' => '$2y$10$oA.uUw7RGK5pUsvckLi.Je755LnhHf.6.w50rjdsX1xqY3uF7oORm',
@@ -1405,16 +1387,16 @@ return array(
     'phone' => '+79990000005',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:35:59',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  85 =>
-  array(
+  85 => 
+  array (
     'id' => 85,
     'email' => 'wrongcode@test.com',
     'password' => '$2y$10$JqlAV6wHRWJQLMwNDy/4YOMePpzCv3NEeJBWB29S.rZkUX1x/xnT.',
@@ -1424,14 +1406,14 @@ return array(
     'verified' => false,
     'verification_code' => '726472',
     'code_expires' => '2026-03-30 10:50:59',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:35:59',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  86 =>
-  array(
+  86 => 
+  array (
     'id' => 86,
     'email' => 'test@example.com',
     'password' => '$2y$10$SGv6MMFQM495KN.hd/epiuSq1iT4FlSL97MvASXaKlZE.EwxUVZkK',
@@ -1441,14 +1423,14 @@ return array(
     'verified' => false,
     'verification_code' => '853453',
     'code_expires' => '2026-03-30 10:50:59',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:35:59',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  87 =>
-  array(
+  87 => 
+  array (
     'id' => 87,
     'email' => 'verify@test.com',
     'password' => '$2y$10$7H4E1fjY04EvGYc.28xqZ.cUKZ.161wO9JkNe/dXTpjXPjPuwfpaq',
@@ -1456,16 +1438,16 @@ return array(
     'phone' => '+79990000003',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:35:59',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  88 =>
-  array(
+  88 => 
+  array (
     'id' => 88,
     'email' => 'verifypass@test.com',
     'password' => '$2y$10$uSiOIdg145KFW6.k8IuLxeerpdzGUKmpTCcEq482aSntVXLxuCcla',
@@ -1475,14 +1457,14 @@ return array(
     'verified' => false,
     'verification_code' => '910922',
     'code_expires' => '2026-03-30 10:50:59',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:35:59',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  89 =>
-  array(
+  89 => 
+  array (
     'id' => 89,
     'email' => 'wrongpass@test.com',
     'password' => '$2y$10$rA3gW1t75OoMamdb40.D9OAeb9LhjaJIuJ/UDP7goO5bHMv6V0tq6',
@@ -1492,14 +1474,14 @@ return array(
     'verified' => false,
     'verification_code' => '543429',
     'code_expires' => '2026-03-30 10:50:59',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:35:59',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  90 =>
-  array(
+  90 => 
+  array (
     'id' => 90,
     'email' => 'notverified@test.com',
     'password' => '$2y$10$X3.Buowa1enUSfv.o6WHK.Ef1G4haxKtXbGB.8Fws6oWvd871cEr6',
@@ -1509,14 +1491,14 @@ return array(
     'verified' => false,
     'verification_code' => '695279',
     'code_expires' => '2026-03-30 10:51:00',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:36:00',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  91 =>
-  array(
+  91 => 
+  array (
     'id' => 91,
     'email' => 'hash@test.com',
     'password' => '$2y$10$VhKbIk4bVuFJPKC0f.jkvuZ5sryuK7nmTcTWjtVRgKnYBfIkxFagS',
@@ -1526,14 +1508,14 @@ return array(
     'verified' => false,
     'verification_code' => '328783',
     'code_expires' => '2026-03-30 10:51:00',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:36:00',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  92 =>
-  array(
+  92 => 
+  array (
     'id' => 92,
     'email' => 'updatepass@test.com',
     'password' => '$2y$10$s0BNOh/y7HdmTug/HLf8fuxd8EJC4TMYltdjGRVxmg9BW7tkqcqwa',
@@ -1543,14 +1525,14 @@ return array(
     'verified' => false,
     'verification_code' => '544568',
     'code_expires' => '2026-03-30 10:51:00',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:36:00',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  93 =>
-  array(
+  93 => 
+  array (
     'id' => 93,
     'email' => 'passchange@test.com',
     'password' => '$2y$10$usnKSGppPD/SRS1XEeBmWOgA3E9Q2Euvp41HdVIBJa9Ffq.V8lWdO',
@@ -1560,14 +1542,14 @@ return array(
     'verified' => false,
     'verification_code' => '364190',
     'code_expires' => '2026-03-30 10:56:32',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:41:32',
-    'last_login' => null,
+    'last_login' => NULL,
     'password_change_code' => '589893',
     'password_change_code_expires' => '2026-03-30 10:51:32',
   ),
-  94 =>
-  array(
+  94 => 
+  array (
     'id' => 94,
     'email' => 'duplicate@example.com',
     'password' => '$2y$10$LV3x76Vg//uMdPRA2I703O/d4rhq/HmBPMrPQIIEg.sTuZbZnQQvm',
@@ -1577,14 +1559,14 @@ return array(
     'verified' => false,
     'verification_code' => '661114',
     'code_expires' => '2026-03-30 10:56:33',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:41:33',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  95 =>
-  array(
+  95 => 
+  array (
     'id' => 95,
     'email' => 'login@test.com',
     'password' => '$2y$10$D/c9q3aTMFEWQPyJ20MNJ.TE6314UxCss6ott2Cwt9XnxYYBmmCh6',
@@ -1592,16 +1574,16 @@ return array(
     'phone' => '+79990000005',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:41:33',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  96 =>
-  array(
+  96 => 
+  array (
     'id' => 96,
     'email' => 'wrongcode@test.com',
     'password' => '$2y$10$0PG0hmwQxu5.vkwY9uvf1elvOhURMqq/3Oxb/FiwS67WFIPQuJggC',
@@ -1611,14 +1593,14 @@ return array(
     'verified' => false,
     'verification_code' => '716831',
     'code_expires' => '2026-03-30 10:56:33',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:41:33',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  97 =>
-  array(
+  97 => 
+  array (
     'id' => 97,
     'email' => 'test@example.com',
     'password' => '$2y$10$2GAQ3Lw.VE9Qsi4axvXh1ePplFqehVOiNgsyMOW3LTrsyPVjbag3a',
@@ -1628,14 +1610,14 @@ return array(
     'verified' => false,
     'verification_code' => '890080',
     'code_expires' => '2026-03-30 10:56:33',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:41:33',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  98 =>
-  array(
+  98 => 
+  array (
     'id' => 98,
     'email' => 'verify@test.com',
     'password' => '$2y$10$avLjJA75smDdqPTwRdgymem.DaMPszJNGOtwPX35lKdSoh7rveMAG',
@@ -1643,16 +1625,16 @@ return array(
     'phone' => '+79990000003',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:41:33',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  99 =>
-  array(
+  99 => 
+  array (
     'id' => 99,
     'email' => 'verifypass@test.com',
     'password' => '$2y$10$8U9GPCBWCR2cSvoKq0ofOu3GEPknJeM7xlJjSW2mOT9OOunvasZPC',
@@ -1662,14 +1644,14 @@ return array(
     'verified' => false,
     'verification_code' => '861593',
     'code_expires' => '2026-03-30 10:56:33',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:41:33',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  100 =>
-  array(
+  100 => 
+  array (
     'id' => 100,
     'email' => 'wrongpass@test.com',
     'password' => '$2y$10$xNp4YuErOM4Ov17q2KDL9eujjTEsCJgtO3DCEk243u0LqATqyPrwe',
@@ -1679,14 +1661,14 @@ return array(
     'verified' => false,
     'verification_code' => '564518',
     'code_expires' => '2026-03-30 10:56:33',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:41:33',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  101 =>
-  array(
+  101 => 
+  array (
     'id' => 101,
     'email' => 'notverified@test.com',
     'password' => '$2y$10$AYE134u7cGLAEOHG8GiTFeZK0c/bduc7B.b1LZNLwGp9VF2Qo.bTO',
@@ -1696,14 +1678,14 @@ return array(
     'verified' => false,
     'verification_code' => '708333',
     'code_expires' => '2026-03-30 10:56:33',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:41:33',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  102 =>
-  array(
+  102 => 
+  array (
     'id' => 102,
     'email' => 'hash@test.com',
     'password' => '$2y$10$3PS8R3HH.9F56pAeSkSGYuJAvLrJ.ZLmqgNU4K6uJPemSTezVdz1u',
@@ -1713,14 +1695,14 @@ return array(
     'verified' => false,
     'verification_code' => '466203',
     'code_expires' => '2026-03-30 10:56:34',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:41:34',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  103 =>
-  array(
+  103 => 
+  array (
     'id' => 103,
     'email' => 'updatepass@test.com',
     'password' => '$2y$10$aeTxZxrecMwPE2SJZNMw7exgMYed5iTltPz8w5cau.iiaMQz.hvoe',
@@ -1730,14 +1712,14 @@ return array(
     'verified' => false,
     'verification_code' => '837463',
     'code_expires' => '2026-03-30 10:56:34',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:41:34',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  104 =>
-  array(
+  104 => 
+  array (
     'id' => 104,
     'email' => 'passchange@test.com',
     'password' => '$2y$10$jdzqUp5KQXoFgzh/p3oLoek8vPwp2CU61bRismrX4vEn.vIq2I3Q2',
@@ -1747,14 +1729,14 @@ return array(
     'verified' => false,
     'verification_code' => '441696',
     'code_expires' => '2026-03-30 10:56:50',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:41:50',
-    'last_login' => null,
+    'last_login' => NULL,
     'password_change_code' => '868719',
     'password_change_code_expires' => '2026-03-30 10:51:50',
   ),
-  105 =>
-  array(
+  105 => 
+  array (
     'id' => 105,
     'email' => 'duplicate@example.com',
     'password' => '$2y$10$f7wpWrStv77HONMl4xZ4LerclmflslrKrFheJHAIRCeb37petIawe',
@@ -1764,14 +1746,14 @@ return array(
     'verified' => false,
     'verification_code' => '105399',
     'code_expires' => '2026-03-30 10:56:50',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:41:50',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  106 =>
-  array(
+  106 => 
+  array (
     'id' => 106,
     'email' => 'login@test.com',
     'password' => '$2y$10$FddEJulOTuMk/h3I365eauKVxuYvIvlpKqgosipXvG28y2.vjEmQS',
@@ -1779,16 +1761,16 @@ return array(
     'phone' => '+79990000005',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:41:50',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  107 =>
-  array(
+  107 => 
+  array (
     'id' => 107,
     'email' => 'wrongcode@test.com',
     'password' => '$2y$10$6zNLrH6TEGTFJuLQqxio2.Xaqiw.unRai9Vhq7L79p2l0n6VZOPK2',
@@ -1798,14 +1780,14 @@ return array(
     'verified' => false,
     'verification_code' => '002849',
     'code_expires' => '2026-03-30 10:56:50',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:41:50',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  108 =>
-  array(
+  108 => 
+  array (
     'id' => 108,
     'email' => 'test@example.com',
     'password' => '$2y$10$b9eML1sZpNseSw6Yi36HT.g.3PxICnYdOEBCnjlaU66RnVqzrrbLW',
@@ -1815,14 +1797,14 @@ return array(
     'verified' => false,
     'verification_code' => '812943',
     'code_expires' => '2026-03-30 10:56:51',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:41:51',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  109 =>
-  array(
+  109 => 
+  array (
     'id' => 109,
     'email' => 'verify@test.com',
     'password' => '$2y$10$Jpz2ntkgd3xtb/YA/z0r.u6fYptHD1w501OvmIuNWMnnMoqVBEmeG',
@@ -1830,16 +1812,16 @@ return array(
     'phone' => '+79990000003',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:41:51',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  110 =>
-  array(
+  110 => 
+  array (
     'id' => 110,
     'email' => 'verifypass@test.com',
     'password' => '$2y$10$zOTvI7HN8k9TJS8fgS6OieOIzuUjIQLprZruVo9ikmf9w4cWa2R/W',
@@ -1849,14 +1831,14 @@ return array(
     'verified' => false,
     'verification_code' => '709393',
     'code_expires' => '2026-03-30 10:56:51',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:41:51',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  111 =>
-  array(
+  111 => 
+  array (
     'id' => 111,
     'email' => 'wrongpass@test.com',
     'password' => '$2y$10$AGApO1KX/1xOnJqINlCgWe0A6FuAIv6viptXI3b5KWg4Bo9EdlxBy',
@@ -1866,14 +1848,14 @@ return array(
     'verified' => false,
     'verification_code' => '365829',
     'code_expires' => '2026-03-30 10:56:51',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:41:51',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  112 =>
-  array(
+  112 => 
+  array (
     'id' => 112,
     'email' => 'notverified@test.com',
     'password' => '$2y$10$B2nmSvz8YkGzuX5XmPksbu3cCmjRVP2LZ2sIc07FmKzYqZd/26zH6',
@@ -1883,14 +1865,14 @@ return array(
     'verified' => false,
     'verification_code' => '400079',
     'code_expires' => '2026-03-30 10:56:51',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:41:51',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  113 =>
-  array(
+  113 => 
+  array (
     'id' => 113,
     'email' => 'hash@test.com',
     'password' => '$2y$10$7jSBxrfs.jU9.UYyLy7cY.pa3UizjNb19sGljqtC6BUhHwT1Qq372',
@@ -1900,14 +1882,14 @@ return array(
     'verified' => false,
     'verification_code' => '195720',
     'code_expires' => '2026-03-30 10:56:51',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:41:51',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  114 =>
-  array(
+  114 => 
+  array (
     'id' => 114,
     'email' => 'updatepass@test.com',
     'password' => '$2y$10$UFHlycsdP8DeR9GJojVMWOzs0Kwh.C9UWVT8ozL/1ZCW0pHXesVDy',
@@ -1917,14 +1899,14 @@ return array(
     'verified' => false,
     'verification_code' => '176031',
     'code_expires' => '2026-03-30 10:56:51',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:41:51',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  115 =>
-  array(
+  115 => 
+  array (
     'id' => 115,
     'email' => 'passchange@test.com',
     'password' => '$2y$10$zTOnEtI8LfUH/JdOWVJpUOzNQ7B3qdYaguJSWywbTeOdblS09kl1G',
@@ -1934,14 +1916,14 @@ return array(
     'verified' => false,
     'verification_code' => '553419',
     'code_expires' => '2026-03-30 10:59:05',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:44:05',
-    'last_login' => null,
+    'last_login' => NULL,
     'password_change_code' => '082276',
     'password_change_code_expires' => '2026-03-30 10:54:05',
   ),
-  116 =>
-  array(
+  116 => 
+  array (
     'id' => 116,
     'email' => 'duplicate@example.com',
     'password' => '$2y$10$ouPFsnZ3dV7rYI8bBD/peujlhWQRUJw/8aSQIKFzrvEE9PLrDtBb6',
@@ -1951,14 +1933,14 @@ return array(
     'verified' => false,
     'verification_code' => '769313',
     'code_expires' => '2026-03-30 10:59:05',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:44:05',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  117 =>
-  array(
+  117 => 
+  array (
     'id' => 117,
     'email' => 'login@test.com',
     'password' => '$2y$10$YwtGfTywTgpne6wVMeS26.Dr9iZHEq42cdRRwMXCPJLOtQG78QRGe',
@@ -1966,16 +1948,16 @@ return array(
     'phone' => '+79990000005',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:44:05',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  118 =>
-  array(
+  118 => 
+  array (
     'id' => 118,
     'email' => 'test@example.com',
     'password' => '$2y$10$bCick9fbba36YJ4AOVfqSuKPlyfdgxFFk2u3YMvM1bdydZlREvhnG',
@@ -1985,14 +1967,14 @@ return array(
     'verified' => false,
     'verification_code' => '318579',
     'code_expires' => '2026-03-30 10:59:06',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:44:06',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  119 =>
-  array(
+  119 => 
+  array (
     'id' => 119,
     'email' => 'wrongcode@test.com',
     'password' => '$2y$10$GMMd15qVC08.Anf5uPfyjOzKVD2vwpR6y6aqDXAgNSeq859be8Poe',
@@ -2002,14 +1984,14 @@ return array(
     'verified' => false,
     'verification_code' => '017188',
     'code_expires' => '2026-03-30 10:59:06',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:44:06',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  120 =>
-  array(
+  120 => 
+  array (
     'id' => 120,
     'email' => 'verifypass@test.com',
     'password' => '$2y$10$rOMP4LQLrp.m5wFpVFPW4./uC7IVFfFIGuQBBcx3otId3KbU5OYde',
@@ -2019,14 +2001,14 @@ return array(
     'verified' => false,
     'verification_code' => '293481',
     'code_expires' => '2026-03-30 10:59:06',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:44:06',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  121 =>
-  array(
+  121 => 
+  array (
     'id' => 121,
     'email' => 'verify@test.com',
     'password' => '$2y$10$sT8a6WMkw5h8RLse/3csG.vMsTHqaO67esQqWvxxY5QIAVJ4V9u52',
@@ -2034,16 +2016,16 @@ return array(
     'phone' => '+79990000003',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:44:06',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  122 =>
-  array(
+  122 => 
+  array (
     'id' => 122,
     'email' => 'wrongpass@test.com',
     'password' => '$2y$10$omFzgnNl7n3hujKCnOUWv.mEXXq0c33qVYBHXdeYaXlMLkLminqru',
@@ -2053,14 +2035,14 @@ return array(
     'verified' => false,
     'verification_code' => '152759',
     'code_expires' => '2026-03-30 10:59:06',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:44:06',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  123 =>
-  array(
+  123 => 
+  array (
     'id' => 123,
     'email' => 'notverified@test.com',
     'password' => '$2y$10$LJqOft/5YWLOOpemXfPJfe3h5Gb2GFQfrolvIXkgd07UN9yUNhNAm',
@@ -2070,14 +2052,14 @@ return array(
     'verified' => false,
     'verification_code' => '100031',
     'code_expires' => '2026-03-30 10:59:06',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:44:06',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  124 =>
-  array(
+  124 => 
+  array (
     'id' => 124,
     'email' => 'hash@test.com',
     'password' => '$2y$10$/.Y8QsfRiCFVpffh5i7V5ehOcbJrIq1RNFaQRDiM.1fG8vYYMv/sG',
@@ -2087,14 +2069,14 @@ return array(
     'verified' => false,
     'verification_code' => '952710',
     'code_expires' => '2026-03-30 10:59:06',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:44:06',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  125 =>
-  array(
+  125 => 
+  array (
     'id' => 125,
     'email' => 'updatepass@test.com',
     'password' => '$2y$10$g7uTtF5PDid7plJydOOMsOf4FGTKGppnAjZOH8iZEhy0Ydr2NseoO',
@@ -2104,14 +2086,14 @@ return array(
     'verified' => false,
     'verification_code' => '595267',
     'code_expires' => '2026-03-30 10:59:07',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:44:07',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  126 =>
-  array(
+  126 => 
+  array (
     'id' => 126,
     'email' => 'passchange@test.com',
     'password' => '$2y$10$ikczNXAbquik3m8pNXMIGufxETEq8KQPpKLFiEYRbU5nw12VY.u5G',
@@ -2121,14 +2103,14 @@ return array(
     'verified' => false,
     'verification_code' => '351614',
     'code_expires' => '2026-03-30 10:59:41',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:44:41',
-    'last_login' => null,
+    'last_login' => NULL,
     'password_change_code' => '693443',
     'password_change_code_expires' => '2026-03-30 10:54:41',
   ),
-  127 =>
-  array(
+  127 => 
+  array (
     'id' => 127,
     'email' => 'duplicate@example.com',
     'password' => '$2y$10$VcIis96NgqUmU3imtHYYouTBoYF2QXb6qvUNm86vCP/.hY.iBQL.u',
@@ -2138,14 +2120,14 @@ return array(
     'verified' => false,
     'verification_code' => '781811',
     'code_expires' => '2026-03-30 10:59:41',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:44:41',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  128 =>
-  array(
+  128 => 
+  array (
     'id' => 128,
     'email' => 'login@test.com',
     'password' => '$2y$10$nA9qCjbK71lh6iKSV/1Tz.8fd.RMztTTI2CBAcpyWpRZ9bQVTLDT6',
@@ -2153,16 +2135,16 @@ return array(
     'phone' => '+79990000005',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:44:41',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  129 =>
-  array(
+  129 => 
+  array (
     'id' => 129,
     'email' => 'test@example.com',
     'password' => '$2y$10$DzWti.odPu2mCZkxxWJaFemxI2R1dqHAkJJ8FPs7boBqP8MOE73LW',
@@ -2172,14 +2154,14 @@ return array(
     'verified' => false,
     'verification_code' => '664418',
     'code_expires' => '2026-03-30 10:59:41',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:44:41',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  130 =>
-  array(
+  130 => 
+  array (
     'id' => 130,
     'email' => 'wrongcode@test.com',
     'password' => '$2y$10$aCpUHy2nO86Hjx0NsO6Do.RsxNA/WxiQ/Kqn0RHDhcc.QW/wAm39.',
@@ -2189,14 +2171,14 @@ return array(
     'verified' => false,
     'verification_code' => '517727',
     'code_expires' => '2026-03-30 10:59:41',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:44:41',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  131 =>
-  array(
+  131 => 
+  array (
     'id' => 131,
     'email' => 'verifypass@test.com',
     'password' => '$2y$10$p1wps0MjHcmZ9w7W6SJL6.tOxd5x1LuGwne1Pq4f38ZOaQ/EH6Eu6',
@@ -2206,14 +2188,14 @@ return array(
     'verified' => false,
     'verification_code' => '799030',
     'code_expires' => '2026-03-30 10:59:42',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:44:42',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  132 =>
-  array(
+  132 => 
+  array (
     'id' => 132,
     'email' => 'verify@test.com',
     'password' => '$2y$10$sPsGbWZQcDZpmXAGbvjI3OzRVcTyvvK6zrx9dyM7Y/yOi9U3pGHBS',
@@ -2221,16 +2203,16 @@ return array(
     'phone' => '+79990000003',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:44:42',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  133 =>
-  array(
+  133 => 
+  array (
     'id' => 133,
     'email' => 'wrongpass@test.com',
     'password' => '$2y$10$JUUF.Au84NXWzte.kPlcq.Csng17PcvdxLlWLQoPhwNUMFBG.kqEa',
@@ -2240,14 +2222,14 @@ return array(
     'verified' => false,
     'verification_code' => '852377',
     'code_expires' => '2026-03-30 10:59:42',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:44:42',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  134 =>
-  array(
+  134 => 
+  array (
     'id' => 134,
     'email' => 'notverified@test.com',
     'password' => '$2y$10$2byehWRkx76UhcwIVBs4PeNJv0zGWkqK3VNDlW/Gp6xuDO74E8M/S',
@@ -2257,14 +2239,14 @@ return array(
     'verified' => false,
     'verification_code' => '042289',
     'code_expires' => '2026-03-30 10:59:42',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:44:42',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  135 =>
-  array(
+  135 => 
+  array (
     'id' => 135,
     'email' => 'hash@test.com',
     'password' => '$2y$10$dAb/C4wx6YoeuoJxG3P5ROO2dqgL1BxDR978x0glLKKBVIGcTawn.',
@@ -2274,14 +2256,14 @@ return array(
     'verified' => false,
     'verification_code' => '551905',
     'code_expires' => '2026-03-30 10:59:42',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:44:42',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  136 =>
-  array(
+  136 => 
+  array (
     'id' => 136,
     'email' => 'updatepass@test.com',
     'password' => '$2y$10$8YcOBWv3p8400/Yf9yQ1MORbjA6dXXGlTJQE.Zonpo31Br2B8R.NO',
@@ -2291,14 +2273,14 @@ return array(
     'verified' => false,
     'verification_code' => '639175',
     'code_expires' => '2026-03-30 10:59:42',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:44:42',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  137 =>
-  array(
+  137 => 
+  array (
     'id' => 137,
     'email' => 'passchange@test.com',
     'password' => '$2y$10$xVdV.6f/5/TWYw8KaWe08us21c/SeVdxySZVHubgvqvvy0OczcsWS',
@@ -2308,14 +2290,14 @@ return array(
     'verified' => false,
     'verification_code' => '529898',
     'code_expires' => '2026-03-30 11:00:25',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:45:25',
-    'last_login' => null,
+    'last_login' => NULL,
     'password_change_code' => '650868',
     'password_change_code_expires' => '2026-03-30 10:55:25',
   ),
-  138 =>
-  array(
+  138 => 
+  array (
     'id' => 138,
     'email' => 'duplicate@example.com',
     'password' => '$2y$10$EBtXif3tD76xwtMX4YdTQeYJs8PI/5UWFKDK6HkyK5tGdLY63GFeq',
@@ -2325,14 +2307,14 @@ return array(
     'verified' => false,
     'verification_code' => '277617',
     'code_expires' => '2026-03-30 11:00:26',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:45:26',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  139 =>
-  array(
+  139 => 
+  array (
     'id' => 139,
     'email' => 'login@test.com',
     'password' => '$2y$10$3HINhAYgLSdiTT.gobs0sOkMRHYliX3rTjaoJ04vRjGAdLSzeiW3m',
@@ -2340,16 +2322,16 @@ return array(
     'phone' => '+79990000005',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:45:26',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  140 =>
-  array(
+  140 => 
+  array (
     'id' => 140,
     'email' => 'test@example.com',
     'password' => '$2y$10$JsfcYbVcStzRcqBAmq0znenyaNCQiC1GtjrmWQSaLkWWcEJBJFHGK',
@@ -2359,14 +2341,14 @@ return array(
     'verified' => false,
     'verification_code' => '846027',
     'code_expires' => '2026-03-30 11:00:26',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:45:26',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  141 =>
-  array(
+  141 => 
+  array (
     'id' => 141,
     'email' => 'wrongcode@test.com',
     'password' => '$2y$10$pxXWKjdZdxpLQEgmmfRr9.yPmF2thdhA83Ki68uRZQaDpB11KswY6',
@@ -2376,14 +2358,14 @@ return array(
     'verified' => false,
     'verification_code' => '215407',
     'code_expires' => '2026-03-30 11:00:26',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:45:26',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  142 =>
-  array(
+  142 => 
+  array (
     'id' => 142,
     'email' => 'verifypass@test.com',
     'password' => '$2y$10$QiYoyoJ/WLp3c9IbpYHM.e7RdRv3v83xMgFyzTFje86ml2YKYhDxO',
@@ -2393,14 +2375,14 @@ return array(
     'verified' => false,
     'verification_code' => '953966',
     'code_expires' => '2026-03-30 11:00:26',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:45:26',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  143 =>
-  array(
+  143 => 
+  array (
     'id' => 143,
     'email' => 'verify@test.com',
     'password' => '$2y$10$Ax1LboK52HAgeBA943nSC.kqYRYgwbDoEODowgWFlNrXnqJClOJaS',
@@ -2408,16 +2390,16 @@ return array(
     'phone' => '+79990000003',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:45:26',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  144 =>
-  array(
+  144 => 
+  array (
     'id' => 144,
     'email' => 'wrongpass@test.com',
     'password' => '$2y$10$7mifN/BgVLO0YE3FMrY2ceZIyIj2tN/XCs.pze8K4rLJ5dBycqWI2',
@@ -2427,14 +2409,14 @@ return array(
     'verified' => false,
     'verification_code' => '853205',
     'code_expires' => '2026-03-30 11:00:27',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:45:27',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  145 =>
-  array(
+  145 => 
+  array (
     'id' => 145,
     'email' => 'notverified@test.com',
     'password' => '$2y$10$NCVuSur5dYQesZdzzoFNy.03Z8QB5G.S4Lof21c1EnQqfls7Fjfwy',
@@ -2444,14 +2426,14 @@ return array(
     'verified' => false,
     'verification_code' => '349856',
     'code_expires' => '2026-03-30 11:00:27',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:45:27',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  146 =>
-  array(
+  146 => 
+  array (
     'id' => 146,
     'email' => 'hash@test.com',
     'password' => '$2y$10$chm1oOqGr0NxBsWr2sLI4u.uJh./By6DwyDtt0F/mgZ71g1KDzGHe',
@@ -2461,14 +2443,14 @@ return array(
     'verified' => false,
     'verification_code' => '103527',
     'code_expires' => '2026-03-30 11:00:27',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:45:27',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  147 =>
-  array(
+  147 => 
+  array (
     'id' => 147,
     'email' => 'updatepass@test.com',
     'password' => '$2y$10$xbTErplgTGAUP2ypbFWX3eKVY34KSsMSwL2q3CpPmEUlD.62aPODe',
@@ -2478,14 +2460,14 @@ return array(
     'verified' => false,
     'verification_code' => '296776',
     'code_expires' => '2026-03-30 11:00:27',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:45:27',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  148 =>
-  array(
+  148 => 
+  array (
     'id' => 148,
     'email' => 'passchange@test.com',
     'password' => '$2y$10$nP3VsaHFcN.RvquRvw6e2O1zw4RAIWKh2y.DY51W3HbDZbMorTDxe',
@@ -2495,14 +2477,14 @@ return array(
     'verified' => false,
     'verification_code' => '281337',
     'code_expires' => '2026-03-30 11:01:59',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:46:59',
-    'last_login' => null,
+    'last_login' => NULL,
     'password_change_code' => '481117',
     'password_change_code_expires' => '2026-03-30 10:56:59',
   ),
-  149 =>
-  array(
+  149 => 
+  array (
     'id' => 149,
     'email' => 'duplicate@example.com',
     'password' => '$2y$10$0hnziZDRkft2ozPUU1En6.02a4K5gFK5Bh4qt.hED2FyLyTHXKJW6',
@@ -2512,14 +2494,14 @@ return array(
     'verified' => false,
     'verification_code' => '576006',
     'code_expires' => '2026-03-30 11:01:59',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:46:59',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  150 =>
-  array(
+  150 => 
+  array (
     'id' => 150,
     'email' => 'login@test.com',
     'password' => '$2y$10$EoutnF3rnQv7ixYw144xxux8e/Y9Z8uoi0zEy7qIscrgkYT6kTInq',
@@ -2527,16 +2509,16 @@ return array(
     'phone' => '+79990000005',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:46:59',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  151 =>
-  array(
+  151 => 
+  array (
     'id' => 151,
     'email' => 'test@example.com',
     'password' => '$2y$10$fpbzDxLbnBIgFZpnQyB.0uqHUTi0Dl81Q7Q.W.3gHPQk2eQVoukse',
@@ -2546,14 +2528,14 @@ return array(
     'verified' => false,
     'verification_code' => '024851',
     'code_expires' => '2026-03-30 11:01:59',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:46:59',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  152 =>
-  array(
+  152 => 
+  array (
     'id' => 152,
     'email' => 'wrongcode@test.com',
     'password' => '$2y$10$VkZltAb3ojcaRXogJsWFeO2FCfKL3x2C7jYIezGODN21PQy/RcJZ6',
@@ -2563,14 +2545,14 @@ return array(
     'verified' => false,
     'verification_code' => '262153',
     'code_expires' => '2026-03-30 11:02:00',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:00',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  153 =>
-  array(
+  153 => 
+  array (
     'id' => 153,
     'email' => 'verifypass@test.com',
     'password' => '$2y$10$k0wg6D2L7klB8J0qWgvIk.2r7eUW06KGlVz.HRGcGx3BUuKnPUKaq',
@@ -2580,14 +2562,14 @@ return array(
     'verified' => false,
     'verification_code' => '383578',
     'code_expires' => '2026-03-30 11:02:00',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:00',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  154 =>
-  array(
+  154 => 
+  array (
     'id' => 154,
     'email' => 'verify@test.com',
     'password' => '$2y$10$h3Qxob93bk3.nICUQ71vqumGTG3oaESHBj2JBGz/ZhadDRQae6Cci',
@@ -2595,16 +2577,16 @@ return array(
     'phone' => '+79990000003',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:00',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  155 =>
-  array(
+  155 => 
+  array (
     'id' => 155,
     'email' => 'wrongpass@test.com',
     'password' => '$2y$10$GzIKSVTKyvsCAZhRRZLrsu.Qxj081U8TGfNsOEz9k/9phXS6nbN.6',
@@ -2614,14 +2596,14 @@ return array(
     'verified' => false,
     'verification_code' => '187453',
     'code_expires' => '2026-03-30 11:02:00',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:00',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  156 =>
-  array(
+  156 => 
+  array (
     'id' => 156,
     'email' => 'notverified@test.com',
     'password' => '$2y$10$c1HpT3T24lg1WOqD9QTniOKZvxZSJZe9ro89v4S3TmAmGQBbfuPiK',
@@ -2631,14 +2613,14 @@ return array(
     'verified' => false,
     'verification_code' => '444130',
     'code_expires' => '2026-03-30 11:02:00',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:00',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  157 =>
-  array(
+  157 => 
+  array (
     'id' => 157,
     'email' => 'hash@test.com',
     'password' => '$2y$10$FIkv1I1MIUmJndw/oToZTeBuP38ZP/ZpydwRnErJGPF5BFXowFSxC',
@@ -2648,14 +2630,14 @@ return array(
     'verified' => false,
     'verification_code' => '847785',
     'code_expires' => '2026-03-30 11:02:00',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:00',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  158 =>
-  array(
+  158 => 
+  array (
     'id' => 158,
     'email' => 'updatepass@test.com',
     'password' => '$2y$10$CpebbmOLIMuZ5CwzVp5Txe8hVSOvoGDtND8iy3zMrDrHWxK9S9tBu',
@@ -2665,14 +2647,14 @@ return array(
     'verified' => false,
     'verification_code' => '830937',
     'code_expires' => '2026-03-30 11:02:01',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:01',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  159 =>
-  array(
+  159 => 
+  array (
     'id' => 159,
     'email' => 'passchange@test.com',
     'password' => '$2y$10$61flUiXZJQgaLXtPTQ6OWedgMHydFDYfq2C4k5dWvhBy1BZnQDFGy',
@@ -2682,14 +2664,14 @@ return array(
     'verified' => false,
     'verification_code' => '873998',
     'code_expires' => '2026-03-30 11:02:06',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:06',
-    'last_login' => null,
+    'last_login' => NULL,
     'password_change_code' => '133458',
     'password_change_code_expires' => '2026-03-30 10:57:06',
   ),
-  160 =>
-  array(
+  160 => 
+  array (
     'id' => 160,
     'email' => 'duplicate@example.com',
     'password' => '$2y$10$SGbkp7HGbfeequCMuF3VF.2/VnGHaIV5QqBhgj.kG..vzB0x1IZCq',
@@ -2699,14 +2681,14 @@ return array(
     'verified' => false,
     'verification_code' => '779330',
     'code_expires' => '2026-03-30 11:02:07',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:07',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  161 =>
-  array(
+  161 => 
+  array (
     'id' => 161,
     'email' => 'login@test.com',
     'password' => '$2y$10$gDb1VBrhSmwtqT/KlNSWguJ3rDDH5ijYwKurfCM06m1TnK12xF9j.',
@@ -2714,16 +2696,16 @@ return array(
     'phone' => '+79990000005',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:07',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  162 =>
-  array(
+  162 => 
+  array (
     'id' => 162,
     'email' => 'test@example.com',
     'password' => '$2y$10$.32Y9Hrb0bWImMpFCaPV9eL1.4V5Xz3ylKLEOBlK1IXE2OmF3mUXK',
@@ -2733,14 +2715,14 @@ return array(
     'verified' => false,
     'verification_code' => '874819',
     'code_expires' => '2026-03-30 11:02:07',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:07',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  163 =>
-  array(
+  163 => 
+  array (
     'id' => 163,
     'email' => 'wrongcode@test.com',
     'password' => '$2y$10$NAiAWapbvKj2CDAkayqC.uR3iK.ghJi7kedkD5Zk3M62.gDQerQUu',
@@ -2750,14 +2732,14 @@ return array(
     'verified' => false,
     'verification_code' => '735360',
     'code_expires' => '2026-03-30 11:02:07',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:07',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  164 =>
-  array(
+  164 => 
+  array (
     'id' => 164,
     'email' => 'verifypass@test.com',
     'password' => '$2y$10$0csv53U/aFQrdjKqpsjTz.TTQO83JvHm3AZkoCNDu9O48.GWYoYza',
@@ -2767,14 +2749,14 @@ return array(
     'verified' => false,
     'verification_code' => '067215',
     'code_expires' => '2026-03-30 11:02:07',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:07',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  165 =>
-  array(
+  165 => 
+  array (
     'id' => 165,
     'email' => 'verify@test.com',
     'password' => '$2y$10$UcJ4CFCQ23zXzXMNy1myR.ikwTTWTJd2Jb5c4vNO2/RGBx9m94BoK',
@@ -2782,16 +2764,16 @@ return array(
     'phone' => '+79990000003',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:07',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  166 =>
-  array(
+  166 => 
+  array (
     'id' => 166,
     'email' => 'wrongpass@test.com',
     'password' => '$2y$10$MKh6OZqdPQSJatDln/KXL.8DJKihqSRbNiBK8nqCt9NaKMZHiv0EC',
@@ -2801,14 +2783,14 @@ return array(
     'verified' => false,
     'verification_code' => '886840',
     'code_expires' => '2026-03-30 11:02:07',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:07',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  167 =>
-  array(
+  167 => 
+  array (
     'id' => 167,
     'email' => 'notverified@test.com',
     'password' => '$2y$10$CFP3wvsF1q3dcpWnXR/wNuYg6O9En9Z9Az2pUDjgbrZeXRQk8sitO',
@@ -2818,14 +2800,14 @@ return array(
     'verified' => false,
     'verification_code' => '769233',
     'code_expires' => '2026-03-30 11:02:08',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:08',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  168 =>
-  array(
+  168 => 
+  array (
     'id' => 168,
     'email' => 'hash@test.com',
     'password' => '$2y$10$IhOclJ8mUROf5GVOUQFIYezTyo1v0WsdcM50b4qHce0faSUoZJQTa',
@@ -2835,14 +2817,14 @@ return array(
     'verified' => false,
     'verification_code' => '809252',
     'code_expires' => '2026-03-30 11:02:08',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:08',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  169 =>
-  array(
+  169 => 
+  array (
     'id' => 169,
     'email' => 'updatepass@test.com',
     'password' => '$2y$10$r7sc6WCJvaAyZUplOEGOQuzTvkUA.SlRpgjRdUNWQkeS09WGB7v/a',
@@ -2852,14 +2834,14 @@ return array(
     'verified' => false,
     'verification_code' => '185600',
     'code_expires' => '2026-03-30 11:02:08',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:08',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  170 =>
-  array(
+  170 => 
+  array (
     'id' => 170,
     'email' => 'passchange@test.com',
     'password' => '$2y$10$gJLOFNjPJBTv2zWEcVd9TeV53lp/hUGsZ0MBP1bnQE3GSDv9t/I.i',
@@ -2869,14 +2851,14 @@ return array(
     'verified' => false,
     'verification_code' => '893404',
     'code_expires' => '2026-03-30 11:02:12',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:12',
-    'last_login' => null,
+    'last_login' => NULL,
     'password_change_code' => '766183',
     'password_change_code_expires' => '2026-03-30 10:57:12',
   ),
-  171 =>
-  array(
+  171 => 
+  array (
     'id' => 171,
     'email' => 'duplicate@example.com',
     'password' => '$2y$10$Y25nBAKDKjkOxHrUfGoqVOJSj6V1uJJgQrWNK/iW4tzXnfivirQhm',
@@ -2886,14 +2868,14 @@ return array(
     'verified' => false,
     'verification_code' => '650753',
     'code_expires' => '2026-03-30 11:02:13',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:13',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  172 =>
-  array(
+  172 => 
+  array (
     'id' => 172,
     'email' => 'login@test.com',
     'password' => '$2y$10$zOpetIhSmznXbPBouy6mIuFVBSvkALgJV7EFI.Y4hxXjosz016uzu',
@@ -2901,16 +2883,16 @@ return array(
     'phone' => '+79990000005',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:13',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  173 =>
-  array(
+  173 => 
+  array (
     'id' => 173,
     'email' => 'test@example.com',
     'password' => '$2y$10$FP6sCFasZpAVdALVIYklaeS7zXXOUWblaHOxP0sNMRgwuLPT9hWr.',
@@ -2920,14 +2902,14 @@ return array(
     'verified' => false,
     'verification_code' => '661667',
     'code_expires' => '2026-03-30 11:02:13',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:13',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  174 =>
-  array(
+  174 => 
+  array (
     'id' => 174,
     'email' => 'verify@test.com',
     'password' => '$2y$10$IBn.5N4hpIy7M4qk4Mx53OgP9mOVimVvAC991cVVrZTyxZoJDi7j.',
@@ -2935,16 +2917,16 @@ return array(
     'phone' => '+79990000003',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:13',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  175 =>
-  array(
+  175 => 
+  array (
     'id' => 175,
     'email' => 'wrongcode@test.com',
     'password' => '$2y$10$NcQ4QYJwRRCDAlxDgWVvMesDUt1HMi0SBu5/wtN2BwDlB2UQvVwOi',
@@ -2954,14 +2936,14 @@ return array(
     'verified' => false,
     'verification_code' => '285964',
     'code_expires' => '2026-03-30 11:02:13',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:13',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  176 =>
-  array(
+  176 => 
+  array (
     'id' => 176,
     'email' => 'wrongpass@test.com',
     'password' => '$2y$10$OBI730Wqe93Nmo2qTJ3RVeZt6DunoWU0mU.kFqsMOkQ7CpgH4Mk1C',
@@ -2971,14 +2953,14 @@ return array(
     'verified' => false,
     'verification_code' => '628796',
     'code_expires' => '2026-03-30 11:02:13',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:13',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  177 =>
-  array(
+  177 => 
+  array (
     'id' => 177,
     'email' => 'notverified@test.com',
     'password' => '$2y$10$FiNRDgvtSqsvlCRT2IKsk.Y1p/9tPaDH0LcSOmeSnaTKNz0z/u4Oq',
@@ -2988,14 +2970,14 @@ return array(
     'verified' => false,
     'verification_code' => '591207',
     'code_expires' => '2026-03-30 11:02:13',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:13',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  178 =>
-  array(
+  178 => 
+  array (
     'id' => 178,
     'email' => 'verifypass@test.com',
     'password' => '$2y$10$aQl.YL3RxZUPpfcYwWX/0uANG8lxLkcruXSTf1ihOt9B3w2JGNfzy',
@@ -3005,14 +2987,14 @@ return array(
     'verified' => false,
     'verification_code' => '107374',
     'code_expires' => '2026-03-30 11:02:14',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:14',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  179 =>
-  array(
+  179 => 
+  array (
     'id' => 179,
     'email' => 'hash@test.com',
     'password' => '$2y$10$ED4wZF6opKP7Z4nGTZHaueIQFAhl/CZE3ESjsc8Hd2Coy4Nooy8Xe',
@@ -3022,14 +3004,14 @@ return array(
     'verified' => false,
     'verification_code' => '814733',
     'code_expires' => '2026-03-30 11:02:14',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:14',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  180 =>
-  array(
+  180 => 
+  array (
     'id' => 180,
     'email' => 'updatepass@test.com',
     'password' => '$2y$10$dVqq//X7RgY8f1vZdOdKP.DfCX.4bVX1N1bEyxLpqQ2mX/PuOihP2',
@@ -3039,14 +3021,14 @@ return array(
     'verified' => false,
     'verification_code' => '954916',
     'code_expires' => '2026-03-30 11:02:14',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:14',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  181 =>
-  array(
+  181 => 
+  array (
     'id' => 181,
     'email' => 'passchange@test.com',
     'password' => '$2y$10$sT1xsuiBx/TYpYAlWpLGaeJxWEI1boubkd1KCkpyy3QLOKECe3T.G',
@@ -3056,14 +3038,14 @@ return array(
     'verified' => false,
     'verification_code' => '808846',
     'code_expires' => '2026-03-30 11:02:14',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:14',
-    'last_login' => null,
+    'last_login' => NULL,
     'password_change_code' => '720972',
     'password_change_code_expires' => '2026-03-30 10:57:14',
   ),
-  182 =>
-  array(
+  182 => 
+  array (
     'id' => 182,
     'email' => 'duplicate@example.com',
     'password' => '$2y$10$3VVBXZQUSqKY1MarvstveuXWJBx9SXtNVbTkWj8hU.0YIcVnOYRxm',
@@ -3073,14 +3055,14 @@ return array(
     'verified' => false,
     'verification_code' => '596752',
     'code_expires' => '2026-03-30 11:02:14',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:14',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  183 =>
-  array(
+  183 => 
+  array (
     'id' => 183,
     'email' => 'login@test.com',
     'password' => '$2y$10$BmdN6sPpFQZKCmS8GNcEWuuhHH2YVVYN14D7hPcW2Y/KHr2k/8RYG',
@@ -3088,16 +3070,16 @@ return array(
     'phone' => '+79990000005',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:15',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  184 =>
-  array(
+  184 => 
+  array (
     'id' => 184,
     'email' => 'test@example.com',
     'password' => '$2y$10$zDC3dRjJ7KKYLL.0FqJvO.dc.J8yfAEGE9ewvVpTT36Bi9qzL5Xtq',
@@ -3107,14 +3089,14 @@ return array(
     'verified' => false,
     'verification_code' => '039270',
     'code_expires' => '2026-03-30 11:02:15',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:15',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  185 =>
-  array(
+  185 => 
+  array (
     'id' => 185,
     'email' => 'verify@test.com',
     'password' => '$2y$10$2EEIQwLP9C1gGh47xVlJ6uq46Q3JpviezDwOXL5CIiDxobljqRMaG',
@@ -3122,16 +3104,16 @@ return array(
     'phone' => '+79990000003',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:15',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  186 =>
-  array(
+  186 => 
+  array (
     'id' => 186,
     'email' => 'wrongcode@test.com',
     'password' => '$2y$10$7thQ5puH8B6hRijMgo4R0eB7UYSFHeeQkQrsvnPXHBXJ34X78Wk4q',
@@ -3141,14 +3123,14 @@ return array(
     'verified' => false,
     'verification_code' => '951276',
     'code_expires' => '2026-03-30 11:02:15',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:15',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  187 =>
-  array(
+  187 => 
+  array (
     'id' => 187,
     'email' => 'wrongpass@test.com',
     'password' => '$2y$10$ANuBBFrW00I2PCzxlkjTQeRR50mnPK3t69hEQgfKSQ7PfLgRieG0q',
@@ -3158,14 +3140,14 @@ return array(
     'verified' => false,
     'verification_code' => '863361',
     'code_expires' => '2026-03-30 11:02:15',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:15',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  188 =>
-  array(
+  188 => 
+  array (
     'id' => 188,
     'email' => 'notverified@test.com',
     'password' => '$2y$10$.Ko1.zsYz1b4yH2PLEEKeetLZtVn244pDEZYEv8P1Fx1tng2OLB8K',
@@ -3175,14 +3157,14 @@ return array(
     'verified' => false,
     'verification_code' => '815421',
     'code_expires' => '2026-03-30 11:02:15',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:15',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  189 =>
-  array(
+  189 => 
+  array (
     'id' => 189,
     'email' => 'verifypass@test.com',
     'password' => '$2y$10$rh4B72k2raIebBoG21shhOTNecNLorkkbEgbgbTeoz4BeZPk8Dnvi',
@@ -3192,14 +3174,14 @@ return array(
     'verified' => false,
     'verification_code' => '981116',
     'code_expires' => '2026-03-30 11:02:15',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:15',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  190 =>
-  array(
+  190 => 
+  array (
     'id' => 190,
     'email' => 'hash@test.com',
     'password' => '$2y$10$5cGgBdX.51mHCqMfS1V7cuHXTaIvFXYUK9WNwFiFL367zl2r0Pi22',
@@ -3209,14 +3191,14 @@ return array(
     'verified' => false,
     'verification_code' => '629784',
     'code_expires' => '2026-03-30 11:02:16',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:16',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  191 =>
-  array(
+  191 => 
+  array (
     'id' => 191,
     'email' => 'updatepass@test.com',
     'password' => '$2y$10$HUUgJlcJRpu6zi/OJae3mepmsMATtyJRicFeyXvNyf9ZHfZ2oWFRS',
@@ -3226,14 +3208,14 @@ return array(
     'verified' => false,
     'verification_code' => '496082',
     'code_expires' => '2026-03-30 11:02:16',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:16',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  192 =>
-  array(
+  192 => 
+  array (
     'id' => 192,
     'email' => 'passchange@test.com',
     'password' => '$2y$10$EE.Z4r1qEb97oKVpGGvcWe0.elkgaXfl3EL6IID5248f43hdIp.km',
@@ -3243,14 +3225,14 @@ return array(
     'verified' => false,
     'verification_code' => '455143',
     'code_expires' => '2026-03-30 11:02:22',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:22',
-    'last_login' => null,
+    'last_login' => NULL,
     'password_change_code' => '827664',
     'password_change_code_expires' => '2026-03-30 10:57:22',
   ),
-  193 =>
-  array(
+  193 => 
+  array (
     'id' => 193,
     'email' => 'duplicate@example.com',
     'password' => '$2y$10$ky.Gj6N9ZlPkD2u6MnA8sO1Viz5Ec17f6tl1mMDheYdNCOwJMYBY6',
@@ -3260,14 +3242,14 @@ return array(
     'verified' => false,
     'verification_code' => '172297',
     'code_expires' => '2026-03-30 11:02:22',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:22',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  194 =>
-  array(
+  194 => 
+  array (
     'id' => 194,
     'email' => 'login@test.com',
     'password' => '$2y$10$Md3UQcoV99exE3ZJ1T490uNbM56O/sBfDna6Y6VwcgO5tg64PCCqe',
@@ -3275,16 +3257,16 @@ return array(
     'phone' => '+79990000005',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:22',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  195 =>
-  array(
+  195 => 
+  array (
     'id' => 195,
     'email' => 'test@example.com',
     'password' => '$2y$10$WG4AsDt9vF09sN8aC6lb0eGNuQNAcU219Wlq3Sk4Ezh2Ka0yeO40q',
@@ -3294,14 +3276,14 @@ return array(
     'verified' => false,
     'verification_code' => '317326',
     'code_expires' => '2026-03-30 11:02:23',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:23',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  196 =>
-  array(
+  196 => 
+  array (
     'id' => 196,
     'email' => 'verify@test.com',
     'password' => '$2y$10$STsBchj1WNXfL5l9GWS7oObTV/fZbLGWeno9sRULLnxLr9GBOvWcW',
@@ -3309,16 +3291,16 @@ return array(
     'phone' => '+79990000003',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:23',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  197 =>
-  array(
+  197 => 
+  array (
     'id' => 197,
     'email' => 'wrongcode@test.com',
     'password' => '$2y$10$XQcNZ5SyybRrKp78Hd6c9u8tpjwrVeaxyu6bekENtkw2pOmUHqVnO',
@@ -3328,14 +3310,14 @@ return array(
     'verified' => false,
     'verification_code' => '704915',
     'code_expires' => '2026-03-30 11:02:23',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:23',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  198 =>
-  array(
+  198 => 
+  array (
     'id' => 198,
     'email' => 'wrongpass@test.com',
     'password' => '$2y$10$FvkLDhbuDGELZl0fxNESGOHCsAmr62q2Dcq44thSCzDAPwndH8l6.',
@@ -3345,14 +3327,14 @@ return array(
     'verified' => false,
     'verification_code' => '216222',
     'code_expires' => '2026-03-30 11:02:23',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:23',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  199 =>
-  array(
+  199 => 
+  array (
     'id' => 199,
     'email' => 'notverified@test.com',
     'password' => '$2y$10$tzRtK6SDvS4qdw9.srz5FOEUTT7MjDGaiuDxfHyKOxGWvbPpAc34.',
@@ -3362,14 +3344,14 @@ return array(
     'verified' => false,
     'verification_code' => '041921',
     'code_expires' => '2026-03-30 11:02:23',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:23',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  200 =>
-  array(
+  200 => 
+  array (
     'id' => 200,
     'email' => 'verifypass@test.com',
     'password' => '$2y$10$UJDqhRK6BM4Mf5HVZCC.uOMQtxq0.oT.VPFa623PWQwimuUTnybNe',
@@ -3379,14 +3361,14 @@ return array(
     'verified' => false,
     'verification_code' => '489902',
     'code_expires' => '2026-03-30 11:02:23',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:23',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  201 =>
-  array(
+  201 => 
+  array (
     'id' => 201,
     'email' => 'hash@test.com',
     'password' => '$2y$10$xxCbnmn9p/Autb8q4RzYvehDx4CAPDJ./jylEZAcNWY5K3EkZMKBe',
@@ -3396,14 +3378,14 @@ return array(
     'verified' => false,
     'verification_code' => '270029',
     'code_expires' => '2026-03-30 11:02:23',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:23',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  202 =>
-  array(
+  202 => 
+  array (
     'id' => 202,
     'email' => 'updatepass@test.com',
     'password' => '$2y$10$JnOHgfhe6xHX1S1z2PGlh./vwoDqLmL/QHHWmBabLtBhss6CQ/266',
@@ -3413,14 +3395,14 @@ return array(
     'verified' => false,
     'verification_code' => '994721',
     'code_expires' => '2026-03-30 11:02:24',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:24',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  203 =>
-  array(
+  203 => 
+  array (
     'id' => 203,
     'email' => 'passchange@test.com',
     'password' => '$2y$10$cVZE88Rw2RIZADhJwJFBq.7hgfGKW26oDhzl60HAl4f7gEk4SQc0y',
@@ -3430,14 +3412,14 @@ return array(
     'verified' => false,
     'verification_code' => '110489',
     'code_expires' => '2026-03-30 11:02:29',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:29',
-    'last_login' => null,
+    'last_login' => NULL,
     'password_change_code' => '694395',
     'password_change_code_expires' => '2026-03-30 10:57:29',
   ),
-  204 =>
-  array(
+  204 => 
+  array (
     'id' => 204,
     'email' => 'duplicate@example.com',
     'password' => '$2y$10$s6bii4EPcbpb2/6TBbwvL.0yMfcoF8VXImqJhS1HHWE.AB9cNoQUy',
@@ -3447,14 +3429,14 @@ return array(
     'verified' => false,
     'verification_code' => '538476',
     'code_expires' => '2026-03-30 11:02:29',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:29',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  205 =>
-  array(
+  205 => 
+  array (
     'id' => 205,
     'email' => 'login@test.com',
     'password' => '$2y$10$hnyKbDPdM5jhL/kun.jmIuOUc0JMWd6hBdNY/2qj5cQ0wFy05xNNm',
@@ -3462,16 +3444,16 @@ return array(
     'phone' => '+79990000005',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:29',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  206 =>
-  array(
+  206 => 
+  array (
     'id' => 206,
     'email' => 'test@example.com',
     'password' => '$2y$10$OH3My1PEtxFhKbccOyz0FejC/8Ccr.MMXngZgaaCqOGJCNhxtbYA.',
@@ -3481,14 +3463,14 @@ return array(
     'verified' => false,
     'verification_code' => '097211',
     'code_expires' => '2026-03-30 11:02:29',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:29',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  207 =>
-  array(
+  207 => 
+  array (
     'id' => 207,
     'email' => 'verify@test.com',
     'password' => '$2y$10$/h2nzqlqIj7Yy2yV0/hfbu01y.NKqo.QnrdCdmAaf1jZMRjUY2Ey6',
@@ -3496,16 +3478,16 @@ return array(
     'phone' => '+79990000003',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:29',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  208 =>
-  array(
+  208 => 
+  array (
     'id' => 208,
     'email' => 'wrongcode@test.com',
     'password' => '$2y$10$dA6jVZOUy2mirLDengrEouE7wK.FFsGz3bc3i0FABV2zAIdYKlE/K',
@@ -3515,14 +3497,14 @@ return array(
     'verified' => false,
     'verification_code' => '723732',
     'code_expires' => '2026-03-30 11:02:29',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:29',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  209 =>
-  array(
+  209 => 
+  array (
     'id' => 209,
     'email' => 'wrongpass@test.com',
     'password' => '$2y$10$trVwN4Uq4EYv7tbJnWnpAeL3502Oq4sOfkYeAlFm7WdZRWwe2MCz2',
@@ -3532,14 +3514,14 @@ return array(
     'verified' => false,
     'verification_code' => '978253',
     'code_expires' => '2026-03-30 11:02:30',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:30',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  210 =>
-  array(
+  210 => 
+  array (
     'id' => 210,
     'email' => 'notverified@test.com',
     'password' => '$2y$10$.iH/ZPwF0tDzMHM/5u6x3.IZJn2gzFtHeW5R5Ef7bHpwOnxUVkbV6',
@@ -3549,14 +3531,14 @@ return array(
     'verified' => false,
     'verification_code' => '143514',
     'code_expires' => '2026-03-30 11:02:30',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:30',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  211 =>
-  array(
+  211 => 
+  array (
     'id' => 211,
     'email' => 'verifypass@test.com',
     'password' => '$2y$10$iZkpGs4lGzmoFM2hTu4tNOHYqcjLuUWTV6VCH/8UUKaHj86mJ9fhW',
@@ -3566,14 +3548,14 @@ return array(
     'verified' => false,
     'verification_code' => '488661',
     'code_expires' => '2026-03-30 11:02:30',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:30',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  212 =>
-  array(
+  212 => 
+  array (
     'id' => 212,
     'email' => 'hash@test.com',
     'password' => '$2y$10$HosIM1AYIUTh94M1HnBKYeKfq4zsvy.lfif/lItbrjDO7YICbur1i',
@@ -3583,14 +3565,14 @@ return array(
     'verified' => false,
     'verification_code' => '658005',
     'code_expires' => '2026-03-30 11:02:30',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:30',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  213 =>
-  array(
+  213 => 
+  array (
     'id' => 213,
     'email' => 'updatepass@test.com',
     'password' => '$2y$10$C53tpcohDeVA4Z9JYJFTZ.bSpFkg4gk5mfk/GYdLvXmU3jS2.HaUG',
@@ -3600,14 +3582,14 @@ return array(
     'verified' => false,
     'verification_code' => '164429',
     'code_expires' => '2026-03-30 11:02:30',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:47:30',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  214 =>
-  array(
+  214 => 
+  array (
     'id' => 214,
     'email' => 'passchange1774860789@test.com',
     'password' => '$2y$10$4Y823Go2pHJpQDg4jMgnHuJ1caVMjZgZrf8lZcjy91Cwdw.1rFfv.',
@@ -3617,14 +3599,14 @@ return array(
     'verified' => false,
     'verification_code' => '852924',
     'code_expires' => '2026-03-30 11:08:09',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:53:09',
-    'last_login' => null,
+    'last_login' => NULL,
     'password_change_code' => '319851',
     'password_change_code_expires' => '2026-03-30 11:03:09',
   ),
-  215 =>
-  array(
+  215 => 
+  array (
     'id' => 215,
     'email' => 'duplicate1774860790@example.com',
     'password' => '$2y$10$/0wqpzbgsIwU6L6TC/F00O0CZRvuD7JSTQCVMloV4EpLkS4/Kp90.',
@@ -3634,14 +3616,14 @@ return array(
     'verified' => false,
     'verification_code' => '991675',
     'code_expires' => '2026-03-30 11:08:10',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:53:10',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  216 =>
-  array(
+  216 => 
+  array (
     'id' => 216,
     'email' => 'login1774860790@test.com',
     'password' => '$2y$10$eHmu8FZQQnKUlwWb1bNln.soYfJ3C7N3mpFCrtJGqhOEFOtTJWQIW',
@@ -3649,16 +3631,16 @@ return array(
     'phone' => '+79990000005',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:53:10',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  217 =>
-  array(
+  217 => 
+  array (
     'id' => 217,
     'email' => 'test1774860790@example.com',
     'password' => '$2y$10$bcGA9FwKS6aLpZm0mX9BPeQgCz18nccQ.2EqbJJUJDnE4i.0XBoW6',
@@ -3668,14 +3650,14 @@ return array(
     'verified' => false,
     'verification_code' => '514200',
     'code_expires' => '2026-03-30 11:08:10',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:53:10',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  218 =>
-  array(
+  218 => 
+  array (
     'id' => 218,
     'email' => 'verify1774860790@test.com',
     'password' => '$2y$10$ns7JlVeJY6R.n9bhxKC7EuNTAbgmQhlQNNSuqzyppgyFrxCJjgQG2',
@@ -3683,16 +3665,16 @@ return array(
     'phone' => '+79990000003',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:53:10',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  219 =>
-  array(
+  219 => 
+  array (
     'id' => 219,
     'email' => 'wrongcode1774860790@test.com',
     'password' => '$2y$10$M8weLy2DVPmtpPmsnDcqEeWKm6/UY0dDwpnk8NxMppISqChbQM02e',
@@ -3702,14 +3684,14 @@ return array(
     'verified' => false,
     'verification_code' => '028618',
     'code_expires' => '2026-03-30 11:08:10',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:53:10',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  220 =>
-  array(
+  220 => 
+  array (
     'id' => 220,
     'email' => 'wrongpass1774860790@test.com',
     'password' => '$2y$10$h2h1eCS.RoIpXfnuTz4wU.OZhjF1MriZy1SZTGhHUugbK/WILehy6',
@@ -3719,14 +3701,14 @@ return array(
     'verified' => false,
     'verification_code' => '669095',
     'code_expires' => '2026-03-30 11:08:10',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:53:10',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  221 =>
-  array(
+  221 => 
+  array (
     'id' => 221,
     'email' => 'notverified1774860790@test.com',
     'password' => '$2y$10$VSc5PUNjpqjg4hxMeDUjSezNvx3o2rfl1qjXUY8IIdfkjCUyRlezC',
@@ -3736,14 +3718,14 @@ return array(
     'verified' => false,
     'verification_code' => '866156',
     'code_expires' => '2026-03-30 11:08:10',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:53:10',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  222 =>
-  array(
+  222 => 
+  array (
     'id' => 222,
     'email' => 'verifypass1774860790@test.com',
     'password' => '$2y$10$FUJWxlrGQRRtz4S0DrhvXums33CIifZP9cRVfaXUbYho3l.wgGbiG',
@@ -3753,14 +3735,14 @@ return array(
     'verified' => false,
     'verification_code' => '299539',
     'code_expires' => '2026-03-30 11:08:11',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:53:11',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  223 =>
-  array(
+  223 => 
+  array (
     'id' => 223,
     'email' => 'hash1774860791@test.com',
     'password' => '$2y$10$x8GyyoVRFXzQ9vJT0SC3JOqiJnqMBuOlJnl66UduXMCthaFwFUT96',
@@ -3770,14 +3752,14 @@ return array(
     'verified' => false,
     'verification_code' => '998371',
     'code_expires' => '2026-03-30 11:08:11',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:53:11',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  224 =>
-  array(
+  224 => 
+  array (
     'id' => 224,
     'email' => 'updatepass1774860791@test.com',
     'password' => '$2y$10$FxKrti0fnCuhh4ob.P4VFe5aku7urlTK8.HMms3JeQ4jxGE0ZkkCe',
@@ -3787,14 +3769,14 @@ return array(
     'verified' => false,
     'verification_code' => '962584',
     'code_expires' => '2026-03-30 11:08:11',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:53:11',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  225 =>
-  array(
+  225 => 
+  array (
     'id' => 225,
     'email' => 'passchange1774860903@test.com',
     'password' => '$2y$10$q/YtE/nlzzvK7qpD.NJm.egVxqB3AQGrB9gdixkvaJwC1bXUM/kZK',
@@ -3804,14 +3786,14 @@ return array(
     'verified' => false,
     'verification_code' => '327529',
     'code_expires' => '2026-03-30 11:10:03',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:03',
-    'last_login' => null,
+    'last_login' => NULL,
     'password_change_code' => '884127',
     'password_change_code_expires' => '2026-03-30 11:05:03',
   ),
-  226 =>
-  array(
+  226 => 
+  array (
     'id' => 226,
     'email' => 'duplicate1774860903@example.com',
     'password' => '$2y$10$MiH2G15KjvWWjPGYTAxW/.qStAsw3IPe0711N8NH27L635q8Rf0rK',
@@ -3821,14 +3803,14 @@ return array(
     'verified' => false,
     'verification_code' => '876766',
     'code_expires' => '2026-03-30 11:10:03',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:03',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  227 =>
-  array(
+  227 => 
+  array (
     'id' => 227,
     'email' => 'login1774860903@test.com',
     'password' => '$2y$10$aC4bJmHHJuXQaxVU1a2UCOFVn5xOC6E2UoDynJucPTv3igqUjH2bS',
@@ -3836,16 +3818,16 @@ return array(
     'phone' => '+79990000005',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:03',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  228 =>
-  array(
+  228 => 
+  array (
     'id' => 228,
     'email' => 'test1774860903@example.com',
     'password' => '$2y$10$Wr6lpYUiFY7uBtoyzzm2MO9h4nTJtJsSLi7Y0cCHCokuto5VdjbvO',
@@ -3855,14 +3837,14 @@ return array(
     'verified' => false,
     'verification_code' => '981871',
     'code_expires' => '2026-03-30 11:10:03',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:03',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  229 =>
-  array(
+  229 => 
+  array (
     'id' => 229,
     'email' => 'verify1774860903@test.com',
     'password' => '$2y$10$2aDfm8RHv1gO4gCbFTozde5KGZWhrSK2We7NUBqG44ZaPgXThLvmW',
@@ -3870,16 +3852,16 @@ return array(
     'phone' => '+79990000003',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:03',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  230 =>
-  array(
+  230 => 
+  array (
     'id' => 230,
     'email' => 'wrongcode1774860903@test.com',
     'password' => '$2y$10$zn9.OsTbfe/alqQznWBM2OP7YEkbMpRx5L9FLNStJMnzcVH/KvF4K',
@@ -3889,14 +3871,14 @@ return array(
     'verified' => false,
     'verification_code' => '062640',
     'code_expires' => '2026-03-30 11:10:03',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:03',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  231 =>
-  array(
+  231 => 
+  array (
     'id' => 231,
     'email' => 'wrongpass1774860904@test.com',
     'password' => '$2y$10$kPXl8Krz0G0Ow4kFx.NgMeoTLT24wJ0D4c2oUkAzdAEjru8CzjjtG',
@@ -3906,14 +3888,14 @@ return array(
     'verified' => false,
     'verification_code' => '293529',
     'code_expires' => '2026-03-30 11:10:04',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:04',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  232 =>
-  array(
+  232 => 
+  array (
     'id' => 232,
     'email' => 'notverified1774860904@test.com',
     'password' => '$2y$10$t1Vx3c5wnrkcj5WV9Rzs4.RwKE0VMfEs3ZwEYCFedhT3NMbCy3h7G',
@@ -3923,14 +3905,14 @@ return array(
     'verified' => false,
     'verification_code' => '934436',
     'code_expires' => '2026-03-30 11:10:04',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:04',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  233 =>
-  array(
+  233 => 
+  array (
     'id' => 233,
     'email' => 'verifypass1774860904@test.com',
     'password' => '$2y$10$M7145CT1UEAQkCUxoaYeyebfM2PKvYtdSdumHpE4rXRW9saYokrlm',
@@ -3940,14 +3922,14 @@ return array(
     'verified' => false,
     'verification_code' => '525215',
     'code_expires' => '2026-03-30 11:10:04',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:04',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  234 =>
-  array(
+  234 => 
+  array (
     'id' => 234,
     'email' => 'hash1774860904@test.com',
     'password' => '$2y$10$9zEZDiyFSIVbcJ6FkDuW9eD8OuIYejMuZvlvO3tdfRsfOtx.cxIIW',
@@ -3957,14 +3939,14 @@ return array(
     'verified' => false,
     'verification_code' => '936899',
     'code_expires' => '2026-03-30 11:10:04',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:04',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  235 =>
-  array(
+  235 => 
+  array (
     'id' => 235,
     'email' => 'updatepass1774860904@test.com',
     'password' => '$2y$10$Ugpd60KOyT676iSt83ZbmuJTKPgktTV6zdhO5AefC1x1ERL76YOfm',
@@ -3974,14 +3956,14 @@ return array(
     'verified' => false,
     'verification_code' => '253733',
     'code_expires' => '2026-03-30 11:10:04',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:04',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  236 =>
-  array(
+  236 => 
+  array (
     'id' => 236,
     'email' => 'passchange1774860913@test.com',
     'password' => '$2y$10$uq5MHUOvCb4Ni7mQROM2EO7752w0BMmwi/iskZWz5ARrsD3u2UwPS',
@@ -3991,14 +3973,14 @@ return array(
     'verified' => false,
     'verification_code' => '944482',
     'code_expires' => '2026-03-30 11:10:14',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:14',
-    'last_login' => null,
+    'last_login' => NULL,
     'password_change_code' => '449503',
     'password_change_code_expires' => '2026-03-30 11:05:14',
   ),
-  237 =>
-  array(
+  237 => 
+  array (
     'id' => 237,
     'email' => 'duplicate1774860914@example.com',
     'password' => '$2y$10$g4ILfHpBNbkZmZIAw5XXa.qxiAenv2eCJ/HR7.uPNrPHhp398LrCO',
@@ -4008,14 +3990,14 @@ return array(
     'verified' => false,
     'verification_code' => '641364',
     'code_expires' => '2026-03-30 11:10:14',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:14',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  238 =>
-  array(
+  238 => 
+  array (
     'id' => 238,
     'email' => 'login1774860914@test.com',
     'password' => '$2y$10$OPOhPTLRkF9ExT7Q/gVKF.cvcbsGnrVTQZy21cbXSwwzrU/28rFay',
@@ -4023,16 +4005,16 @@ return array(
     'phone' => '+79990000005',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:14',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  239 =>
-  array(
+  239 => 
+  array (
     'id' => 239,
     'email' => 'test1774860914@example.com',
     'password' => '$2y$10$RgGfCi1yL1XmeLXXqIhHVuhnZ.rLbykqBv3LPPLvBJHjfBec5SpBy',
@@ -4042,14 +4024,14 @@ return array(
     'verified' => false,
     'verification_code' => '506496',
     'code_expires' => '2026-03-30 11:10:14',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:14',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  240 =>
-  array(
+  240 => 
+  array (
     'id' => 240,
     'email' => 'verify1774860914@test.com',
     'password' => '$2y$10$P0uOTV/1.gPaMCy3xhGzq.LpDGXvK8mD/U5JS7kbc969ixeb4esO.',
@@ -4057,16 +4039,16 @@ return array(
     'phone' => '+79990000003',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:14',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  241 =>
-  array(
+  241 => 
+  array (
     'id' => 241,
     'email' => 'wrongcode1774860914@test.com',
     'password' => '$2y$10$d42anQNvyqNT8zzpLypbi.LfxATK5jftchWmOd452CEscskdIKOVC',
@@ -4076,14 +4058,14 @@ return array(
     'verified' => false,
     'verification_code' => '364964',
     'code_expires' => '2026-03-30 11:10:14',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:14',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  242 =>
-  array(
+  242 => 
+  array (
     'id' => 242,
     'email' => 'wrongpass1774860914@test.com',
     'password' => '$2y$10$ul.doPD12barMPvFyqTz4.Z1COjhOX3A7lu5OJspSrEGP5ffv./xm',
@@ -4093,14 +4075,14 @@ return array(
     'verified' => false,
     'verification_code' => '431834',
     'code_expires' => '2026-03-30 11:10:14',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:14',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  243 =>
-  array(
+  243 => 
+  array (
     'id' => 243,
     'email' => 'notverified1774860914@test.com',
     'password' => '$2y$10$QaZSH.p54UirNbvcefzv4.xXxFvSMIoWuCXPG/9DmqrFn.53TRsSi',
@@ -4110,14 +4092,14 @@ return array(
     'verified' => false,
     'verification_code' => '242133',
     'code_expires' => '2026-03-30 11:10:15',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:15',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  244 =>
-  array(
+  244 => 
+  array (
     'id' => 244,
     'email' => 'verifypass1774860915@test.com',
     'password' => '$2y$10$4Yn1natRvLwPvrHVva3/Be3WFLuD1cB4o0YGiNxXz9Sug0l3v.Vp6',
@@ -4127,14 +4109,14 @@ return array(
     'verified' => false,
     'verification_code' => '090169',
     'code_expires' => '2026-03-30 11:10:15',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:15',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  245 =>
-  array(
+  245 => 
+  array (
     'id' => 245,
     'email' => 'hash1774860915@test.com',
     'password' => '$2y$10$X8FWtEP4pKmAg3pBw2jZO.6IeUdoazFFFzYDP25lPAjnYBBA5u1S6',
@@ -4144,14 +4126,14 @@ return array(
     'verified' => false,
     'verification_code' => '038577',
     'code_expires' => '2026-03-30 11:10:15',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:15',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  246 =>
-  array(
+  246 => 
+  array (
     'id' => 246,
     'email' => 'updatepass1774860915@test.com',
     'password' => '$2y$10$0BIPkY24G3PlfdbB8RbtQOkYsoVIVlAkMYpjvLvWPsgLa.ZLh8Cam',
@@ -4161,14 +4143,14 @@ return array(
     'verified' => false,
     'verification_code' => '566165',
     'code_expires' => '2026-03-30 11:10:15',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:15',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  247 =>
-  array(
+  247 => 
+  array (
     'id' => 247,
     'email' => 'passchange1774860921@test.com',
     'password' => '$2y$10$QgnV/T5CzLdNLfF85NOZV.zPZlZMqITHZTUMF65DkngUjPDyxb3G.',
@@ -4178,14 +4160,14 @@ return array(
     'verified' => false,
     'verification_code' => '094412',
     'code_expires' => '2026-03-30 11:10:21',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:21',
-    'last_login' => null,
+    'last_login' => NULL,
     'password_change_code' => '123340',
     'password_change_code_expires' => '2026-03-30 11:05:21',
   ),
-  248 =>
-  array(
+  248 => 
+  array (
     'id' => 248,
     'email' => 'duplicate1774860921@example.com',
     'password' => '$2y$10$jeAd.mEvjKv6nQ4TqOBlTe4vGy57052.018x48ZTlw7QJ1o9A1czW',
@@ -4195,14 +4177,14 @@ return array(
     'verified' => false,
     'verification_code' => '910922',
     'code_expires' => '2026-03-30 11:10:21',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:21',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  249 =>
-  array(
+  249 => 
+  array (
     'id' => 249,
     'email' => 'login1774860921@test.com',
     'password' => '$2y$10$GUPqQjrPA0bshpqEZRP9b.U/XMhPwN/1DZjRBHDjOZbYFy7F6ru1y',
@@ -4210,16 +4192,16 @@ return array(
     'phone' => '+79990000005',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:21',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  250 =>
-  array(
+  250 => 
+  array (
     'id' => 250,
     'email' => 'test1774860921@example.com',
     'password' => '$2y$10$bDzL/UVLOmge2wfuSLEA1ejl56Cz3SaPgDk3gF8J7FCOxFKqcglCW',
@@ -4229,14 +4211,14 @@ return array(
     'verified' => false,
     'verification_code' => '154002',
     'code_expires' => '2026-03-30 11:10:21',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:21',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  251 =>
-  array(
+  251 => 
+  array (
     'id' => 251,
     'email' => 'verify1774860921@test.com',
     'password' => '$2y$10$7zWt.w8n/.HaNiJf23Q/YemQ8jvHHujglB0VT6CMISwRxUm754Nhm',
@@ -4244,16 +4226,16 @@ return array(
     'phone' => '+79990000003',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:21',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  252 =>
-  array(
+  252 => 
+  array (
     'id' => 252,
     'email' => 'wrongcode1774860921@test.com',
     'password' => '$2y$10$th1k9Ue2zAmOuHuVHVfcEurxodeoFyTzIRZ1j3jmIy6NN9Fg9ptjO',
@@ -4263,14 +4245,14 @@ return array(
     'verified' => false,
     'verification_code' => '739287',
     'code_expires' => '2026-03-30 11:10:22',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:22',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  253 =>
-  array(
+  253 => 
+  array (
     'id' => 253,
     'email' => 'wrongpass1774860922@test.com',
     'password' => '$2y$10$9YWwSXviworr1uvbQ7nUkuXzB4VF.3BvC67FMKnpylkPnt0mNL4A2',
@@ -4280,14 +4262,14 @@ return array(
     'verified' => false,
     'verification_code' => '277012',
     'code_expires' => '2026-03-30 11:10:22',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:22',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  254 =>
-  array(
+  254 => 
+  array (
     'id' => 254,
     'email' => 'notverified1774860922@test.com',
     'password' => '$2y$10$Ai2mPKRTfW5QSqmygkwNnOd60sG8gTDwdKnxG5HnOCygyRiPKPmuC',
@@ -4297,14 +4279,14 @@ return array(
     'verified' => false,
     'verification_code' => '075250',
     'code_expires' => '2026-03-30 11:10:22',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:22',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  255 =>
-  array(
+  255 => 
+  array (
     'id' => 255,
     'email' => 'verifypass1774860922@test.com',
     'password' => '$2y$10$muoo0OhrdevpwQFZ4hqfX.CnOg0WlgZ5aLBMOSxLlAznoHxcH0.iG',
@@ -4314,14 +4296,14 @@ return array(
     'verified' => false,
     'verification_code' => '178736',
     'code_expires' => '2026-03-30 11:10:22',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:22',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  256 =>
-  array(
+  256 => 
+  array (
     'id' => 256,
     'email' => 'hash1774860922@test.com',
     'password' => '$2y$10$R1BwDLLJtXf5QCkV7lotqOJ.6RSv0a7iSZWYnljVRtuX708RXtgXG',
@@ -4331,14 +4313,14 @@ return array(
     'verified' => false,
     'verification_code' => '121371',
     'code_expires' => '2026-03-30 11:10:22',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:22',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  257 =>
-  array(
+  257 => 
+  array (
     'id' => 257,
     'email' => 'updatepass1774860922@test.com',
     'password' => '$2y$10$vZTlEBBR3omE9NFk8qI.1u4J9UcNFqBmBw0pnNcu/O2bj7zGf5xH2',
@@ -4348,14 +4330,14 @@ return array(
     'verified' => false,
     'verification_code' => '013565',
     'code_expires' => '2026-03-30 11:10:22',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:22',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  258 =>
-  array(
+  258 => 
+  array (
     'id' => 258,
     'email' => 'passchange1774860943@test.com',
     'password' => '$2y$10$qnMNraMO41jpPTRlIl961OpjmqvAP08DBAg9xqIushLxjGSwQ7sUW',
@@ -4365,14 +4347,14 @@ return array(
     'verified' => false,
     'verification_code' => '524622',
     'code_expires' => '2026-03-30 11:10:43',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:43',
-    'last_login' => null,
+    'last_login' => NULL,
     'password_change_code' => '530703',
     'password_change_code_expires' => '2026-03-30 11:05:43',
   ),
-  259 =>
-  array(
+  259 => 
+  array (
     'id' => 259,
     'email' => 'duplicate1774860943@example.com',
     'password' => '$2y$10$TWgDnNlvx6i9H4ejmVdjEOkkAsUrdiVfFis64n4D//iP6jeoeKp2G',
@@ -4382,14 +4364,14 @@ return array(
     'verified' => false,
     'verification_code' => '325254',
     'code_expires' => '2026-03-30 11:10:43',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:43',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  260 =>
-  array(
+  260 => 
+  array (
     'id' => 260,
     'email' => 'login1774860943@test.com',
     'password' => '$2y$10$ZMQr0ujypbIlHfTB.pKW/uHZqsvP8DSzd7w67XX/XwFivHJrzxOcS',
@@ -4397,16 +4379,16 @@ return array(
     'phone' => '+79990000005',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:44',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  261 =>
-  array(
+  261 => 
+  array (
     'id' => 261,
     'email' => 'test1774860944@example.com',
     'password' => '$2y$10$y4QcTwUEFR3E/IB4jIGAP.ZznYQVt43wqnqi6ScLn7Dggc4GJlNhy',
@@ -4416,14 +4398,14 @@ return array(
     'verified' => false,
     'verification_code' => '127935',
     'code_expires' => '2026-03-30 11:10:44',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:44',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  262 =>
-  array(
+  262 => 
+  array (
     'id' => 262,
     'email' => 'verify1774860944@test.com',
     'password' => '$2y$10$fln7yFWmyuY2RTum.9Dw4OUKnQzycmdLl/Frbpsq9KasGqtR4WaHG',
@@ -4431,16 +4413,16 @@ return array(
     'phone' => '+79990000003',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:44',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  263 =>
-  array(
+  263 => 
+  array (
     'id' => 263,
     'email' => 'wrongcode1774860944@test.com',
     'password' => '$2y$10$FwTyyWrNiBYzjlwV48jmj.Bf1/BnZ9ma.Xu14bjkUEwWQj01iPod.',
@@ -4450,14 +4432,14 @@ return array(
     'verified' => false,
     'verification_code' => '402226',
     'code_expires' => '2026-03-30 11:10:44',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:44',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  264 =>
-  array(
+  264 => 
+  array (
     'id' => 264,
     'email' => 'wrongpass1774860944@test.com',
     'password' => '$2y$10$fPXrQZLc9tJyscGmmZ0Cvu3KG46yBVTpxsBQ/4Q7Gy0SdZci/NG/a',
@@ -4467,14 +4449,14 @@ return array(
     'verified' => false,
     'verification_code' => '261173',
     'code_expires' => '2026-03-30 11:10:44',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:44',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  265 =>
-  array(
+  265 => 
+  array (
     'id' => 265,
     'email' => 'notverified1774860944@test.com',
     'password' => '$2y$10$tovRk47r.3fvZxIUTT2TSeJU2j3ulDm8LKcgbelWkn.QkBRoug6LC',
@@ -4484,14 +4466,14 @@ return array(
     'verified' => false,
     'verification_code' => '717448',
     'code_expires' => '2026-03-30 11:10:44',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:44',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  266 =>
-  array(
+  266 => 
+  array (
     'id' => 266,
     'email' => 'verifypass1774860944@test.com',
     'password' => '$2y$10$yu/AdMrQXS3dSkHPlmA4m.HqcymkJQtecA/h72Nb77iHpwSUsMBgC',
@@ -4501,14 +4483,14 @@ return array(
     'verified' => false,
     'verification_code' => '662796',
     'code_expires' => '2026-03-30 11:10:44',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:44',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  267 =>
-  array(
+  267 => 
+  array (
     'id' => 267,
     'email' => 'hash1774860945@test.com',
     'password' => '$2y$10$jAFxLbrBkebJ.QASHqWwVOeZ9yli6OXTBD1Sd7U5cbL8PgL7ZENpu',
@@ -4518,14 +4500,14 @@ return array(
     'verified' => false,
     'verification_code' => '620261',
     'code_expires' => '2026-03-30 11:10:45',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:45',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  268 =>
-  array(
+  268 => 
+  array (
     'id' => 268,
     'email' => 'updatepass1774860945@test.com',
     'password' => '$2y$10$1IrSNeSkwWBoqKlwW.aY4.3ZHnAJZKT6bwEe1SAqiTYMHR5qGGouG',
@@ -4535,14 +4517,14 @@ return array(
     'verified' => false,
     'verification_code' => '702298',
     'code_expires' => '2026-03-30 11:10:45',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:55:45',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  269 =>
-  array(
+  269 => 
+  array (
     'id' => 269,
     'email' => 'expiry1774861018@test.com',
     'password' => '$2y$10$0iG3vole5/jKnlqTuJJax.1CelPiZXk5FoSW/kiboKXljAxdSvz02',
@@ -4552,14 +4534,14 @@ return array(
     'verified' => false,
     'verification_code' => '226689',
     'code_expires' => '2026-03-30 11:11:58',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:56:58',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  270 =>
-  array(
+  270 => 
+  array (
     'id' => 270,
     'email' => 'reset1774861018@test.com',
     'password' => '$2y$10$7ba0u0R406iaV7McSGj8bOsq8Fy1vmF8IrJjpFEw36Kj0RFGWszqu',
@@ -4571,13 +4553,13 @@ return array(
     'code_expires' => '2026-03-30 11:11:59',
     'verification_token' => '00e7278476dae50e83170e52fa88c47f38d1c80e40c2d19615bc278904d09ea4',
     'created_at' => '2026-03-30 10:56:59',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
     'token_expires' => '2026-03-30 11:56:59',
   ),
-  271 =>
-  array(
+  271 => 
+  array (
     'id' => 271,
     'email' => 'tokenval1774861019@test.com',
     'password' => '$2y$10$iBicwjYDAPf./9kYD.uv3.a/8pddFX8rj2L7jB8K4I4csKMiVL6N6',
@@ -4589,13 +4571,13 @@ return array(
     'code_expires' => '2026-03-30 11:11:59',
     'verification_token' => '7b4f22778476451c2f54c4798438d94e8716b4139292529c82c303c5fb9b322c',
     'created_at' => '2026-03-30 10:56:59',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
     'token_expires' => '2026-03-30 11:56:59',
   ),
-  272 =>
-  array(
+  272 => 
+  array (
     'id' => 272,
     'email' => 'resend1774861019@test.com',
     'password' => '$2y$10$a/4ZlQhafKQD7G74rc4/Bekzg7LKtnKFDd.KsxTer8zEaoU9G4cTW',
@@ -4605,14 +4587,14 @@ return array(
     'verified' => false,
     'verification_code' => '553670',
     'code_expires' => '2026-03-30 11:11:59',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:56:59',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  273 =>
-  array(
+  273 => 
+  array (
     'id' => 273,
     'email' => 'verifiedresend1774861019@test.com',
     'password' => '$2y$10$FqBBS4KkAuNMqorvD2cOwuhyv37joFxUNiKOCKt11h7a2uX4MWXJq',
@@ -4620,16 +4602,16 @@ return array(
     'phone' => '+79990000015',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 10:56:59',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  274 =>
-  array(
+  274 => 
+  array (
     'id' => 274,
     'email' => 'passchange1774861221@test.com',
     'password' => '$2y$10$.DrAFbLE4RCyWJX0OVoALeJrJcD5qrx1jFMOc4vedRXM8zdFHlQoy',
@@ -4639,14 +4621,14 @@ return array(
     'verified' => false,
     'verification_code' => '308273',
     'code_expires' => '2026-03-30 11:15:21',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:00:21',
-    'last_login' => null,
+    'last_login' => NULL,
     'password_change_code' => '291184',
     'password_change_code_expires' => '2026-03-30 11:10:21',
   ),
-  275 =>
-  array(
+  275 => 
+  array (
     'id' => 275,
     'email' => 'duplicate1774861221@example.com',
     'password' => '$2y$10$LasdT6h.BRVLOlfIOVUHbuB8VyQOAjkJ9n6TMCtW6ym.NAfznPBNe',
@@ -4656,14 +4638,14 @@ return array(
     'verified' => false,
     'verification_code' => '754091',
     'code_expires' => '2026-03-30 11:15:21',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:00:21',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  276 =>
-  array(
+  276 => 
+  array (
     'id' => 276,
     'email' => 'login1774861221@test.com',
     'password' => '$2y$10$zOgGseYNOzgpADHwSJB/cOBh0W29fmJ0sAYXhSQudxGgWqw6gV5ja',
@@ -4671,16 +4653,16 @@ return array(
     'phone' => '+79990000005',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:00:21',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  277 =>
-  array(
+  277 => 
+  array (
     'id' => 277,
     'email' => 'wrongcode1774861221@test.com',
     'password' => '$2y$10$wurmX6VzdkdRI.H.0A6eKu0StBcs.2IRVNHUk.RyaZKXdC0iFkBg.',
@@ -4690,14 +4672,14 @@ return array(
     'verified' => false,
     'verification_code' => '866904',
     'code_expires' => '2026-03-30 11:15:21',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:00:21',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  278 =>
-  array(
+  278 => 
+  array (
     'id' => 278,
     'email' => 'test1774861221@example.com',
     'password' => '$2y$10$65y2YUT01UsicB5TF93rZO544GKldZFrXxBYhaMmFqiYh5SgGm32S',
@@ -4707,14 +4689,14 @@ return array(
     'verified' => false,
     'verification_code' => '018188',
     'code_expires' => '2026-03-30 11:15:22',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:00:22',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  279 =>
-  array(
+  279 => 
+  array (
     'id' => 279,
     'email' => 'verify1774861222@test.com',
     'password' => '$2y$10$nEQsNDxFY8QSm939O0h4TeeFk4cnoV2O9EBcY2g9UuiPOnGAfaQIC',
@@ -4722,16 +4704,16 @@ return array(
     'phone' => '+79990000003',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:00:22',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  280 =>
-  array(
+  280 => 
+  array (
     'id' => 280,
     'email' => 'wrongpass1774861222@test.com',
     'password' => '$2y$10$8eIxPceYU/HKWBW30yv03eOhFBmuUoklj8Yunlb2w39HSKr1uBc0G',
@@ -4741,14 +4723,14 @@ return array(
     'verified' => false,
     'verification_code' => '996895',
     'code_expires' => '2026-03-30 11:15:22',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:00:22',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  281 =>
-  array(
+  281 => 
+  array (
     'id' => 281,
     'email' => 'notverified1774861222@test.com',
     'password' => '$2y$10$f0FnJ2Mj.gg.6pdGVfWXPO7eil5LNM/MNJlEI1PCxVRhAXe0vBGD6',
@@ -4758,14 +4740,14 @@ return array(
     'verified' => false,
     'verification_code' => '520610',
     'code_expires' => '2026-03-30 11:15:22',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:00:22',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  282 =>
-  array(
+  282 => 
+  array (
     'id' => 282,
     'email' => 'verifypass1774861222@test.com',
     'password' => '$2y$10$byva8p14XKiri1yfB6pVx.zmbBsb/NX7xZHaexvQJgdQG0VJnYYWm',
@@ -4775,14 +4757,14 @@ return array(
     'verified' => false,
     'verification_code' => '767593',
     'code_expires' => '2026-03-30 11:15:22',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:00:22',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  283 =>
-  array(
+  283 => 
+  array (
     'id' => 283,
     'email' => 'hash1774861222@test.com',
     'password' => '$2y$10$CuCK.pn1YpAPeMosmgVcbe7E97DId/JtuSFFI5ChVNkp.p7ZDw/bm',
@@ -4792,14 +4774,14 @@ return array(
     'verified' => false,
     'verification_code' => '416302',
     'code_expires' => '2026-03-30 11:15:22',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:00:22',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  284 =>
-  array(
+  284 => 
+  array (
     'id' => 284,
     'email' => 'updatepass1774861222@test.com',
     'password' => '$2y$10$CO38mmihqSei4RiUczC.J.ygsCyTFTh4wAU06KRUIMq6GzZpOyzCK',
@@ -4809,14 +4791,14 @@ return array(
     'verified' => false,
     'verification_code' => '915595',
     'code_expires' => '2026-03-30 11:15:23',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:00:23',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  285 =>
-  array(
+  285 => 
+  array (
     'id' => 285,
     'email' => 'passchange1774861673@test.com',
     'password' => '$2y$10$deRsCLRXzujyYTmdUlgnl.CcODKkMzy9gfR3iUAnDL1tWROvxwIu.',
@@ -4826,14 +4808,14 @@ return array(
     'verified' => false,
     'verification_code' => '142828',
     'code_expires' => '2026-03-30 11:22:53',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:07:53',
-    'last_login' => null,
+    'last_login' => NULL,
     'password_change_code' => '279277',
     'password_change_code_expires' => '2026-03-30 11:17:53',
   ),
-  286 =>
-  array(
+  286 => 
+  array (
     'id' => 286,
     'email' => 'duplicate1774861673@example.com',
     'password' => '$2y$10$.IskDuZojB/Fw0aqZFdiH.xD.YrseTCFfIGBnxt1yShxOENupwI3G',
@@ -4843,14 +4825,14 @@ return array(
     'verified' => false,
     'verification_code' => '802395',
     'code_expires' => '2026-03-30 11:22:53',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:07:53',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  287 =>
-  array(
+  287 => 
+  array (
     'id' => 287,
     'email' => 'login1774861673@test.com',
     'password' => '$2y$10$pONgx.rE9zZD6jMvey0qBu4sUvSm55gN.zn/tB4KyzPe3TZB4iHkS',
@@ -4858,16 +4840,16 @@ return array(
     'phone' => '+79990000005',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:07:53',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  288 =>
-  array(
+  288 => 
+  array (
     'id' => 288,
     'email' => 'test1774861673@example.com',
     'password' => '$2y$10$aju1ylLQNWRCyMxUv1u2MOBtWlWdmQrwkIj/xiTJe8GHM6IAI4z1S',
@@ -4877,14 +4859,14 @@ return array(
     'verified' => false,
     'verification_code' => '414154',
     'code_expires' => '2026-03-30 11:22:53',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:07:53',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  289 =>
-  array(
+  289 => 
+  array (
     'id' => 289,
     'email' => 'wrongcode1774861673@test.com',
     'password' => '$2y$10$Op1iUrGrDRY9krDhU9Uq/eToengytG.Z9QkpX0XhZLzak0UBhTU1G',
@@ -4894,14 +4876,14 @@ return array(
     'verified' => false,
     'verification_code' => '440629',
     'code_expires' => '2026-03-30 11:22:53',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:07:53',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  290 =>
-  array(
+  290 => 
+  array (
     'id' => 290,
     'email' => 'verify1774861673@test.com',
     'password' => '$2y$10$/D7fKN40OLjZoDLyYslp0.otT3Q.tGPp/lFoTLzjFtIzOsWjPJvZu',
@@ -4909,16 +4891,16 @@ return array(
     'phone' => '+79990000003',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:07:54',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  291 =>
-  array(
+  291 => 
+  array (
     'id' => 291,
     'email' => 'wrongpass1774861674@test.com',
     'password' => '$2y$10$eoO/U2eYZJjNMC9kiZ0huOp6SqxU9USmdPUYMpiJ1/EefIyQyuTHu',
@@ -4928,14 +4910,14 @@ return array(
     'verified' => false,
     'verification_code' => '000009',
     'code_expires' => '2026-03-30 11:22:54',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:07:54',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  292 =>
-  array(
+  292 => 
+  array (
     'id' => 292,
     'email' => 'notverified1774861674@test.com',
     'password' => '$2y$10$h2CgaKTVeCRz7qyrzE44JO3MI9PGYCRxgTJ4ohIR/jfwdCBV/aPzG',
@@ -4945,14 +4927,14 @@ return array(
     'verified' => false,
     'verification_code' => '909801',
     'code_expires' => '2026-03-30 11:22:54',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:07:54',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  293 =>
-  array(
+  293 => 
+  array (
     'id' => 293,
     'email' => 'verifypass1774861674@test.com',
     'password' => '$2y$10$7EEsj6FGMgwJuJAfwNF3Iuxx8ViH7ZJAILOPDFMnpsqOsbv/aHiQG',
@@ -4962,14 +4944,14 @@ return array(
     'verified' => false,
     'verification_code' => '772617',
     'code_expires' => '2026-03-30 11:22:54',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:07:54',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  294 =>
-  array(
+  294 => 
+  array (
     'id' => 294,
     'email' => 'hash1774861674@test.com',
     'password' => '$2y$10$KbyG2OB4HHMBk0Q55tGw1eLQYa/p/ETyj7su0dASwHszNvzGX7F2u',
@@ -4979,14 +4961,14 @@ return array(
     'verified' => false,
     'verification_code' => '245184',
     'code_expires' => '2026-03-30 11:22:54',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:07:54',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  295 =>
-  array(
+  295 => 
+  array (
     'id' => 295,
     'email' => 'updatepass1774861674@test.com',
     'password' => '$2y$10$vNvu3d5UTPKTpb0IlanTSOslyexNPJmU6AKArFbdg2VkZ/CMj5Zci',
@@ -4996,14 +4978,14 @@ return array(
     'verified' => false,
     'verification_code' => '287575',
     'code_expires' => '2026-03-30 11:22:54',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:07:54',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  296 =>
-  array(
+  296 => 
+  array (
     'id' => 296,
     'email' => 'passchange1774861868@test.com',
     'password' => '$2y$10$ey2pvS2CAOybo7Oe9agLEuXdH73ZXgeh/r81mX.6hSJcGlnOIFKie',
@@ -5013,14 +4995,14 @@ return array(
     'verified' => false,
     'verification_code' => '094899',
     'code_expires' => '2026-03-30 11:26:08',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:11:08',
-    'last_login' => null,
+    'last_login' => NULL,
     'password_change_code' => '341815',
     'password_change_code_expires' => '2026-03-30 11:21:08',
   ),
-  297 =>
-  array(
+  297 => 
+  array (
     'id' => 297,
     'email' => 'duplicate1774861869@example.com',
     'password' => '$2y$10$ai2f54K38kvK8cnQ86oBn.4RibUTY8K7URgKy9h0ScIeKteq0I7vy',
@@ -5030,14 +5012,14 @@ return array(
     'verified' => false,
     'verification_code' => '148182',
     'code_expires' => '2026-03-30 11:26:09',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:11:09',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  298 =>
-  array(
+  298 => 
+  array (
     'id' => 298,
     'email' => 'login1774861869@test.com',
     'password' => '$2y$10$rT4yBqOErVI8GRUpS.ifmeJI09OEXfIHTuxioEembKMQWrl9euf86',
@@ -5045,16 +5027,16 @@ return array(
     'phone' => '+79990000005',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:11:09',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  299 =>
-  array(
+  299 => 
+  array (
     'id' => 299,
     'email' => 'test1774861869@example.com',
     'password' => '$2y$10$5ZCHPiCWjSP7hppT4qJ7tuB4vCiOuV3zL3/MkTogVMmtBl0.ym5su',
@@ -5064,14 +5046,14 @@ return array(
     'verified' => false,
     'verification_code' => '451893',
     'code_expires' => '2026-03-30 11:26:09',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:11:09',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  300 =>
-  array(
+  300 => 
+  array (
     'id' => 300,
     'email' => 'wrongcode1774861869@test.com',
     'password' => '$2y$10$cQQPEtE1UHmiCHJNB4jwD.7qYB4XVycsfO14Dejfmmaa9.wc2xtA6',
@@ -5081,14 +5063,14 @@ return array(
     'verified' => false,
     'verification_code' => '636771',
     'code_expires' => '2026-03-30 11:26:09',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:11:09',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  301 =>
-  array(
+  301 => 
+  array (
     'id' => 301,
     'email' => 'verify1774861869@test.com',
     'password' => '$2y$10$4ONbU22c1IZDNPFq4Eq3AuMPQbBswgZRm8kejQOOQkrCjI6.Ni0vG',
@@ -5096,16 +5078,16 @@ return array(
     'phone' => '+79990000003',
     'role' => 'user',
     'verified' => true,
-    'verification_code' => null,
-    'code_expires' => null,
-    'verification_token' => null,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:11:09',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  302 =>
-  array(
+  302 => 
+  array (
     'id' => 302,
     'email' => 'wrongpass1774861869@test.com',
     'password' => '$2y$10$rwutM6VrvTu7FJou8iSb1.Pzpjvt1mBoC1CmOfY1GLcVjVkqTEF5S',
@@ -5115,14 +5097,14 @@ return array(
     'verified' => false,
     'verification_code' => '691562',
     'code_expires' => '2026-03-30 11:26:10',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:11:10',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  303 =>
-  array(
+  303 => 
+  array (
     'id' => 303,
     'email' => 'notverified1774861870@test.com',
     'password' => '$2y$10$sHU4aQKdMzWWHvk8nAvp6esKGnC4.s6OZcszHicxuC4vu9fZYlMMu',
@@ -5132,14 +5114,14 @@ return array(
     'verified' => false,
     'verification_code' => '150710',
     'code_expires' => '2026-03-30 11:26:10',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:11:10',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  304 =>
-  array(
+  304 => 
+  array (
     'id' => 304,
     'email' => 'verifypass1774861870@test.com',
     'password' => '$2y$10$Ps5DKGaUner0Kp1AQUy8rei2m9gsx4a/7qGy/eJCEevlzdx3p281i',
@@ -5149,14 +5131,14 @@ return array(
     'verified' => false,
     'verification_code' => '455492',
     'code_expires' => '2026-03-30 11:26:10',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:11:10',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  305 =>
-  array(
+  305 => 
+  array (
     'id' => 305,
     'email' => 'hash1774861870@test.com',
     'password' => '$2y$10$O1L3d6CDadOvdmny9.qbuO3zXEICq1gNGBkWN85E.y3CcUVyWpFmq',
@@ -5166,14 +5148,14 @@ return array(
     'verified' => false,
     'verification_code' => '107419',
     'code_expires' => '2026-03-30 11:26:10',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:11:10',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
-  306 =>
-  array(
+  306 => 
+  array (
     'id' => 306,
     'email' => 'updatepass1774861870@test.com',
     'password' => '$2y$10$HWuQ/q4F5Mldz6DYWG2seu5.WJD2wVJxPNhDmECBNJBGkAqfMn7Se',
@@ -5183,10 +5165,27 @@ return array(
     'verified' => false,
     'verification_code' => '891815',
     'code_expires' => '2026-03-30 11:26:10',
-    'verification_token' => null,
+    'verification_token' => NULL,
     'created_at' => '2026-03-30 11:11:10',
-    'last_login' => null,
-    'password_change_code' => null,
-    'password_change_code_expires' => null,
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
+  ),
+  307 => 
+  array (
+    'id' => 307,
+    'email' => 'vlad_milev@mail.ru',
+    'password' => '$2y$10$q3e8z8HLRr69lXZ34pf.l.JK7lBn8jMb7JdYff9TpnIGkGkqzDhge',
+    'name' => 'Гарчиханов Ислам Магомедсалиевич Милевский Владислав Анатольевич',
+    'phone' => '+79059000687',
+    'role' => 'admin',
+    'verified' => true,
+    'verification_code' => NULL,
+    'code_expires' => NULL,
+    'verification_token' => NULL,
+    'created_at' => '2026-04-13 06:44:30',
+    'last_login' => NULL,
+    'password_change_code' => NULL,
+    'password_change_code_expires' => NULL,
   ),
 );

@@ -847,3 +847,48 @@
 [2026-04-09 06:42:50] [DEBUG] [IP:::1] [User:guest] [URI:/geek/php.php] Request | Context: {"uri":"\/geek\/php.php","method":"GET"}
 [2026-04-09 06:42:50] [DEBUG] [IP:::1] [User:guest] [URI:/favicon.ico] Request | Context: {"uri":"\/favicon.ico","method":"GET"}
 [2026-04-09 06:42:55] [DEBUG] [IP:::1] [User:guest] [URI:/] Request | Context: {"uri":"\/","method":"GET"}
+[2026-04-13 04:25:26] [DEBUG] [IP:::1] [User:guest] [URI:/geek/php.php] Request | Context: {"uri":"\/geek\/php.php","method":"GET"}
+[2026-04-13 04:25:26] [DEBUG] [IP:::1] [User:guest] [URI:/favicon.ico] Request | Context: {"uri":"\/favicon.ico","method":"GET"}
+[2026-04-13 04:25:31] [DEBUG] [IP:::1] [User:guest] [URI:/] Request | Context: {"uri":"\/","method":"GET"}
+[2026-04-13 06:38:16] [DEBUG] [IP:::1] [User:guest] [URI:/geek/php.php] Request | Context: {"uri":"\/geek\/php.php","method":"GET"}
+[2026-04-13 06:38:23] [DEBUG] [IP:::1] [User:guest] [URI:/] Request | Context: {"uri":"\/","method":"GET"}
+[2026-04-13 06:38:27] [DEBUG] [IP:::1] [User:guest] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-04-13 06:38:27] [DEBUG] [IP:::1] [User:guest] [URI:/courses] Курсы загружены из файла | Context: {"count":6}
+[2026-04-13 06:42:39] [DEBUG] [IP:::1] [User:guest] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-04-13 06:42:40] [INFO] [IP:::1] [User:guest] [URI:/courses] Курсы загружены из БД | Context: {"count":6}
+[2026-04-13 06:42:40] [DEBUG] [IP:::1] [User:guest] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-04-13 06:42:40] [INFO] [IP:::1] [User:guest] [URI:/courses] Курсы загружены из БД | Context: {"count":6}
+[2026-04-13 06:43:00] [DEBUG] [IP:::1] [User:guest] [URI:/auth/login] Request | Context: {"uri":"\/auth\/login","method":"GET"}
+[2026-04-13 06:43:04] [DEBUG] [IP:::1] [User:guest] [URI:/auth/login] Request | Context: {"uri":"\/auth\/login","method":"POST"}
+[2026-04-13 06:43:04] [WARNING] [IP:::1] [User:guest] [URI:/auth/login] Неудачная попытка входа | Context: {"email":"petrov@mail.ru","ip":"::1"}
+[2026-04-13 06:43:57] [DEBUG] [IP:::1] [User:guest] [URI:/auth/register] Request | Context: {"uri":"\/auth\/register","method":"GET"}
+[2026-04-13 06:44:29] [DEBUG] [IP:::1] [User:guest] [URI:/auth/register] Request | Context: {"uri":"\/auth\/register","method":"POST"}
+[2026-04-13 06:44:30] [DEBUG] [IP:::1] [User:guest] [URI:/auth/register] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-04-13 06:44:34] [INFO] [IP:::1] [User:guest] [URI:/auth/register] Новая регистрация пользователя | Context: {"user_id":307,"email":"kasll2007@inbox.ru"}
+[2026-04-13 06:44:34] [DEBUG] [IP:::1] [User:guest] [URI:/auth/verify-code] Request | Context: {"uri":"\/auth\/verify-code","method":"GET"}
+[2026-04-13 06:44:50] [DEBUG] [IP:::1] [User:guest] [URI:/auth/verify-code] Request | Context: {"uri":"\/auth\/verify-code","method":"POST"}
+[2026-04-13 06:44:50] [DEBUG] [IP:::1] [User:guest] [URI:/auth/verify-code] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-04-13 06:44:50] [INFO] [IP:::1] [User:guest] [URI:/auth/verify-code] Email подтверждён | Context: {"email":"kasll2007@inbox.ru"}
+[2026-04-13 06:44:50] [DEBUG] [IP:::1] [User:guest] [URI:/auth/login?verified=1] Request | Context: {"uri":"\/auth\/login","method":"GET"}
+[2026-04-13 06:45:02] [DEBUG] [IP:::1] [User:guest] [URI:/auth/login] Request | Context: {"uri":"\/auth\/login","method":"POST"}
+[2026-04-13 06:45:02] [WARNING] [IP:::1] [User:guest] [URI:/auth/login] Неудачная попытка входа | Context: {"email":"petrov@mail.ru","ip":"::1"}
+[2026-04-13 06:45:12] [DEBUG] [IP:::1] [User:guest] [URI:/auth/login] Request | Context: {"uri":"\/auth\/login","method":"POST"}
+[2026-04-13 06:45:12] [DEBUG] [IP:::1] [User:307] [URI:/auth/login] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-04-13 06:45:12] [INFO] [IP:::1] [User:307] [URI:/auth/login] Успешный вход пользователя | Context: {"user_id":307,"email":"kasll2007@inbox.ru"}
+[2026-04-13 06:45:12] [DEBUG] [IP:::1] [User:307] [URI:/admin] Request | Context: {"uri":"\/admin","method":"GET"}
+[2026-04-13 06:45:12] [INFO] [IP:::1] [User:307] [URI:/admin] Доступ к админ-панели | Context: {"user_id":307}
+[2026-04-13 06:45:32] [DEBUG] [IP:::1] [User:307] [URI:/courses] Request | Context: {"uri":"\/courses","method":"GET"}
+[2026-04-13 06:45:32] [INFO] [IP:::1] [User:307] [URI:/courses] Курсы загружены из БД | Context: {"count":6}
+[2026-04-13 06:45:33] [DEBUG] [IP:::1] [User:307] [URI:/cart/add] Request | Context: {"uri":"\/cart\/add","method":"POST"}
+[2026-04-13 06:45:33] [INFO] [IP:::1] [User:307] [URI:/cart/add] Курсы загружены из БД | Context: {"count":6}
+[2026-04-13 06:45:33] [DEBUG] [IP:::1] [User:307] [URI:/cart/count] Request | Context: {"uri":"\/cart\/count","method":"GET"}
+[2026-04-13 06:45:35] [DEBUG] [IP:::1] [User:307] [URI:/cart/add] Request | Context: {"uri":"\/cart\/add","method":"POST"}
+[2026-04-13 06:45:35] [INFO] [IP:::1] [User:307] [URI:/cart/add] Курсы загружены из БД | Context: {"count":6}
+[2026-04-13 06:45:35] [DEBUG] [IP:::1] [User:307] [URI:/cart/count] Request | Context: {"uri":"\/cart\/count","method":"GET"}
+[2026-04-13 06:45:36] [DEBUG] [IP:::1] [User:307] [URI:/cart] Request | Context: {"uri":"\/cart","method":"GET"}
+[2026-04-13 06:45:37] [DEBUG] [IP:::1] [User:307] [URI:/cart/checkout] Request | Context: {"uri":"\/cart\/checkout","method":"GET"}
+[2026-04-13 06:45:52] [DEBUG] [IP:::1] [User:307] [URI:/cart/order] Request | Context: {"uri":"\/cart\/order","method":"POST"}
+[2026-04-13 06:45:52] [DEBUG] [IP:::1] [User:307] [URI:/cart/order] Файл пользователей сохранён | Context: {"file":"C:\\xampp\\htdocs\\lib\/..\/data\/users.php"}
+[2026-04-13 06:45:52] [INFO] [IP:::1] [User:307] [URI:/cart/order] Заказ успешно создан (файл) | Context: {"order_id":"ORD-20260413-06C521","total":86000}
+[2026-04-13 06:45:52] [INFO] [IP:::1] [User:307] [URI:/cart/order] Заказ успешно сохранён в БД | Context: {"order_id":"ORD-20260413-06C521"}
+[2026-04-13 06:45:58] [DEBUG] [IP:::1] [User:307] [URI:/cart/success?order=ORD-20260413-06C521] Request | Context: {"uri":"\/cart\/success","method":"GET"}

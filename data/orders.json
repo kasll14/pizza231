@@ -59,5 +59,49 @@
         "ip": "::1",
         "user_id": 4,
         "user_email": "toni.maslennikov.08@inbox.ru"
+    },
+    {
+        "id": "ORD-20260413-06C521",
+        "name": "Гарчиханов Ислам Магомедсалиевич Милевский Владислав Анатольевич",
+        "email": "vlad_milev@mail.ru",
+        "phone": "+7 (905) 900-06-87",
+        "payment_method": "card",
+        "comment": "",
+        "items": [
+            {
+                "id": 1,
+                "title": {
+                    "ru": "Python-разработчик",
+                    "en": "Python-разработчик"
+                },
+                "price": "54 000 ₽",
+                "icon": "PY",
+                "duration": {
+                    "ru": "",
+                    "en": ""
+                },
+                "added_at": 1776055533
+            },
+            {
+                "id": 3,
+                "title": {
+                    "ru": "SQL и базы данных",
+                    "en": "SQL и базы данных"
+                },
+                "price": "32 000 ₽",
+                "icon": "DB",
+                "duration": {
+                    "ru": "",
+                    "en": ""
+                },
+                "added_at": 1776055535
+            }
+        ],
+        "total": 86000,
+        "status": "pending",
+        "created_at": "2026-04-13 06:45:52",
+        "ip": "::1",
+        "user_id": 307,
+        "user_email": "kasll2007@inbox.ru"
     }
 ]

@@ -1,8 +1,6 @@
 <?php
-
 // data/config.php
 // Глобальные настройки сайта
-
 return [
     'site' => [
         'name' => 'Geek Legend',
@@ -24,5 +22,15 @@ return [
     'pagination' => [
         'courses_per_page' => 6,
         'news_per_page' => 10
+    ],
+    // 🔐 НОВОЕ: Настройки подключения к базе данных
+    'db' => [
+        'enabled' => true,           // true - использовать БД, false - файлы
+        'dsn' => 'mysql:dbname=is231;host=localhost;charset=utf8mb4',
+        'user' => 'root',
+        'pass' => '',
+        'table_products' => 'products',
+        'table_orders' => 'orders',
+        'table_order_items' => 'order_item'
     ]
 ];
