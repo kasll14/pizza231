@@ -1,0 +1,15 @@
+{
+    "name": "geek/htdocs",
+    "autoload": {
+        "psr-4": {
+            "Geek\\Htdocs\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "anton",
+            "email": "toni.maslennikov.08@inbox.ru"
+        }
+    ],
+    "require": {}
+}

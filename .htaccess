@@ -1,0 +1,14 @@
+# Включение модуля rewrite
+RewriteEngine On
+
+# Если файл или папка существует - отдавать как есть
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Все остальные запросы перенаправлять на index.php
+RewriteRule ^ index.php [L]
+
+# Разрешить доступ к ресурсам
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
