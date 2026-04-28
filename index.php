@@ -193,6 +193,24 @@ try {
         }
         break;
         
+    case '/profile':
+        require_once BASE_PATH . '/controllers/ProfileController.php';
+        $controller = new ProfileController();
+        $controller->index();
+        break;
+        
+    case '/profile/update':
+        require_once BASE_PATH . '/controllers/ProfileController.php';
+        $controller = new ProfileController();
+        $controller->updateProfile();
+        break;
+        
+    case '/profile/change-password':
+        require_once BASE_PATH . '/controllers/ProfileController.php';
+        $controller = new ProfileController();
+        $controller->changePassword();
+        break;
+        
     default:
         http_response_code(404);
         echo '<h1>404 - Страница не найдена</h1>';

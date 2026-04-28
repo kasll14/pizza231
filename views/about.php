@@ -52,26 +52,10 @@
     </div>
 </div>
 
-<script src="https://api-maps.yandex.ru/2.1/?apikey=your_api_key&lang=ru_RU" type="text/javascript"></script>
 <script type="text/javascript">
-    ymaps.ready(init);
-    
-    function init() {
-        var myMap = new ymaps.Map("yandex-map", {
-            center: [55.333333, 86.083333],
-            zoom: 15,
-            controls: ['zoomControl', 'fullscreenControl']
-        });
-        
-        var myPlacemark = new ymaps.Placemark([55.333333, 86.083333], {
-            hintContent: 'Кемеровский Кооперативный Техникум',
-            balloonContent: '<strong>Кемеровский Кооперативный Техникум</strong><br>Наш адрес'
-        }, {
-            preset: 'islands#blueEducationIcon'
-        });
-        
-        myMap.geoObjects.add(myPlacemark);
-    }
+    // Карта отключена - требуется API ключ Яндекс.Карт
+    // Для включения получите ключ на https://developer.tech.yandex.ru/
+    console.log('Яндекс.Карта отключена: требуется API ключ');
 </script>
 
 <?php require_once 'views/layouts/footer.php'; ?>

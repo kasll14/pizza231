@@ -2,7 +2,7 @@
     "name": "geek/htdocs",
     "autoload": {
         "psr-4": {
-            "Geek\\Htdocs\\": "src/"
+            "App\\": "src/"
         }
     },
     "authors": [
@@ -11,5 +11,7 @@
             "email": "toni.maslennikov.08@inbox.ru"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "phpmetrics/phpmetrics": "^2.9"
+    }
 }
